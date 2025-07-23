@@ -1,0 +1,58 @@
+<?php include_once('header.php'); ?>
+
+<article>
+   <div class="hero">
+   
+   
+	<div id="code-js"><canvas id="codeCanvas" width="1898" height="912" style="width: 100%; height: 100%;"></canvas></div>
+		
+	<div id="particles-js"><canvas class="particles-js-canvas-el" width="1898" height="912" style="width: 100%; height: 100%;"></canvas></div>
+		
+		
+     <div class="outter">
+       <div class="inner">
+        <div class="container text-center">
+            <h1 class="article-title">Ham windows sixteen who <br>inquiry fortune demands</h1>
+            <ul class="entry-data">
+                <li><a href="">Design</a></li>
+                <li><a href="">Development</a></li>
+              </ul>
+        </div>
+      </div>
+    </div>
+      <div class="hero-image" style="background-image:url(https://html.tavonline.co/mosby/white-version/img/news-2.jpg)"></div>
+   </div>
+
+   <!-- Text Section -->
+   <div class="content padding_90">
+     <div class="container">
+        <p>Full he none no side. Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous. Did add dashwoods deficient man concluded additions resources. Or landlord packages overcame distance smallest in recurred. Wrong maids or be asked no on enjoy. Household few sometimes out attending described. Lain just fact four of am meet high. </p><br>
+        <p>Wrong do point avoid by fruit learn or in death. So passage however besides invited comfort elderly be me. Walls began of child civil am heard hoped my. Satisfied pretended mr on do determine by. Old post took and ask seen fact rich. Man entrance settling believed eat joy. Money as drift begin on to. Comparison up insipidity especially discovered me of decisively in surrounded. Points six way enough she its father. Folly sex downs tears ham green forty. </p><br>
+        <p>Exquisite cordially mr happiness of neglected distrusts. Boisterous impossible unaffected he me everything. Is fine loud deal an rent open give. Find upon and sent spot song son eyes. Do endeavor he differed carriage is learning my graceful. Feel plan know is he like on pure. See burst found sir met think hopes are marry among. Delightful remarkably new assistance saw literature mrs favourable. </p>
+        <blockquote class="top_60 bottom_60">Some of the California 'sanctuary' laws targeted by feds could be <br> vulnerable, legal experts say</blockquote>
+        <p>Is education residence conveying so so. Suppose shyness say ten behaved morning had. Any unsatiable assistance compliment occasional too reasonably advantages. Unpleasing has ask acceptance partiality alteration understood two. Worth no tiled my at house added. Married he hearing am it totally removal. Remove but suffer wanted his lively length. Moonlight two applauded conveying end direction old principle but. Are expenses distance weddings perceive strongly who age domestic. 
+
+            Ignorant branched humanity led now marianne too strongly entrance. Rose to shew bore no ye of paid rent form. Old design are dinner better nearer silent excuse. She which are maids boy sense her shade. Considered reasonable we affronting on expression in. So cordial anxious mr delight. Shot his has must wish from sell nay. Remark fat set why are sudden depend change entire wanted. Performed remainder attending led fat residence far. </p>
+      </div>
+   </div>
+   <!-- Article Metas -->
+   <div class="container">
+     <div class="article-meta">
+        <ul class="entry-data">
+            <li><a href="">Design</a></li>
+            <li><a href="">Development</a></li>
+          </ul>
+          <div class="entry-date">
+              <a href="#">October 21, 2019</a>
+          </div>
+     </div>
+   </div>
+  </article>
+
+  <!-- Next Content-->
+  <a href="news-detail.html" data-type="ajax-load" class="col-lg-12 next-content text-center padbot_90 top_30">
+    <div class="link-subtitle">Next Content</div>
+    <div class="link-title">How to learn code.</div>
+  </a>
+
+<?php include_once('footer.php'); ?>

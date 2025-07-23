@@ -1,0 +1,37 @@
+RewriteEngine On
+
+# -----------------------------------------
+# 1. Force HTTPS
+# -----------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# -----------------------------------------
+# 2. Security Header
+# -----------------------------------------
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "upgrade-insecure-requests;"
+</IfModule>
+
+# -----------------------------------------
+# 3. Default index file order
+# -----------------------------------------
+DirectoryIndex index.html index.htm
+
+# -----------------------------------------
+# 4. Internally map /page or /page/ to page.html
+# -----------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# -----------------------------------------
+# 5. Redirect actual .html URLs to clean URLs (SEO-friendly)
+RewriteCond %{THE_REQUEST} \s/+([^/.]+)\.html [NC]
+RewriteRule ^([^/]+)\.html$ /$1 [R=301,L]
+
+# -----------------------------------------
+# 6. Custom 404 page
+# -----------------------------------------
+ErrorDocument 404 /page-not-found.html
