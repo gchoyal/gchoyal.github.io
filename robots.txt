@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /assets/
-Disallow: /assets/clients/
-Disallow: /assets/webfonts/
-Disallow: /assets/webfonts/flaticon/
+Disallow: /
