@@ -1708,6 +1708,11 @@ p.copy-right {
     cursor: wait;
 }
 
+.banner-btns .site-btn{
+	min-width: 164px;
+    text-align: center;
+}
+
 /*------------------------ Responsive ------------------------*/   
 
 
@@ -1924,7 +1929,7 @@ p.copy-right {
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
-	background: #fff;
+	background: #000;
 	box-shadow: 0 0 3px #313131;
 	border-radius: 100px;
 	height: 58px;
@@ -2069,7 +2074,7 @@ header.black .logo{
   font-size: 38px;
 }
 
-.hero .section-title .title {
+.hero:not(.home-banner) .section-title .title {
     border-top: 3px solid #000000;
     padding-top: 15px;
     font-size: 25px;
