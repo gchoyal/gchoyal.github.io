@@ -1604,8 +1604,8 @@ transition: all ease 0.3s;
 
 
 .filter-icon img {
-    height: 25px;
-    width: 25px;
+    height: 26px;
+    width: 26px;
     object-fit: contain;
 }
 
@@ -1924,11 +1924,11 @@ p.copy-right {
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
-	background: white;
+	background: #fff;
 	box-shadow: 0 0 3px #313131;
 	border-radius: 100px;
-	height: 44.8px;
-	width: 44.8px;
+	height: 58px;
+	width: 58px;
 	display: flex;
 	align-items: center;
 	align-content: center;
@@ -2148,8 +2148,8 @@ header.black {
 }
 
 .hero .section-title .title {
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 23px;
+    line-height: 30px;
 }
 
 .say-hello {
