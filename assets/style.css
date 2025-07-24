@@ -182,11 +182,11 @@ header.black .logo img{
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   box-shadow: 0 0 5px gray;
   -webkit-box-shadow: 0 0 5px gray;
   -moz-box-shadow: 0 0 5px gray;
@@ -194,6 +194,9 @@ header.black .logo img{
   -o-box-shadow: 0 0 5px gray;
 	height: 60px;
     width: 60px;
+	border-bottom-right-radius: 20px;
+    border: 3px solid #ffffff;
+    border-top-left-radius: 20px;
 }
 
 header.whitev{
@@ -1690,8 +1693,14 @@ p.copy-right {
 }
 
 .founder-msg .authorbox .col-3 img {
-    border-radius: 100px;
-	filter: invert(0) brightness(1) contrast(3) grayscale(1);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-bottom-right-radius: 20px;
+    border: 3px solid #ffffff;
+    border-top-left-radius: 20px;
 }
 
 .site-btn[disabled] {
@@ -2060,6 +2069,13 @@ header.black .logo{
   font-size: 38px;
 }
 
+.hero .section-title .title {
+    border-top: 3px solid #000000;
+    padding-top: 15px;
+    font-size: 25px;
+    line-height: 29px;
+}
+
 }/* Max 768px mediaget end */
 
 
@@ -2129,6 +2145,11 @@ header.black {
 .section-title .title {
   font-size: 32px;
   line-height: 43px;
+}
+
+.hero .section-title .title {
+    font-size: 21px;
+    line-height: 26px;
 }
 
 .say-hello {
