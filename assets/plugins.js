@@ -119,7 +119,7 @@ $(document).ready( function() {
 				  , stagePadding: stagePaddingData
 				  , autoplay: autoplayData
 				  , autoplayTimeout: autoPlayTimeoutData
-				  , navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"]
+				  , navText: ["←","→"]
 				  , responsive:{
 						  0:{
 								items: 1,
