@@ -1735,6 +1735,10 @@ p.copy-right {
 	display: flex;
 }
 
+.banner-btns .site-btn{
+	margin-left: 15px;
+}
+
 /*------------------------ Responsive ------------------------*/   
 
 
@@ -2215,7 +2219,11 @@ form {
 	width: 100%;
 }
 
-}/* Max 500px end */
+.banner-btns .site-btn{
+	margin: 0;
+}
+
+} /* Max 500px end */
 
 @media screen and (min-device-width: 1366px) 
            and (max-device-height: 1024px) 
