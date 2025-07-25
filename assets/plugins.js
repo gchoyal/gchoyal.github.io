@@ -114,6 +114,7 @@ $(document).ready( function() {
 					items: itemsData
 				  , dots: dotsData
 				  , nav: navData
+				  , autoWidth: true
 				  , margin: marginData
 				  , loop: true
 				  , stagePadding: stagePaddingData
