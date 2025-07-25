@@ -112,15 +112,6 @@ h6{
 	font-weight: 600;
 }
 
-.site-btn:hover {
-    background: black;
-}
-
-.site-btn:focus{
-  outline: 0;
-  color: white;
-}
-
 .site-btn::after {
     content: '→';
     display: inline-block;
@@ -130,12 +121,24 @@ h6{
     border-radius: 85px;
     text-align: center;
     line-height: 20px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     margin-left: 10px;
     align-items: center;
     align-content: center;
     position: absolute;
     right: 3px;
+	font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.site-btn:hover {
+    background: black;
+	color: white !important;
+}
+
+.site-btn:focus{
+  outline: 0;
 }
 
 
