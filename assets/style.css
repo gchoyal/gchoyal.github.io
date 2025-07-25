@@ -982,7 +982,6 @@ section.news-list article:last-child {
 }
 
 .portfolio_filter{
-  left: 0;
   transform-origin: top left;
   -webkit-transform: rotate(-90deg);
 }
