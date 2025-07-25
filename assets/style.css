@@ -87,6 +87,8 @@ h6{
   -o-border-radius: 4px;
   position: relative;
   overflow: hidden;
+	min-width: 164px;
+    text-align: center;
 }
 
 .slider-images{
@@ -128,6 +130,41 @@ h6{
 
 .darkness .site-btn:hover{
   color: #000;
+}
+
+
+
+
+
+.site-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.site-btn:hover {
+    transform: translateX(5px);
+}
+
+.site-btn::after {
+    content: '→';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-left: 10px;
 }
 
 
@@ -1708,12 +1745,8 @@ p.copy-right {
     cursor: wait;
 }
 
-.banner-btns .site-btn{
-	min-width: 164px;
-    text-align: center;
-}
 
-span.element {
+.element {
     width: 210px;
     display: inline-block;
     background: #eee;
@@ -1728,6 +1761,10 @@ span.element {
     height: 34px;
     font-style: italic;
     -webkit-font-smoothing: auto;
+}
+
+.typed-cursor {
+    display: none;
 }
 
 /*------------------------ Responsive ------------------------*/   
