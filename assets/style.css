@@ -537,21 +537,13 @@ header.whitev{
 
 
 
-.owl-carousel {
-  width: 100%;
+.owl-carousel, .owl-stage-outer {
   overflow: hidden;
 }
 
-.owl-carousel .owl-stage-outer {
-  overflow-x: hidden;
-}
-
-.owl-carousel .owl-item {
-  box-sizing: border-box;
-}
-
-.col-lg-6 {
-  overflow-x: hidden;
+.review-box {
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 
