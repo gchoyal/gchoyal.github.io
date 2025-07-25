@@ -104,7 +104,7 @@ $(document).ready( function() {
 	  if (owlcar.length) {
 		  owlcar.each(function () {
 			  var $owl = $(this);
-			  var itemsData = $owl.data('items');
+			  var itemsData = 1;
 			  var autoplayData = $owl.data('autoplay');
 			  var autoPlayTimeoutData = $owl.data('autoplaytimeout');
 			  var dotsData = $owl.data('dots');
@@ -139,6 +139,11 @@ $(document).ready( function() {
 								stagePadding:0
 						  },
 						  1000:{
+								items: 1,
+								margin: 30,
+								items:itemsDesktopData
+						  },
+						  2000:{
 								items: 1,
 								margin: 30,
 								items:itemsDesktopData
