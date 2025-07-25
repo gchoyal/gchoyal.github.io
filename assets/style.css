@@ -841,6 +841,7 @@ right: 0 !important;
   top: 40px;
   right: 64px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .full-menu .close-icon img{
