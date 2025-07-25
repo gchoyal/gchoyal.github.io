@@ -483,6 +483,7 @@ header.whitev{
 
 .hero .outter{
 	position: relative;
+	z-index: 9;
 }
 
 .hero-title{
@@ -1730,6 +1731,10 @@ p.copy-right {
     display: none;
 }
 
+.banner-btns{
+	display: flex;
+}
+
 /*------------------------ Responsive ------------------------*/   
 
 
@@ -2196,6 +2201,18 @@ form {
 
 .work-content .article-title {
   font-size: 45px !important;
+}
+
+.banner-btns{
+	display: block;
+}
+
+.chat-btn{
+	display: none;
+}
+
+.site-btn{
+	width: 100%;
 }
 
 }/* Max 500px end */
