@@ -203,7 +203,6 @@ header.black .logo img{
 	height: 60px;
     width: 60px;
 	border-bottom-right-radius: 20px;
-    border: 3px solid #ffffff;
     border-top-left-radius: 20px;
 }
 
@@ -1656,13 +1655,13 @@ p.copy-right {
 
 .review-content .review-text {
     font-size: 21px;
-    color: #ababab;
+    color: #fff;
     line-height: 1.5;
 }	
 
 .linkedin-link {
   font-size: 0.875rem;
-  color: #0077b5 !important;
+  color: #ffd600 !important;
   text-decoration: none;
 }
 
@@ -1707,7 +1706,6 @@ p.copy-right {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-bottom-right-radius: 20px;
-    border: 3px solid #ffffff;
     border-top-left-radius: 20px;
 }
 
