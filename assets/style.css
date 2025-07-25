@@ -130,6 +130,7 @@ h6{
 	font-family: 'Gilroy';
     font-weight: 600;
     font-size: 20px;
+	top: 2px;
 }
 
 .site-btn:hover {
@@ -692,6 +693,12 @@ right: 0 !important;
 
 .full-menu .outter{
   height: 100vh;
+  display: table;
+}
+
+.full-menu .inner {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .full-menu .site-menu li a{
@@ -703,12 +710,16 @@ right: 0 !important;
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
+  line-height: 1;
+	padding: 10px 0;
+    display: inline-block;
 } 
 
 .full-menu .site-menu li a.site-btn {
     color: #fff;
     font-size: 21px;
     margin-top: 25px;
+	padding: 13px 65px 13px 28px;
 }
 
 .darkness .full-menu .site-menu li a{
