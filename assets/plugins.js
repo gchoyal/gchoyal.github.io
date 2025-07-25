@@ -30,7 +30,6 @@ $(document).ready( function() {
 	
 	window.onbeforeunload = function () { window.scrollTo(0, 0); }
 
-	PortfolioGrids();
 	full_menu();
 	typed();
 	cform();
@@ -152,23 +151,6 @@ $(document).ready( function() {
 			  , });
 		  });
 	  }
-
-	}
-
-	//PORTFOLIO GRIDS
-	function PortfolioGrids() {
-
-		  $(".filter-icon").on("click", function() {
-			$('.portfolio_filter').addClass('show');  
-			$('.portfolio').addClass('zendex');        
-		  });
-
-		  $(".portfolio_filter").on("click", function (event) {
-			if (!$(event.target).is(".portfolio_filter ul li a")) {
-					$('.portfolio_filter').removeClass('show');
-					return false;
-				}
-			}); 
 
 	}
 
