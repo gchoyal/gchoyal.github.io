@@ -1645,8 +1645,7 @@ p.copy-right {
 	max-height: 40px;
     width: 100%;
     object-fit: contain;
-    object-position: right;
-    margin-bottom: 15px;
+    object-position: left;
 }
 
 .client-photo img {
