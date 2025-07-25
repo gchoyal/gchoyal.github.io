@@ -70,38 +70,12 @@ h6{
   color:#fff;
 }
 
-.site-btn{
-  font-family: 'Gilroy';
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 15px;
-  border: 0;
-  background: #000;
-  color: #fff;
-  padding: 13px 28px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-	min-width: 164px;
-    text-align: center;
-}
-
 .slider-images{
   height: 100vh;
 }
 
 .vegas-timer{
   display: none;
-}
-
-.darkness .site-btn{
-  color: #000;
-  background: #fff;
 }
 
 .my-sign {
@@ -111,60 +85,57 @@ h6{
     padding: 15px;
 }
 
+.site-btn {
+	color: #fff;
+	padding: 13px 65px 13px 28px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	min-width: 164px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1DA1F2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.5s;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+	font-weight: 600;
+}
+
+.site-btn:hover {
+    background: black;
+}
 
 .site-btn:focus{
   outline: 0;
   color: white;
 }
 
-
-.form-btn{
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.site-btn:hover{
-  color: #fff;
-}
-
-.darkness .site-btn:hover{
-  color: #000;
-}
-
-
-
-
-
-.site-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #1DA1F2;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.site-btn:hover {
-    transform: translateX(5px);
-}
-
 .site-btn::after {
     content: '→';
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 43px;
+    height: 43px;
     background-color: #000000;
-    border-radius: 50%;
+    border-radius: 85px;
     text-align: center;
     line-height: 20px;
     color: #FFFFFF;
     margin-left: 10px;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    right: 3px;
 }
 
 
