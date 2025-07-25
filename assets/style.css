@@ -981,7 +981,7 @@ section.news-list article:last-child {
   z-index: 2;
 }
 
-.portfolio_filter ul{
+.portfolio_filter{
   left: 0;
   transform-origin: top left;
   -webkit-transform: rotate(-90deg);
@@ -1904,7 +1904,7 @@ p.copy-right {
     -o-transition: all ease 0.3s;
 }
 
-  .portfolio_filter ul{   
+  .portfolio_filter{   
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -1914,6 +1914,7 @@ p.copy-right {
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
   }
+  
   
   .portfolio_filter ul li{
     float: none;
