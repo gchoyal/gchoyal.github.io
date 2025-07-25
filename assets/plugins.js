@@ -115,16 +115,18 @@ $(document).ready( function() {
 			  var itemsTabletData = $owl.data('items-tablet');
 			  var itemsTabletSmallData = $owl.data('items-tablet-small');
 			  $owl.owlCarousel({
-					items: itemsData
-				  , dots: dotsData
-				  , nav: navData
-				  , margin: marginData
-				  , loop: true
-				  , stagePadding: stagePaddingData
-				  , autoplay: autoplayData
-				  , autoplayTimeout: autoPlayTimeoutData
-				  , navText: ["←","→"]
-				  , responsive:{
+					items: itemsData,
+				  dots: dotsData,
+				  nav: navData,
+				  animateOut: 'slideOutDown',
+					animateIn: 'flipInX',
+				  margin: marginData,
+				  loop: true,
+				  stagePadding: stagePaddingData,
+				  autoplay: autoplayData,
+				  autoplayTimeout: autoPlayTimeoutData,
+				  navText: ["←","→"],
+				  responsive:{
 						  0:{
 								items: 1,
 								margin: 10,
