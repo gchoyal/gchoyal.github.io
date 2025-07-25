@@ -1639,6 +1639,14 @@ p.copy-right {
     border-radius: 35px;
 }
 
+.review-box .rating-icon{
+	max-height: 40px;
+    width: 100%;
+    object-fit: contain;
+    object-position: right;
+    margin-bottom: 15px;
+}
+
 .client-photo img {
   border: 2px solid #0077b5; /* LinkedIn blue */
   object-fit: cover;
