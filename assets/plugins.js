@@ -122,15 +122,21 @@ $(document).ready( function() {
 				  , navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"]
 				  , responsive:{
 						  0:{
-							  items:itemsTabletSmallData,
-							  stagePadding:0
+								items: 1,
+								margin: 10,
+								items:itemsTabletSmallData,
+								stagePadding:0
 						  },
 						  600:{
-							  items:itemsTabletData,
-							  stagePadding:0
+								items: 1,
+								margin: 20,
+								items:itemsTabletData,
+								stagePadding:0
 						  },
 						  1000:{
-							  items:itemsDesktopData
+								items: 1,
+								margin: 30,
+								items:itemsDesktopData
 						  }
 					  }
 			  , });
