@@ -1652,6 +1652,10 @@ p.copy-right {
     object-position: left;
 }
 
+.review-box .rating-auth p{
+	line-height: 1;
+}
+
 .client-photo img {
   border: 2px solid #0077b5; /* LinkedIn blue */
   object-fit: cover;
@@ -2229,9 +2233,6 @@ form {
 	display: none;
 }
 
-.site-btn{
-	width: 100%;
-}
 
 .banner-btns .site-btn{
 	margin: 0;
