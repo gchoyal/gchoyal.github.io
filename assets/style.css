@@ -479,19 +479,10 @@ header.whitev{
 .outter{
   height: 100%;
   width: 100%;
-  display: table;
 }
 
 .hero .outter{
-	z-index: 7;
 	position: relative;
-}
-
-.inner{
-  height: 100%;
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .hero-title{
@@ -534,18 +525,6 @@ header.whitev{
     font-size: 45px;
 	display: block;
 }
-
-
-
-.owl-carousel, .owl-stage-outer {
-  overflow: hidden;
-}
-
-.review-box {
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
 
 .owl-theme .owl-nav.disabled+.owl-dots {
   margin-top: 45px;
