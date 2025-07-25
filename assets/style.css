@@ -1714,13 +1714,20 @@ p.copy-right {
 }
 
 span.element {
-    min-width: 200px;
+    width: 210px;
     display: inline-block;
     background: #eee;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 80%;
+    font-weight: 900;
+    margin-top: 10px;
+    height: 34px;
+    font-style: italic;
+    -webkit-font-smoothing: auto;
 }
 
 /*------------------------ Responsive ------------------------*/   
