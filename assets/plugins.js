@@ -118,8 +118,7 @@ $(document).ready( function() {
 					items: itemsData,
 				  dots: dotsData,
 				  nav: navData,
-				  animateOut: 'slideOutDown',
-					animateIn: 'flipInX',
+				  animateOut: 'fadeOut'
 				  margin: marginData,
 				  loop: true,
 				  stagePadding: stagePaddingData,
