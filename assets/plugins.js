@@ -117,6 +117,7 @@ $(document).ready( function() {
 					items: itemsData,
 				  dots: dotsData,
 				  nav: navData,
+				  autoplayHoverPause:true,
 				  animateOut: 'fadeOut',
 				  margin: marginData,
 				  loop: true,
