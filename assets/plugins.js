@@ -119,6 +119,7 @@ $(document).ready( function() {
 				  nav: navData,
 				  autoplayHoverPause:true,
 				  animateOut: 'fadeOut',
+				  smartSpeed:200,
 				  margin: marginData,
 				  loop: true,
 				  stagePadding: stagePaddingData,
