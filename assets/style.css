@@ -548,7 +548,7 @@ header.whitev{
 }
 
 .owl-theme .owl-nav.disabled+.owl-dots {
-  margin-top: 45px;
+  margin-top: 10px;
 }
 
 .subhero-title span{
@@ -1704,7 +1704,12 @@ p.copy-right {
     font-size: 19px;
     color: #fff;
     line-height: 1.5;
-}	
+    height: 260px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+}
 
 .linkedin-link {
   font-size: 0.875rem;
