@@ -122,6 +122,7 @@ $(document).ready( function() {
 				  smartSpeed:50,
 				  margin: marginData,
 				  loop: true,
+				  autoHeight:true,
 				  stagePadding: stagePaddingData,
 				  autoplay: autoplayData,
 				  autoplayTimeout: autoPlayTimeoutData,
