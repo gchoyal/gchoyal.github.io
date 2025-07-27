@@ -9065,6 +9065,9 @@ a.text-gray-dark:hover {
   display: inline-block;
   zoom: 1;
 }
+.owl-theme .owl-dots .owl-dot:focus {
+  outline: none;
+}
 .owl-theme .owl-dots .owl-dot span {
   width: 10px;
   height: 10px;
@@ -9077,7 +9080,7 @@ a.text-gray-dark:hover {
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #869791;
+  background: #000;
 }
 
 
