@@ -205,6 +205,10 @@ header.black{
   -moz-transition: all ease 0.3s 0.3s;
   -ms-transition: all ease 0.3s 0.3s;
   -o-transition: all ease 0.3s 0.3s;
+      background: rgb(255 255 255 / 68%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ffffff;
 }
 
 header.black .logo img{
@@ -617,6 +621,7 @@ header.whitev{
 
 .hamburger{
   float: right;
+  margin-top: 18px;
 }
 
 .nav-icon {
@@ -1973,7 +1978,6 @@ p.copy-right {
 
 
 .hamburger {
-  background: #fff;
   padding: 8px;
   transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
@@ -2037,6 +2041,16 @@ header.black .logo{
 /* Max 768px  */
 @media only screen and (max-width: 768px) {
 
+header.black .logo img{
+	height: 45px;
+    width: 45px;
+	border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.hamburger{
+	    margin-top: 8px;
+}
   .subhero-title {
     font-size: 50px;
 }

@@ -46,7 +46,7 @@ $(document).ready( function() {
 			canvas.height = window.innerHeight;
 
 			const snippets = [
-			  "WordPress", "WooCommerce", "Web App", "Website", "PHP", "Custom Design"
+			  "WordPress", "WooCommerce", "Elementor", "WP Backery", "SEO", "Custom Design"
 			];
 			const floatingCodes = [];
 
