@@ -1215,6 +1215,11 @@ footer{
 
 .clients .client img{
   width: 80%;
+  filter: grayscale(1);
+}
+
+.clients .client:hover img{
+	filter: grayscale(0);
 }
 
 .services .sercol{
