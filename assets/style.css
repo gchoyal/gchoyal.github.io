@@ -161,6 +161,14 @@ h6{
   outline: 0;
 }
 
+.site-btn-black {
+	background: black;
+}
+.site-btn-black::after {
+	background: #ffffff;
+    color: black !important;
+}
+
 
 li{
   list-style: none;
