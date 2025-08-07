@@ -1199,6 +1199,7 @@ footer{
   border-right: solid 1px #dfdfdf;
   border-bottom: solid 1px #dfdfdf;
   padding:60px 30px;
+  align-content: center;
 }
 
 .clients .client:first-child{
