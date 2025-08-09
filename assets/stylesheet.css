@@ -71,3 +71,5 @@
   font-display: swap;
   src: url(webfonts/sign-font.woff2) format('woff2');
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');

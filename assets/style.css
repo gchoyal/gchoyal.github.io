@@ -5,8 +5,12 @@
 /*------------------------ 1 Body and Core Css ------------------------*/   
 
 body{
-  font-family: 'Gilroy';
+  /*font-family: 'Gilroy';*/
   background: #000;
+   font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body.darkness{
@@ -52,6 +56,10 @@ body.darkness{
 p{
   line-height: 30px;
     font-size: 18px;
+}
+
+h1, h2{
+	font-family: 'Gilroy';
 }
 
 h3{
