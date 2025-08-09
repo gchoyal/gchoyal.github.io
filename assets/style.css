@@ -320,6 +320,10 @@ header.whitev{
   line-height: 45px;
 }
 
+.social ul li a:hover{
+	color: #3F51B5;
+}
+
 .social ul li, .portfolio_filter ul>li{
   opacity: 0;
   transform: translateX(30px);
@@ -688,6 +692,10 @@ header.black .nav-icon span{
   background: #000;
 }
 
+header.black .nav-icon:hover span{
+  background: #3F51B5;
+}
+
 .darkness header.black .nav-icon span{
   background: #fff;
 }
@@ -761,7 +769,9 @@ right: 0 !important;
     color: #fff;
     font-size: 21px;
     margin-top: 25px;
-	padding: 13px 65px 13px 28px;
+    padding: 13px 65px 13px 28px;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 
 .darkness .full-menu .site-menu li a{
@@ -829,7 +839,7 @@ right: 0 !important;
 }
 
 .full-menu .right-content ul li:first-child {
-    color: #818181;
+    color: #3F51B5;
     font-weight: 400;
     font-size: 27px;
     line-height: 35px;
@@ -1775,6 +1785,7 @@ p.copy-right {
     font-style: normal;
     font-size: 45px;
     line-height: 1;
+	    color: #3f51b5;
 }
 
 .founder-msg .authorbox{
