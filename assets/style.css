@@ -1064,6 +1064,10 @@ section.news-list article:last-child {
   margin-right: 30px;
 }
 
+.portfolio_filter ul li a:hover{
+	color: #3F51B5;
+}
+
 
 .darkness .portfolio_filter ul li a{
   color: #fff;
