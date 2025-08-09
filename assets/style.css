@@ -31,13 +31,14 @@ body.darkness{
   position: absolute;
   width: 100%;
   min-height: 100vh; /* IE9+ */
-  height: 100vw\9; /* IE8 fallback */
+  min-height: 100vw\9; /* IE8 fallback */
   top: 0;
   left: 0;
   opacity: .85;
-  filter: alpha(opacity=70); /* IE8 fallback */
+  filter: alpha(opacity=85); /* IE8 fallback */
   z-index: 6;
   height: 100%;
+  background-color: white;
 }
 
 #particles-js canvas, div#code-js canvas{
