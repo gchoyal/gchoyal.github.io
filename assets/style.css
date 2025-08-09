@@ -1167,13 +1167,16 @@ footer{
   font-style: normal;
 }
 
-.services .ser{
-  text-align: center;
-  padding:60px;
-  border: solid 1px #dfdfdf;
-  background-image: url(decor-1.svg);
+.services .ser {
+    text-align: center;
+    padding: 60px;
+    border: solid 5px #ffffff;
+    background-image: url(decor-1.svg);
     background-position: -84px -55px;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-color: #3f51b5;
+    color: white;
+    border-radius: 35px;
 }
 
 .services .ser i{
