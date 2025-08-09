@@ -181,7 +181,7 @@ figure{
 header{
   position: absolute;
   top: 0;
-  padding: 15px 45px;
+  padding: 10px 45px;
   width: 100%;
 }
 
@@ -628,8 +628,9 @@ header.whitev{
 /* Nav Icon */
 
 .hamburger{
-  float: right;
-  margin-top: 18px;
+	float: right;
+	margin-top: 18px;
+    margin-right: 26px;
 }
 
 .nav-icon {
@@ -1818,6 +1819,11 @@ p.copy-right {
 
 .banner-btns .site-btn{
 	margin-right: 15px;
+}
+
+.top-request-quote{
+	margin-top: 5px;
+	float: right;
 }
 
 /*------------------------ Responsive ------------------------*/   
