@@ -1253,9 +1253,6 @@ footer{
   filter: grayscale(1);
 }
 
-.clients .client:hover img{
-	filter: grayscale(0);
-}
 
 .services .sercol{
   padding: 0;
