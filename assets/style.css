@@ -1890,9 +1890,24 @@ p.copy-right {
 }
 
 
-	.white .hero{
-		padding-bottom: 60px;
-	}
+.white .hero{
+	padding-bottom: 60px;
+}
+
+.ser-plugin{
+	border-radius: 35px;
+	overflow: hidden;
+}
+
+.ser-plugin .inner-content{
+	padding: 30px;
+	background-color: rgb(63, 81, 181);
+}
+
+.ser-plugin img{
+	height: 250px;
+	width: 100%;
+}
 
 /*------------------------ Responsive ------------------------*/   
 
