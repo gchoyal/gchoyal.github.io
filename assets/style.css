@@ -2237,6 +2237,12 @@ header.black .logo img{
 		    padding: 20px;
 	}
 	
+	.radius-img-right {
+		border-top-right-radius: 30px;
+		border-bottom-left-radius: 30px;
+		border-top-left-radius: 30px;
+	}
+	
 
 }
 
