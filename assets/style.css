@@ -2247,6 +2247,20 @@ header.black .logo img{
         padding-top: 100px;
     }
 	
+	.full-menu .site-menu li a {
+        font-size: 26px;
+    }
+	.full-menu .site-menu li a.site-btn{
+		font-size: 17px;
+		padding: 13px 53px 13px 20px;
+	}
+	
+	.full-menu .site-menu li a.site-btn::after{
+		width: 39px;
+		height: 39px;
+	}
+	
+	
 
 }
 
