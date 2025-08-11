@@ -179,6 +179,14 @@ h6{
     color: black !important;
 }
 
+.site-btn-white {
+	background: white;
+}
+.site-btn-white::after {
+	background: #000;
+    color: #fff !important;
+}
+
 
 li{
   list-style: none;
@@ -1144,8 +1152,17 @@ footer{
 
 .background-primary{
 	background-color: #3f51b5;
+	color: white;
 }
 
+.background-primary a, .background-primary .contact-info span{
+	color: white;
+}
+
+.white form .background-primary .form-group .placeholder{
+	color: white;
+}
+	
 /*------------------------ About ------------------------*/   
 
 .section-title .title{
