@@ -302,6 +302,9 @@ header.whitev{
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
+  background: url(hero-back.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
 
 .white .down-arrow {
