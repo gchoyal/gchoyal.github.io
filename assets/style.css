@@ -2203,6 +2203,19 @@ header.black .logo img{
 	  height: 55px;
 	}
 	
+	.handwriting-text{
+		font-size: 33px;
+	}
+	.services .ser{
+		padding: 25px 25px 35px 25px;
+		background-size: 60px;
+		background-position: -33px -4px;
+	}
+	
+	.services .ser i {
+		font-size: 90px;
+	}
+
 }
 
 /* Max 500px  */
