@@ -2243,6 +2243,10 @@ header.black .logo img{
 		border-top-left-radius: 30px;
 	}
 	
+	.hero {
+        padding-top: 100px;
+    }
+	
 
 }
 
