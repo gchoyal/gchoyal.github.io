@@ -1265,6 +1265,9 @@ footer{
 
 .clients .client img{
   width: 80%;
+  height: 85px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 
@@ -2194,6 +2197,10 @@ header.black .logo img{
 	.review-box .rating-icon{
 		object-position: center;
 		margin-bottom: 15px;
+	}
+	
+	.clients .client img{
+	  height: 55px;
 	}
 	
 }
