@@ -1156,10 +1156,9 @@ footer{
 	color: white;
 }
 
-.background-primary a, .background-primary .contact-info span, .background-primary p, .background-primary .form-group .placeholder {
+.background-primary a, .background-primary .contact-info span, .background-primary p, .background-primary .form-group .placeholder, .background-primary form .inp {
     color: white !important;
 }
-
 	
 /*------------------------ About ------------------------*/   
 
