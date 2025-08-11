@@ -1889,6 +1889,11 @@ p.copy-right {
     align-content: end;
 }
 
+
+	.white .hero{
+		padding-bottom: 60px;
+	}
+
 /*------------------------ Responsive ------------------------*/   
 
 
@@ -2224,9 +2229,6 @@ header.black .logo img{
 		margin-bottom: 60px;
 	}
 	
-	.white .hero{
-		padding-bottom: 60px;
-	}
 
 }
 
