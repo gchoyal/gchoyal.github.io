@@ -1163,6 +1163,10 @@ footer{
 .background-primary form .form-group:after {
     background: #fff !important;
 }
+
+.white form textarea.inp {
+    height: 50px;
+}
 	
 /*------------------------ About ------------------------*/   
 
