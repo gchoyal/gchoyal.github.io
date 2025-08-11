@@ -181,6 +181,7 @@ h6{
 
 .site-btn-white {
 	background: white;
+	color: black;
 }
 .site-btn-white::after {
 	background: #000;
@@ -1155,13 +1156,10 @@ footer{
 	color: white;
 }
 
-.background-primary a, .background-primary .contact-info span{
-	color: white;
+.background-primary a, .background-primary .contact-info span, .background-primary p, .background-primary .form-group .placeholder {
+    color: white !important;
 }
 
-.white form .background-primary .form-group .placeholder{
-	color: white;
-}
 	
 /*------------------------ About ------------------------*/   
 
