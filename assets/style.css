@@ -586,13 +586,6 @@ header.whitev{
   margin-top: 10px;
 }
 
-.subhero-title span{
-  opacity: .5;
-      font-size: 60%;
-    line-height: 1;
-    display: block;
-}
-
 .hero-text{
   font-weight: 600;
   font-style: normal;
@@ -1176,10 +1169,6 @@ footer{
 
 .darkness .section-title .title {
   color: #fff;
-}
-
-.section-title span{
-  font-size: 20px;
 }
 
 .flaticon{
