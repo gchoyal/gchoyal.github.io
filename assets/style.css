@@ -1157,11 +1157,11 @@ footer{
 }
 
 .background-primary form .inp{
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff !important;
 }
 
 .background-primary form .form-group:after {
-    background: #fff;
+    background: #fff !important;
 }
 	
 /*------------------------ About ------------------------*/   
