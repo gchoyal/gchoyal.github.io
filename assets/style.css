@@ -1912,6 +1912,10 @@ p.copy-right {
 	  margin-top: 40px;
 	  margin-bottom: 40px;
 	}
+	
+	.fluid-back-line{
+		    padding: 30px;
+	}
       
 }
 
@@ -2227,6 +2231,10 @@ header.black .logo img{
 	
 	.bottom_90 {
 		margin-bottom: 60px;
+	}
+	
+	.fluid-back-line{
+		    padding: 20px;
 	}
 	
 
