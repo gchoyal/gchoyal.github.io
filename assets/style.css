@@ -2215,6 +2215,14 @@ header.black .logo img{
 	.services .ser i {
 		font-size: 90px;
 	}
+	
+	.padding_120 {
+		padding: 60px 0;
+	}
+	
+	.bottom_90 {
+		margin-bottom: 60px;
+	}
 
 }
 
