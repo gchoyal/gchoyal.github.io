@@ -1912,6 +1912,12 @@ p.copy-right {
     width: 100%;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
+	border: 1px solid #a5a5a5;
+    border-bottom: 0;
+}
+
+.ser-plugin .inner-content .inner-content-text{
+	min-height: 200px;
 }
 
 /*------------------------ Responsive ------------------------*/   
