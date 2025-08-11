@@ -1248,10 +1248,11 @@ footer{
 
 .clients .client{
   text-align: center;
-  border-right: solid 1px #dfdfdf;
-  border-bottom: solid 1px #dfdfdf;
+  border-right: solid 1px #fff;
+  border-bottom: solid 1px #fff;
   padding:60px 30px;
   align-content: center;
+  background: #dfdfdf;
 }
 
 .clients .client:first-child{
@@ -1260,10 +1261,6 @@ footer{
 
 .clients .client:last-child, .clients .client:nth-child(4), .clients .client:nth-last-child(5), .clients .client:nth-last-child(9){
   border-right: 0px;
-}
-
-.clients .client:nth-last-child(1), .clients .client:nth-last-child(2), .clients .client:nth-last-child(3), .clients .client:nth-last-child(4){
-  border-bottom: 0px;
 }
 
 .clients .client img{
@@ -2143,7 +2140,6 @@ header.black .logo img{
 }
 .clients .client{
 	padding: 20px 15px;
-	border: solid 1px #dfdfdf !important;
 }
 
 .article-title {
