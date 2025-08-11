@@ -2223,6 +2223,10 @@ header.black .logo img{
 	.bottom_90 {
 		margin-bottom: 60px;
 	}
+	
+	.white .hero{
+		padding-bottom: 60px;
+	}
 
 }
 
