@@ -1155,6 +1155,14 @@ footer{
 .background-primary a, .background-primary .contact-info span, .background-primary p, .background-primary .form-group .placeholder, .background-primary form .inp {
     color: white !important;
 }
+
+.background-primary form .inp{
+    border-bottom: 1px solid #ffffff;
+}
+
+.background-primary form .form-group:after {
+    background: #fff;
+}
 	
 /*------------------------ About ------------------------*/   
 
