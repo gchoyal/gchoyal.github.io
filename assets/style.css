@@ -1166,6 +1166,8 @@ footer{
 
 .white form textarea.inp {
     height: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 	
 /*------------------------ About ------------------------*/   
@@ -1293,7 +1295,7 @@ form .inp{
   font-weight: 300;
   color: #fff;
   font-size: 18px;
-  line-height: 46px;
+  line-height: 21px;
   height: 46px;
   background: transparent;
   outline: none;
