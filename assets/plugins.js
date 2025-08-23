@@ -101,61 +101,76 @@ $(document).ready( function() {
 	function carousel_slider() {  
 	  var owlcar = $('.owl-carousel');
 	  if (owlcar.length) {
-		  owlcar.each(function () {
-			  var $owl = $(this);
-			  var itemsData = 1;
-			  var autoplayData = $owl.data('autoplay');
-			  var autoPlayTimeoutData = $owl.data('autoplaytimeout');
-			  var dotsData = $owl.data('dots');
-			  var navData = $owl.data('nav');
-			  var marginData = $owl.data('margin');
-			  var stagePaddingData = $owl.data('stagepadding');
-			  var itemsDesktopData = $owl.data('items-desktop');
-			  var itemsTabletData = $owl.data('items-tablet');
-			  var itemsTabletSmallData = $owl.data('items-tablet-small');
-			  $owl.owlCarousel({
-					items: itemsData,
-				  dots: dotsData,
-				  nav: navData,
-				  autoplayHoverPause:true,
-				  animateOut: 'fadeOut',
-				  smartSpeed:50,
-				  margin: marginData,
-				  loop: true,
-				  autoHeight:true,
-				  stagePadding: stagePaddingData,
-				  autoplay: autoplayData,
-				  autoplayTimeout: autoPlayTimeoutData,
-				  navText: ["←","→"],
-				  responsive:{
-						  0:{
-								items: 1,
-								margin: 10,
-								items:itemsTabletSmallData,
-								stagePadding:0
-						  },
-						  600:{
-								items: 1,
-								margin: 20,
-								items:itemsTabletData,
-								stagePadding:0
-						  },
-						  1000:{
-								items: 1,
-								margin: 30,
-								items:itemsDesktopData
-						  },
-						  2000:{
-								items: 1,
-								margin: 30,
-								items:itemsDesktopData
-						  }
-					  }
-			  , });
-		  });
-	  }
+		owlcar.each(function () {
+		  var $owl = $(this);
+		  var itemsData = 1;
+		  var autoplayData = $owl.data('autoplay');
+		  var autoPlayTimeoutData = $owl.data('autoplaytimeout');
+		  var dotsData = $owl.data('dots');
+		  var navData = $owl.data('nav');
+		  var marginData = $owl.data('margin');
+		  var stagePaddingData = $owl.data('stagepadding');
+		  var itemsDesktopData = $owl.data('items-desktop');
+		  var itemsTabletData = $owl.data('items-tablet');
+		  var itemsTabletSmallData = $owl.data('items-tablet-small');
 
+		  $owl.owlCarousel({
+			items: itemsData,
+			dots: dotsData,
+			nav: navData,
+			autoplayHoverPause: true,
+			animateOut: 'fadeOut',
+			smartSpeed: 50,
+			margin: marginData,
+			loop: true,
+			autoHeight: true,
+			stagePadding: stagePaddingData,
+			autoplay: autoplayData,
+			autoplayTimeout: autoPlayTimeoutData,
+			navText: ["←", "→"],
+			responsive: {
+			  0: {
+				items: itemsTabletSmallData,
+				margin: 10,
+				stagePadding: 0
+			  },
+			  600: {
+				items: itemsTabletData,
+				margin: 20,
+				stagePadding: 0
+			  },
+			  1000: {
+				items: itemsDesktopData,
+				margin: 30
+			  },
+			  2000: {
+				items: itemsDesktopData,
+				margin: 30
+			  }
+			},
+
+			// ✅ Accessibility Fixes
+			onInitialized: function (event) {
+			  setTimeout(() => {
+				var dots = $owl.find('.owl-dot');
+				dots.each(function (index) {
+				  $(this).attr('aria-label', 'Go to slide ' + (index + 1));
+				});
+				// Mark the first dot as current
+				dots.removeAttr('aria-current');
+				dots.eq(event.item.index).attr('aria-current', 'true');
+			  }, 50);
+			},
+			onChanged: function (event) {
+			  var dots = $owl.find('.owl-dot');
+			  dots.removeAttr('aria-current');
+			  dots.eq(event.item.index).attr('aria-current', 'true');
+			}
+		  });
+		});
+	  }
 	}
+
 
 	// FULL MENU
 	function full_menu() {
