@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gchoyal.com/sitemap.xml

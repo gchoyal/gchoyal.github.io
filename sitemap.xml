@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://gchoyal.com/</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About / Meet the Developer -->
+  <url>
+    <loc>https://gchoyal.com/meet-the-developer</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Plugin Lab -->
+  <url>
+    <loc>https://gchoyal.com/plugin-lab</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact / Say Hello -->
+  <url>
+    <loc>https://gchoyal.com/say-hello</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dev Notes (Blog) -->
+  <url>
+    <loc>https://gchoyal.com/dev-notes</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- External Link (Calendly) -->
+  <url>
+    <loc>https://calendly.com/gchoyal/web-design</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
