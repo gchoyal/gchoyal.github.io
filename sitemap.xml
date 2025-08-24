@@ -36,11 +36,4 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- External Link (Calendly) -->
-  <url>
-    <loc>https://calendly.com/gchoyal/web-design</loc>
-    <lastmod>2025-08-23</lastmod>
-    <priority>0.5</priority>
-  </url>
-
 </urlset>
