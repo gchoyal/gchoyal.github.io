@@ -56,15 +56,35 @@
 	<meta name="msapplication-TileColor" content="#3F51B5"> <!-- Windows tiles -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#3F51B5"> <!-- iOS Safari -->
 	
+	<!-- ✅ Preload critical fonts -->
 	<link rel="preload" as="font" href="/assets/Gilroy-ExtraBold.woff2" type="font/woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/Gilroy-Black.woff2" type="font/woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/Inter.woff2" type="font/woff2" crossorigin>
 
+	<!-- ✅ Inline small critical CSS (reset/margins/hero etc.) -->
+	<style>
+	  body { margin:0; font-family:'Inter', sans-serif; }
+	  .hero img { max-height:150px; border-radius:13px; }
+	</style>
 
-	<link rel="stylesheet" href="assets/fontawesome-all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/flaticon.css" />
-	<link rel="stylesheet" href="assets/stylesheet.css">
-	<link rel="stylesheet" href="assets/style.css">
+	<!-- ✅ Async load non-critical CSS -->
+	<link rel="preload" href="assets/style.css" as="style">
+	<link rel="stylesheet" href="assets/style.css" media="print" onload="this.media='all'">
+
+	<link rel="preload" href="assets/assets.css" as="style">
+	<link rel="stylesheet" href="assets/assets.css" media="print" onload="this.media='all'">
+
+	<link rel="stylesheet" href="assets/fontawesome-all.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/flaticon.css" media="print" onload="this.media='all'">
+
+	<!-- ✅ Fallback for no-JS users -->
+	<noscript>
+	  <link rel="stylesheet" href="assets/style.css">
+	  <link rel="stylesheet" href="assets/assets.css">
+	  <link rel="stylesheet" href="assets/fontawesome-all.min.css">
+	  <link rel="stylesheet" href="assets/flaticon.css">
+	</noscript>
+
 
 </head> 
 <body class="white"> 
