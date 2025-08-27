@@ -1931,7 +1931,7 @@ p.copy-right {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #25d366;
+      background-image: url('wa.png');
       color: white;
       border-radius: 50%;
       width: 60px;
@@ -2006,6 +2006,7 @@ p.copy-right {
       font-size: 18px;
       display: flex;
       align-items: center;
+	  background-image: url('send.png');
     }
     .chat-input button:hover {
       background: #20b358;
