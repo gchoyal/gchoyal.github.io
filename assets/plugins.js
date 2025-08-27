@@ -333,6 +333,25 @@ $(document).ready( function() {
 		var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return re.test(email);
 	}
+	
+	// Toggle Chat Bubble
+      $(".whatsapp-float").click(function () {
+        $(".chat-bubble").fadeIn();
+      });
+      $(".close-btn").click(function () {
+        $(".chat-bubble").fadeOut();
+      });
+
+      // Send Message to WhatsApp
+      $("#sendBtn").click(function () {
+        let msg = $("#msgInput").val().trim();
+        if (msg === "") {
+          msg = "Hi Girdhari, I'm looking for a WordPress developer. Are you available?";
+        }
+        let phone = "918435155366"; // Without +
+        let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+        window.open(url, "_blank");
+      });
 
 });
 

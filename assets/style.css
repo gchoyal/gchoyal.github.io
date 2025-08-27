@@ -1926,6 +1926,91 @@ p.copy-right {
 	min-height: 174px;
 }
 
+/* Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    /* Chat Bubble */
+    .chat-bubble {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      background: #e5ddd5;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      z-index: 1001;
+    }
+
+    /* Chat Header */
+    .chat-header {
+      background: #075e54;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+    .chat-header .close-btn {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    /* Message Area */
+    .chat-body {
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Input Area */
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+      background: white;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+    .chat-input button {
+      background: #25d366;
+      border: none;
+      padding: 0 15px;
+      cursor: pointer;
+      color: white;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    .chat-input button:hover {
+      background: #20b358;
+    }
+	
 /*------------------------ Responsive ------------------------*/   
 
 
