@@ -2014,6 +2014,17 @@ p.copy-right {
 		width: 45px;
 	}
 	
+.contact{
+	background-image: url(../assets/g-image.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 400px;
+}	
+
+.about-hero{
+	align-content: end;
+}
+	
 /*------------------------ Responsive ------------------------*/   
 
 
