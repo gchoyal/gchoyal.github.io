@@ -1280,7 +1280,7 @@ footer{
 form .form-group{
   width: 100%;
   position: relative;
-  margin-bottom: 46px;
+  margin-bottom: 25px;
 }
 
 form .inp{
@@ -1294,9 +1294,9 @@ form .inp{
   width: 100%;
   font-weight: 300;
   color: #fff;
-  font-size: 18px;
-  line-height: 21px;
-  height: 46px;
+  font-size: 14px;
+  line-height: 16px;
+  height: 35px;
   background: transparent;
   outline: none;
   padding: 0 0 3px;
@@ -1335,7 +1335,7 @@ form .form-group .placeholder {
   position: absolute;
   top: 4px;
   left: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300;
   color: #fff;
   letter-spacing: -.009em;
@@ -2024,9 +2024,9 @@ p.copy-right {
 }
 
 .home-banner form.contact-form {
-    padding: 25px;
-    background: #fff;
-    border-radius: 15px;
+    padding: 5px 20px 0;
+    background: #00000012;
+    border-radius: 5px;
     text-align: center;
 }
 
@@ -2122,6 +2122,12 @@ p.copy-right {
   .portfolio{
     min-height: 110vh;
   }
+  
+  .banner-contact ul {
+		display: inline-flex;
+		gap: 15px;
+	}
+
 
 } /* 1025px mediaget end */
 
