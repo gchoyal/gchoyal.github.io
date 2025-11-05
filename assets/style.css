@@ -1748,7 +1748,6 @@ p.copy-right {
 }
 
 .owl-carousel{
-	max-width: 600px;
     margin-left: auto;
 }
 
@@ -2022,6 +2021,13 @@ p.copy-right {
 
 .about-hero{
 	align-content: end;
+}
+
+.home-banner form.contact-form {
+    padding: 25px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
 }
 	
 /*------------------------ Responsive ------------------------*/   
