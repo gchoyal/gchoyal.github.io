@@ -2029,6 +2029,10 @@ p.copy-right {
     border-radius: 15px;
     text-align: center;
 }
+
+.banner-contact {
+    font-weight: 600;
+}
 	
 /*------------------------ Responsive ------------------------*/   
 
