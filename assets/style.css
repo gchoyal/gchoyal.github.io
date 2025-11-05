@@ -1928,8 +1928,8 @@ p.copy-right {
 /* Floating Button */
     .whatsapp-float {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 5px;
+      right: 5px;
       background-image: url('wa.png');
 	  background-size: contain;
       color: white;
@@ -2169,10 +2169,10 @@ p.copy-right {
     background: #fff;
     padding: 7px 7px;
     display: inline !important;
-    left: 45px;
+    left: 5px;
     position: fixed;
     z-index: 100;
-    bottom: 33px;
+    bottom: 5px;
     opacity: 0;
     transform: translateX(-200px);
     -webkit-transform: translateX(-200px);
