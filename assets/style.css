@@ -304,7 +304,7 @@ header.whitev{
   -o-transition: all ease 0.3s;
   background: url(background-image.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .white .down-arrow {
