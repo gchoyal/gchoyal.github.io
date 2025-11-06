@@ -2051,7 +2051,10 @@ p.copy-right {
 
 /* Max 1024px  */
 @media only screen and (max-width: 1024px) {
-
+	
+	#particles-js, div#code-js{
+		background-color: rgb(0 0 0 / 22%);
+	}
 	.social.fix{
 		position: fixed;
 		bottom: 0;
