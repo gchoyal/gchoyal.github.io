@@ -269,6 +269,7 @@ header.whitev{
 .hero-content{
   z-index: 2;
   position: relative;
+  color: white;
 }
 
 .hero-content span.little{
@@ -2070,9 +2071,10 @@ p.copy-right {
 		padding: 0;
 		margin: 0;
 		right: unset;
-		background: rgb(255 255 255 / 0%);
+		background: rgb(255 255 255 / 7%);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px); 
+		z-index: 99999999;
 	}
 	
 	.social.fix ul{
