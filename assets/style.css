@@ -1963,6 +1963,14 @@ p.copy-right {
 .banner-contact a {
     color: white;
 }
+
+.hero .contact-form .section-title .title{
+	    color: #000000;
+}
+
+.hero .contact-form .section-title {
+    color: black;
+}
 	
 /*------------------------ Responsive ------------------------*/   
 
