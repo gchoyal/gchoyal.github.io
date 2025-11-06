@@ -30,8 +30,6 @@ body.darkness{
 #particles-js, div#code-js {
   position: absolute;
   width: 100%;
-  min-height: 100vh; /* IE9+ */
-  min-height: 100vw\9; /* IE8 fallback */
   top: 0;
   left: 0;
   opacity: .85;
@@ -41,6 +39,12 @@ body.darkness{
   background-color: rgb(255 255 255 / 0%);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
+}
+
+.hero.home-banner div#code-js{
+	min-height: 100vh; /* IE9+ */
+	min-height: 100vw\9; /* IE8 fallback */
+	background-color: rgb(255 255 255 / 40%);
 }
 
 #particles-js canvas, div#code-js canvas{
@@ -258,12 +262,15 @@ header.whitev{
 
 .hero{
   width: 100%;
-  min-height: 100vh;
   z-index: 2;
   position: relative;
   top: 0;
   align-content: center;
   padding-top: 100px;
+}
+
+.hero.home-banner{
+	min-height: 100vh;
 }
 
 .hero-content{
