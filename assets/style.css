@@ -2061,11 +2061,13 @@ p.copy-right {
 	
 	.social.fix ul{
 		display: flex;
+		margin: 0;
+        padding: 0;
 	}
 	
 	.social.fix ul li{
 		flex: 1; 
-		border-right: 1px solid #ccc;
+		border-right: 1px solid hsl(0deg 0% 80% / 12%);
 		box-sizing: border-box;
 	}
 	
