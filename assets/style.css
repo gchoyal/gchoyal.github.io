@@ -39,8 +39,8 @@ body.darkness{
   z-index: 6;
   height: 100%;
   background-color: rgb(255 255 255 / 0%);
-	backdrop-filter: blur(1px);
-	-webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 }
 
 #particles-js canvas, div#code-js canvas{
