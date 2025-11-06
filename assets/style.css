@@ -786,7 +786,6 @@ right: 0 !important;
 
 
 .full-menu .left-content{
-  background-color: #EFEFEF;
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -841,7 +840,7 @@ right: 0 !important;
 }
 
 .full-menu .right-content ul li:first-child {
-    color: #3F51B5;
+    color: #a4a4a4;
     font-weight: 400;
     font-size: 27px;
     line-height: 35px;
