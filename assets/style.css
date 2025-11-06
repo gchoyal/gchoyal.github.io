@@ -973,7 +973,7 @@ right: 0 !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-	background-image: url(fluid-white-back.svg);
+	/*background-image: url(fluid-white-back.svg);*/
 }
 
 .radius-img-right{
