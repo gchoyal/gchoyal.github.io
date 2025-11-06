@@ -556,7 +556,7 @@ header.whitev{
 }
 
 .white .subhero-title{
-  color: #000;
+  color: #fff;
 }
 
 .darkness.white .subhero-title{
@@ -564,7 +564,7 @@ header.whitev{
 }
 
 .white .hero-content span.little{
-  color: #000;
+  color: #fff;
 }
 
 
@@ -1179,6 +1179,11 @@ footer{
 .home-banner .section-title .title{
 	font-size: 35px;
 	line-height: 40px;
+	color: white;
+}
+
+.hero .section-title .title{
+	color: white;
 }
 
 .darkness .section-title .title {
