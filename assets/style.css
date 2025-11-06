@@ -107,6 +107,7 @@ h6{
     width: 100%;
     object-fit: contain;
     padding: 15px;
+	filter: invert(1);
 }
 
 .site-btn {
@@ -736,6 +737,9 @@ right: 0 !important;
   top: 0;
   z-index: 100;
   visibility: hidden;
+      background-color: rgb(255 255 255 / 39%);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 }
 
 .full-menu .outter{
@@ -749,7 +753,7 @@ right: 0 !important;
 }
 
 .full-menu .site-menu li a{
-  color: #000;
+  color: #fff;
   font-size: 44px;
   font-weight: 900;
   transition: all ease 0.3s;
@@ -799,13 +803,14 @@ right: 0 !important;
 }
 
 .full-menu .right-content{
-  background: #fff;
+  background: #000000;
   padding: 0 60px;
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
+  color:white;
 }
 
 .full-menu .right-content, .full-menu .left-content{
@@ -856,7 +861,7 @@ right: 0 !important;
 }
 
 .full-menu .right-content ul li a{
-  color: #000;
+  color: #fff;
 }
 
 .darkness .full-menu .right-content ul li a {
@@ -895,6 +900,8 @@ right: 0 !important;
 
 .full-menu .close-icon img{
   max-width: 16px;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 .filter-icon {
