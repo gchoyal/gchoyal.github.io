@@ -2402,7 +2402,7 @@ header.black .logo img{
 @media only screen and (max-width: 500px) {
 
 .hamburger {
-	height: 500px;
+	height: 44px; 
 }
 .top-request-quote {
     padding: 12px 54px 11px 20px;
