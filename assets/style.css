@@ -112,6 +112,7 @@ h6{
     object-fit: contain;
     padding: 15px;
 	filter: invert(1);
+	object-position: left;
 }
 
 .site-btn {
