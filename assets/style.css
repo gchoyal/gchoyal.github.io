@@ -2277,10 +2277,7 @@ header.black .logo img{
     width: 45px;
 }
 
-.hamburger{
-	    margin-top: 8px;
-}
-  .subhero-title {
+.subhero-title {
     font-size: 50px;
 }
 
@@ -2404,6 +2401,9 @@ header.black .logo img{
 /* Max 500px  */
 @media only screen and (max-width: 500px) {
 
+.hamburger {
+	height: 500px;
+}
 .top-request-quote {
     padding: 12px 54px 11px 20px;
     min-width: 130px;
@@ -2414,14 +2414,9 @@ header.black .logo img{
 	    width: 40px;
     height: 40px;
 }
-
-.hamburger{
-	        margin-right: 4px;
-}
-
-  .hero-title {
-		font-size: 40px;
-        line-height: 45px;
+.hero-title {
+	font-size: 40px;
+    line-height: 45px;
 }
 
 footer{
