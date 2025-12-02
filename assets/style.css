@@ -1070,10 +1070,16 @@ section.news-list article:last-child {
   float: left;
 }
 
-.portfolio_filter ul li a{
-  color: #000;
-  font-weight: 600;
-  margin-right: 30px;
+.portfolio_filter ul li a {
+    color: #000;
+    font-weight: 400;
+    margin-right: 30px;
+    background: white;
+    font-size: 14px;
+    padding: 3px 10px 6px 10px;
+    border-radius: 27px;
+    box-shadow: 0 0 5px black;
+    border: 3px solid #3f51b5;
 }
 
 .portfolio_filter ul li a:hover{
