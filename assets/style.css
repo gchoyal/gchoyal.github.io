@@ -1985,15 +1985,17 @@ p.copy-right {
     color: black;
 }
 
-.icon{
-	width: 44px;
-	height: 44px;
-	background-size: contain;
-	background-position: center;
+.icon {
+    width: 44px;
+    height: 44px;
+    background-size: 25px !important;
+    background-position: center !important;
+    display: block;
+    background-repeat: no-repeat !important;
 }
 
 .icon-mail{ background: url(icons/mail.png); }
-.icon-phone{ background: url(icons/phone.png); }
+.icon-phone{ background: url(icons/telephone.png); }
 .icon-whatsapp{ background: url(icons/whatsapp.png); }
 .icon-linkedin{ background: url(icons/linkedin.png); }
 .icon-instagram{ background: url(icons/instagram.png); }
@@ -2086,7 +2088,7 @@ p.copy-right {
 	
 .social ul {
     background: white;
-    padding: 0 5px;
+    padding: 5px 0;
     border-radius: 35px;
 }
 
