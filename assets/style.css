@@ -664,7 +664,7 @@ header.whitev{
     width: 50px;
     align-items: center;
     align-content: center;
-    text-align: center;
+    text-align: center; 
 }
 
 .nav-icon {
