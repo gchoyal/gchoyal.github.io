@@ -324,12 +324,6 @@ header.whitev{
   z-index: 3;
 }
 
-.social ul {
-    background: white;
-    padding: 0 5px;
-    border-radius: 35px;
-}
-
 .social ul li {
   text-align: center;
 }
@@ -2076,6 +2070,13 @@ p.copy-right {
 } /* 1401px mediaget end */
 
 @media only screen and (min-width: 1025px) {
+	
+.social ul {
+    background: white;
+    padding: 0 5px;
+    border-radius: 35px;
+}
+
   .portfolio{
     min-height: 110vh;
   }
