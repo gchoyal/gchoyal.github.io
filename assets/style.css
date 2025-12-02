@@ -1955,7 +1955,7 @@ p.copy-right {
 .home-banner form.contact-form {
     padding: 5px 20px 0;
     background: rgb(255 255 255 / 79%);
-    border-radius: 30px;
+    border-radius: 30px; 
     text-align: center;
 }
 
