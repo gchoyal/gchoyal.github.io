@@ -1999,7 +1999,11 @@ p.copy-right {
 .icon-whatsapp{ background: url(icons/whatsapp.png); }
 .icon-linkedin{ background: url(icons/linkedin.png); }
 .icon-instagram{ background: url(icons/instagram.png); }
-	
+
+form .site-btn {
+    width: 100%;
+}
+
 /*------------------------ Responsive ------------------------*/   
 
 
