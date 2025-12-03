@@ -2125,6 +2125,7 @@ p.copy-right {
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px); 
 		z-index: 99999999;
+		box-shadow: 0 0 5px #595959;
 	}
 	
 	.social.fix ul{
@@ -2417,6 +2418,12 @@ header.black .logo img{
 /* Max 500px  */
 @media only screen and (max-width: 500px) {
 
+.white .hero {
+    padding-bottom: 20px;
+}
+.fluid-back-line {
+    background: unset;
+}
 .hamburger {
 	height: 44px;  
 }
