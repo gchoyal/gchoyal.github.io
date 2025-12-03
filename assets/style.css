@@ -1469,11 +1469,12 @@ form .form-group.in:after {
 }
 
 .error-text {
-    background: #9d4040;
-    padding: 0 10px;
-    color: white;
+    background: #ffffff;
+    padding: 0;
     font-size: 12px;
-	line-height: 16px;
+    line-height: 16px;
+    color: #9d4040;
+    text-align: left;
 }
 
 
