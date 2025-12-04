@@ -1,3 +1,34 @@
+/* fallback for older engines */
+:root {
+  --safe-top: env(safe-area-inset-top);
+  --safe-right: env(safe-area-inset-right);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+}
+
+/* Make page background fill full visual viewport */
+html, body {
+  height: 100%;
+  min-height: 100svh; /* use svh/dvh variants where available */
+  margin: 0;
+  background: #111111; /* set this to match your page background (or theme-color) */
+  -webkit-backface-visibility: hidden;
+}
+
+/* Use safe-area inset so interactive content isn't covered by gesture bars */
+body {
+  padding-bottom: max(0px, env(safe-area-inset-bottom));
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+  padding-top: max(0px, env(safe-area-inset-top));
+}
+
+/* fallback for older engines that only support constant() */
+body {
+  padding-bottom: constant(safe-area-inset-bottom);
+}
+
+
 @import url("margins.css");
 @import url("reset.css");
 @import url("assets.css");
