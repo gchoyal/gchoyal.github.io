@@ -1794,7 +1794,7 @@ p.copy-right {
 .review-box .rating-auth p {
     line-height: 1;
     color: #3f51b5;
-    font-size: 10px;
+    font-size: 10px; 
     text-transform: uppercase;
     letter-spacing: 1px;
 }
