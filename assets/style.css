@@ -1765,21 +1765,32 @@ p.copy-right {
 
 .review-box {
     transition: box-shadow 0.3s;
-    background: black;
-    color: white;
+    background: #ffffff;
+    color: #000000;
     padding: 35px;
     border-radius: 35px;
+    height: 100%;
+}
+
+.review-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .owl-carousel{
     margin-left: auto;
 }
 
-.review-box .rating-icon{
-	max-height: 29px;
-    width: 100%;
+.review-box .rating-icon {
+    max-height: 25px;
+    width: auto;
     object-fit: contain;
     object-position: left;
+    background: #000000;
+    padding: 3px 12px;
+    border-radius: 30px;
 }
 
 .review-box .rating-auth p {
@@ -1800,16 +1811,11 @@ p.copy-right {
 }
 
 .review-content .review-text {
-    font-size: 19px;
-    color: #fff;
-    line-height: 1.5;
-    height: 260px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 9;
-    -webkit-box-orient: vertical;
-	word-wrap: break-word;
-    white-space: break-spaces;
+    font-size: 16px;
+    color: #8b8b8b;
+    line-height: 1.4;
+    display: block;
+    font-style: italic;
 }
 
 .linkedin-link {
