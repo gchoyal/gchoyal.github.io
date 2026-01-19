@@ -1237,9 +1237,11 @@ footer{
   color: #fff;
 }
 
-.services .ser .title{
-  font-size: 28px;
-  font-weight: bold;
+.services .ser .title {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 30px;
+	margin-bottom: 30px;
 }
 
 .darkness .services .ser .title{
@@ -1252,8 +1254,6 @@ footer{
 
 .services .ser p{
   margin-top:10px;
-  font-size: 22px;
-  line-height: 32px;
 }
 .services .ser ul {
     margin-top: 20px;
