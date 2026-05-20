@@ -27,6 +27,10 @@ body.darkness{
   color: #fff;
 }
 
+.contact-iframe{
+	min-height: 800px;
+}
+
 #particles-js, div#code-js {
   position: absolute;
   width: 100%;
