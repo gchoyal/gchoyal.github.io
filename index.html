@@ -1,438 +1,822 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="dark">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-	<!-- Cache for 1 year -->
-	<meta http-equiv="Cache-Control" content="max-age=0, public">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Girdhari Choyal — Full-Stack WordPress Developer</title>
+  <meta name="description" content="Girdhari Choyal — Full-Stack WordPress Developer with 11+ years of experience building fast, secure WordPress & WooCommerce websites." />
 
-	<title>WordPress Expert with 11+ Years of Experience | Girdhari Choyal</title>
-	<meta name="description" content="Girdhari Choyal, a skilled full stack WordPress developer specializing in custom themes, plugins, and Elementor design." />
-	<meta name="keywords" content="WordPress developer, full stack developer, Elementor, plugin developer, web designer, freelance developer" />
-	<meta name="author" content="Girdhari Choyal" />
-	
-	<!-- Open Graph -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gchoyal.com/" />
-	<meta property="og:title" content="WordPress Expert with 11+ Years of Experience | Girdhari Choyal" />
-	<meta property="og:description" content="Explore the portfolio of Girdhari Choyal, a skilled full stack WordPress developer specializing in custom themes, plugins, and Elementor design." />
-	<meta property="og:image" content="https://gchoyal.com/assets/up-b.jpg" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://gchoyal.com/" />
-	<meta name="twitter:title" content="WordPress Expert with 11+ Years of Experience | Girdhari Choyal" />
-	<meta name="twitter:description" content="Explore the portfolio of Girdhari Choyal, a skilled full stack WordPress developer specializing in custom themes, plugins, and Elementor design." />
-	<meta name="twitter:image" content="https://gchoyal.com/assets/up-b.jpg" />
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: '#070b16',
+            foreground: '#f1f5f9',
+            card: '#0d1424',
+            muted: '#0f1a2e',
+            'muted-foreground': '#93a4bd',
+            border: '#1d2942',
+            electric: '#3B82F6',
+            violet: '#8B5CF6',
+            cyan: '#22d3ee',
+            indigo: '#6366F1',
+            highlight: '#F97316',
+            success: '#22c55e',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          maxWidth: { '9xl': '104rem' },
+        },
+      },
+    };
+  </script>
 
-	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-	<meta name="theme-color" content="#3F51B5">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: #070b16;
+      color: #f1f5f9;
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4 { font-family: 'Plus Jakarta Sans','Inter',sans-serif; letter-spacing: -0.02em; }
+    .font-display { font-family: 'Plus Jakarta Sans','Inter',sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-	<link rel="canonical" href="https://gchoyal.com/">
-	<link rel="icon" type="image/jpeg" href="https://gchoyal.com/assets/logo.jpg"> 
-	<!-- Browser Theme Colors -->
-	<meta name="theme-color" content="#3F51B5"> <!-- Chrome, Android -->
-	<meta name="msapplication-TileColor" content="#3F51B5"> <!-- Windows tiles -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#3F51B5"> <!-- iOS Safari -->
-	
-	<link rel="preload" as="font" href="/assets/Gilroy-ExtraBold.woff2" type="font/woff2" crossorigin>
-	<link rel="preload" as="font" href="/assets/Gilroy-Black.woff2" type="font/woff2" crossorigin>
-	<link rel="preload" as="font" href="/assets/Inter.woff2" type="font/woff2" crossorigin>
+    ::selection { background: rgba(59,130,246,.32); color: #f1f5f9; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #070b16; }
+    ::-webkit-scrollbar-thumb { background: #243352; border-radius: 999px; border: 2px solid #070b16; }
+    ::-webkit-scrollbar-thumb:hover { background: #3B82F6; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-	<link rel="stylesheet" href="assets/fontawesome-all.min.css" >
-	<link rel="stylesheet" type="text/css" href="assets/flaticon.css" />
-	<link rel="stylesheet" href="assets/stylesheet.css">
-	<link rel="stylesheet" href="assets/style.css">
+    .text-gradient {
+      background: linear-gradient(120deg, #f1f5f9 0%, #93c5fd 45%, #c4b5fd 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .text-gradient-cool {
+      background: linear-gradient(135deg, #22d3ee, #3B82F6 55%, #8B5CF6);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .bg-aurora {
+      background-image:
+        radial-gradient(60% 60% at 20% 20%, rgba(59,130,246,.35), transparent 70%),
+        radial-gradient(50% 50% at 80% 10%, rgba(139,92,246,.30), transparent 70%),
+        radial-gradient(55% 55% at 70% 80%, rgba(34,211,238,.22), transparent 70%);
+    }
+    .bg-grid {
+      background-image:
+        linear-gradient(rgba(36,51,82,.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36,51,82,.5) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .bg-dots { background-image: radial-gradient(rgba(60,80,120,.6) 1px, transparent 1px); background-size: 26px 26px; }
+    .mask-radial { -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
+    .glass { background: rgba(13,20,36,.55); backdrop-filter: blur(16px); border: 1px solid rgba(241,245,249,.08); }
+    .glass-strong { background: rgba(13,20,36,.85); backdrop-filter: blur(22px); border: 1px solid rgba(241,245,249,.1); }
+    .glow { box-shadow: 0 0 50px -8px rgba(59,130,246,.45); }
+    .shadow-elevated { box-shadow: 0 30px 80px -20px rgba(2,4,10,.9); }
+    .shadow-card { box-shadow: 0 10px 40px -16px rgba(2,4,10,.8); }
+    .ring-grad { position: relative; }
+    .ring-grad::before {
+      content:''; position:absolute; inset:0; border-radius:inherit; padding:1px;
+      background: linear-gradient(135deg, rgba(59,130,246,.6), rgba(139,92,246,.2), rgba(34,211,238,.5));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
+    }
+    .mask-fade-x { -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 
-	<!-- JSON-LD Schema -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Person",
-	  "name": "Girdhari Choyal",
-	  "url": "https://gchoyal.com/",
-	  "sameAs": [
-		"https://www.instagram.com/gchoyal/",
-		"https://www.facebook.com/gchoyal",
-		"https://www.youtube.com/@gchoyal",
-		"https://x.com/gchoyal",
-		"https://upwork.com/freelancers/gchoyal",
-		"https://www.behance.net/gchoyal",
-		"https://www.linkedin.com/in/gchoyal/",
-		"https://wa.me/918435155366",
-		"https://calendly.com/gchoyal/web-design",
-		"https://github.com/gchoyal"
-	  ],
-	  "jobTitle": "WordPress Expert with 11+ Years of Experience",
-	  "description": "Experienced full stack WordPress developer specializing in custom themes, plugins, and Elementor design."
-	}
-	</script>
+    /* keyframes */
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
+    @keyframes floatslow { 0%,100%{transform:translate(0,0)} 50%{transform:translate(10px,-26px)} }
+    @keyframes glowpulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes spinslow { to{transform:rotate(360deg)} }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    @keyframes marqueeRev { from{transform:translateX(-50%)} to{transform:translateX(0)} }
+    @keyframes ping { 75%,100%{transform:scale(2);opacity:0} }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-25%)} }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-floatslow { animation: floatslow 9s ease-in-out infinite; }
+    .animate-glowpulse { animation: glowpulse 4s ease-in-out infinite; }
+    .animate-blink { animation: blink 1.1s step-end infinite; }
+    .animate-pingdot { animation: ping 1.4s cubic-bezier(0,0,.2,1) infinite; }
+    .animate-bounce { animation: bounce 1.4s infinite; }
+    .marquee { animation: marquee 45s linear infinite; }
+    .marquee.rev { animation: marqueeRev 45s linear infinite; }
+    .marquee-wrap:hover .marquee { animation-play-state: paused; }
 
-</head> 
-<body class="white"> 
-<main> 	
-	<header class="black">
-		<a href="https://gchoyal.com/" class="logo">
-			<img src="assets/logo.jpg" alt="Girdhari Choyal">
-		</a>
-		
-		<a class="site-btn top-request-quote" href="https://gchoyal.com/say-hello/">Request a Quote</a>
+    /* reveal on scroll */
+    .reveal { opacity:0; transform: translateY(40px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal.rl { transform: translateX(60px); }
+    .reveal.in { opacity:1; transform: none; }
 
-		<div class="hamburger">
-			<div class="nav-icon">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</header>
-	
-	<div class="full-menu">
-     <div class="row">
-       <div class="col-lg-8 col-md-7 left-content fluid-back-white">
-         <div class="close-icon d-none">
-           <img src="assets/cancel.png" alt="Close">
-         </div>
-         <div class="outter">
-           <div class="inner">
-              <div class="container">
-			  <div><img src="assets/mysign.webp" class="img-fluid my-sign mb-3" alt="Girdhari Choyal"></div>
-              <ul class="site-menu">
-                  <li style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, 0);"><a href="https://gchoyal.com/">Home.</a></li>
-                  <li style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, 0);"><a href="https://gchoyal.com/meet-the-developer/">About.</a></li>
-				  <li style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, 0);"><a href="https://gchoyal.com/dev-notes/">Blog.</a></li>
-                  <li style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, 0);"><a href="https://gchoyal.com/say-hello/">Contact.</a></li>
-				  <li style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, 0);"><a class="site-btn" target="_blank" href="https://calendly.com/gchoyal/web-design">Book Meeting.</a></li>
-                 </ul>
-                </div> <!-- container end -->
-           </div>
-         </div>
-       </div>
-       <div class="col-lg-4 col-md-5 right-content">
-         <div class="close-icon">
-           <img src="assets/cancel.png" alt="Close">
-         </div>
-          <div class="outter">
-            <div class="inner">
-              <ul style="opacity: 0; transform: matrix(1, 0, 0, 1, 50, 0);">
-                <li>Contact</li>
-                <li><a href="mailto:girdharichoyal@gmail.com">girdharichoyal@gmail.com</a></li>
-                <li><a href="tel:+918435155366">Mobile/Whatsapp No. +91-8435155366</a></li>
-              </ul>
-              <ul style="opacity: 0; transform: matrix(1, 0, 0, 1, 50, 0);">
-                <li>Address</li>
-                <li>Indore, india</li>
-              </ul>
-              <ul class="social-links" style="opacity: 0; transform: matrix(1, 0, 0, 1, 50, 0);">
-                <li>Follow</li>
-                <li><a href="https://wa.me/+918435155366" target="_blank">Whatsapp.</a></li>
-                <li><a href="https://github.com/gchoyal" target="_blank">Github.</a></li>
-                <li><a href="https://www.linkedin.com/in/gchoyal/" target="_blank">Linkedin.</a></li>
-				<li><a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank">Instagram.</a></li>
-              </ul>
+    .btn-shine { position: relative; overflow: hidden; }
+    .btn-shine::after {
+      content:''; position:absolute; inset:0; transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(241,245,249,.22), transparent); transition: transform .7s;
+    }
+    .btn-shine:hover::after { transform: translateX(100%); }
+
+    .skill-bar > span { display:block; height:100%; width:0; border-radius:999px; transition: width 1s ease-out; }
+
+    /* dot nav */
+    .dotnav a .lbl { opacity:0; transition: opacity .3s, color .3s; }
+    .dotnav a:hover .lbl { opacity:1; }
+    .dotnav a .dot { transition: all .3s; }
+    .dotnav a.active .dot { transform: scale(1.25); background:#3B82F6; border-color:#3B82F6; box-shadow:0 0 50px -8px rgba(59,130,246,.45); }
+    .dotnav a.active .lbl { opacity:1; color:#3B82F6; }
+
+    .opt.selected { border-color:#3B82F6; background: rgba(59,130,246,.10); color:#f1f5f9; box-shadow: 0 0 50px -8px rgba(59,130,246,.45); }
+    .chip.selected { border-color:#3B82F6; background: rgba(59,130,246,.10); color:#f1f5f9; }
+
+    /* toast */
+    #toasts { position: fixed; bottom: 20px; right: 20px; z-index: 80; display:flex; flex-direction:column; gap:10px; }
+    .toast { min-width: 240px; max-width: 340px; padding: 12px 16px; border-radius: 12px; font-size: 14px;
+      border:1px solid #1d2942; background:#0d1424; color:#f1f5f9; box-shadow: 0 10px 40px -16px rgba(2,4,10,.8);
+      opacity:0; transform: translateY(10px); transition: all .35s; }
+    .toast.show { opacity:1; transform: none; }
+    .toast.err { border-color: rgba(239,68,68,.5); }
+    .toast.ok { border-color: rgba(34,197,94,.5); }
+  </style>
+</head>
+
+<body>
+  <!-- scroll progress -->
+  <div id="progress" class="fixed left-0 top-0 z-50 h-[3px] w-0" style="background:linear-gradient(90deg,#22d3ee,#3B82F6,#8B5CF6)"></div>
+  <!-- cursor glow -->
+  <div id="cursorGlow" class="pointer-events-none fixed inset-0 z-[5] hidden lg:block"></div>
+
+  <!-- dot nav -->
+  <nav class="dotnav fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
+    <a href="#hero" data-id="hero" class="active group flex items-center justify-end gap-3">
+      <span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Intro</span>
+      <span class="dot h-2.5 w-2.5 rounded-full border border-border"></span>
+    </a>
+    <a href="#about" data-id="about" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">About</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#skills" data-id="skills" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Skills</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#projects" data-id="projects" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Work</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#devlab" data-id="devlab" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Dev Lab</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#services" data-id="services" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Services</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#testimonials" data-id="testimonials" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Reviews</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#process" data-id="process" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Process</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#contact" data-id="contact" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Contact</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+  </nav>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section id="hero" class="relative flex min-h-screen items-center overflow-hidden pb-16 pt-28">
+      <div class="absolute inset-0 bg-aurora"></div>
+      <div class="absolute inset-0 bg-grid mask-radial opacity-40"></div>
+      <div class="absolute -left-32 top-24 h-[28rem] w-[28rem] animate-glowpulse rounded-full bg-violet/20 blur-[120px]"></div>
+      <div class="absolute -right-24 bottom-0 h-[30rem] w-[30rem] animate-glowpulse rounded-full bg-electric/20 blur-[130px]"></div>
+
+      <div class="relative z-10 mx-auto grid w-full max-w-9xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
+        <div>
+          <div class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 backdrop-blur">
+            <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-pingdot rounded-full bg-success opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-success"></span></span>
+            <span class="text-sm text-muted-foreground">Available for select projects — Indore, India</span>
+          </div>
+          <h1 class="reveal mt-7 font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl" data-delay="80">
+            <span class="text-foreground">Full-Stack</span><br />
+            <span class="text-gradient">WordPress</span> <span class="text-foreground">Developer</span>
+          </h1>
+          <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground" data-delay="160">
+            Hi, I’m <span class="font-medium text-foreground">Girdhari Choyal</span>. For
+            <span class="font-medium text-foreground">11+ years</span> I’ve been crafting fast, secure and beautiful
+            WordPress &amp; WooCommerce experiences for founders, agencies and global brands.
+          </p>
+          <div class="reveal mt-9 flex flex-wrap items-center gap-4" data-delay="240">
+            <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-7 py-3.5 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              Start a project
+            </button>
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-7 py-3.5 font-medium text-foreground backdrop-blur transition-colors duration-300 hover:border-electric/60 hover:text-electric">
+              View my work
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+          </div>
+          <div class="reveal mt-10 flex items-center gap-5" data-delay="320">
+            <span class="text-xs uppercase tracking-[0.2em] text-muted-foreground">Find me</span>
+            <div class="h-px w-10 bg-border"></div>
+            <div class="flex items-center gap-3" id="hero-socials"></div>
+          </div>
+        </div>
+
+        <div id="hero-visual" class="relative mx-auto w-full max-w-2xl">
+          <div class="animate-float ring-grad rounded-2xl border border-border bg-card shadow-elevated">
+            <div class="flex items-center gap-3 border-b border-border px-4 py-3">
+              <div class="flex gap-2"><span class="h-3 w-3 rounded-full bg-red-500"></span><span class="h-3 w-3 rounded-full bg-amber-400"></span><span class="h-3 w-3 rounded-full bg-green-500"></span></div>
+              <div class="mx-auto flex w-full max-w-sm items-center gap-2 rounded-md border border-border bg-muted/60 px-3 py-1.5"><span class="h-2.5 w-2.5 rounded-full border border-muted-foreground/50"></span><span class="truncate font-mono text-[11px] text-muted-foreground">gchoyal.com/projects</span></div>
+            </div>
+            <div class="relative aspect-[16/10] overflow-hidden rounded-b-2xl">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200" alt="Dashboard" class="h-full w-full object-cover" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
             </div>
           </div>
-       </div>
-     </div> <!-- row end -->
-	</div>
-	
-	
-	
-	<div class="hero home-banner">
-
-		<div id="code-js"></div>
-	
-		<div class="outter">
-		  <div class="inner">
-			<div class="hero-content">
-			  <div class="container">
-				<div class="row align-items-center">
-				  
-					<div class="col-lg-8">
-					 
-						<h1 class="hero-title mb-4">Looking For <span style="color: #fff;">Website Developer?</span></h1>
-						
-						<p class="hero-text">I'm Girdhari Choyal, WordPress Developer with 12 Years of Experience</p>
-						
-						<div class="banner-contact my-4">
-							<ul>
-								<li><a href="mailto:girdharichoyal@gmail.com">📧 girdharichoyal@gmail.com</a></li>
-								<li><a href="tel:+918435155366">📞 +91-8435155366</a></li>
-							</ul>
-						</div>
-						
-						<div class="mt-2 banner-btns" style="display: flex;">
-							<a href="https://wa.me/+918435155366" target="_blank" class="site-btn chat-btn site-btn-black">Chat Now</a>
-							<a class="site-btn banner-request-q-btn" href="#service-request">Request a Quote</a>
-						</div>
-						
-			
-					</div>
-					<div class="col-lg-4 text-left mt-5 mt-lg-0">
-						
-						
-						
-						<iframe class="contact-iframe" aria-label='Drop a message!' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.in/girdharichoyalgm1/form/SupportRequestForm/formperma/i9xiYCwXqhASx0kY74F9jjiJnI9hRYGVVlOg54M-n0o' ></iframe>
-						
-			
-					</div>
-					
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-
-	</div> 
-	
-
-<!-- SERVICES 
-  ================================================== --> 	
-  <section class="services padding_120" id="start">
-    <div class="container">
-      <div class="section-title bottom_90">
-        <span>What I Do</span>
-        <h2 class="title"><span style="color: #3F51B5;">Services</span></h2>
-      </div>
-      <div class="row m-0">
-        <!-- a service-->
-        <div class="col-lg-4 col-md-6 ser">
-          <i class="flaticon flaticon-024-office"></i>
-          <h3 class="title">Web Design</h3>
-          <p>We design modern, responsive websites that reflect your brand and engage your visitors across all devices.</p>
-        </div>
-        <!-- a service-->
-        <div class="col-lg-4 col-md-6 ser">
-          <i class="flaticon flaticon-030-network"></i>
-          <h3 class="title">Web Applications</h3>
-          <p>We build smart, functional web applications tailored to your business needs using modern tools and secure architecture.</p>
-        </div>
-        <!-- a service-->
-        <div class="col-lg-4 col-md-6 ser">
-          <i class="flaticon flaticon-018-laptop"></i>
-          <h3 class="title">Premium Support & Maintenance</h3>
-          <p>Ongoing assistance, updates, and troubleshooting to ensure your site stays fast, secure, and up-to-date.</p>
-        </div>
-      </div>
-    </div> <!-- container end -->
-  </section>
-
-
-  <section class="clients padding_120 background-light">
-    <div class="container">
-	
-		<div class="row">
-			<div class="col-md-6 align-middle pr-md-5">
-				<img src="assets/office.jpg" class="img-fluid" style="border-radius: 35px;">
-			</div>
-			<div class="col-md-6 align-middle founder-msg fluid-back">
-				<div class="section-title mb-5">
-					 <a class="site-btn my-4" href="#service-request">Request a Quote</a>
-					 
-				  <div class="mt-5">You're in Good Company</div>
-				  <h2 class="title">Join 100+ businesses, entrepreneurs, and creators who trust Girdhari Choyal to build and grow their online presence.</h2>
-				 
-				</div>
-				
-				<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 1.25rem;height: 1.25rem;fill: black;margin-bottom: 0;"><path d="M3.10803425,18 L9,13.9662923 C6.96073628,13.0533469 5.8939118,11.5149147 5.79952656,9.35099565 C5.70514133,7.18707659 6.77196581,4.40341137 9,1 C5.07202284,3.66424743 2.58102569,6.44791265 1.52700856,9.35099565 C0.472991437,12.2540786 1,15.1370801 3.10803425,18 Z M13.1080343,18 L19,13.9662923 C16.9607363,13.0533469 15.8939118,11.5149147 15.7995266,9.35099565 C15.7051413,7.18707659 16.7719658,4.40341137 19,1 C15.0720228,3.66424743 12.5810257,6.44791265 11.5270086,9.35099565 C10.4729914,12.2540786 11,15.1370801 13.1080343,18 Z" fill-rule="nonzero"></path></svg>
-
-				<p class="handwriting-text mb-3">Today, there are many web designers offering WordPress services, but I stand out by providing personal attention, clean and modern designs, and a hassle-free experience. My clients have seen faster websites, higher engagement, and real business growth—thanks to the reliability, creativity, and dedicated support I bring to every project.</p>
-				<div class="row authorbox">
-					<div class="col-3">
-						<img src="assets/logo.jpg" class="img-fluid" alt="Girdhari Choyal">
-					</div>
-					<div class="col-9">
-						<img src="assets/mysign.webp" class="footer-logo" style="max-height: 60px;" alt="Girdhari Choyal">
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	
-    </div>
-  </section>
-  
-  
-   <section class="clients padding_120"> 
-    <div class="container"> 
-		
-		<div class="section-title mb-4">
-		  <span>Client Reviews</span>
-		  <h2 class="title">Proven Results and <span style="color: #3F51B5;">Happy Clients</span></h2>
-		  <a class="site-btn my-4" href="https://gchoyal.com/say-hello">Request a Quote</a>
-		</div>
-				
-		<div class="row">
-			<div class="col-lg-4 mb-4">
-				
-				<div class="review-box background-light">
-					  <div class="review-content text-right">
-						
-						<p class="review-text mb-3 text-center text-sm-left">I have spent countless hours searching for quality engineering skills abroad. I can say with the upmost confidence, Girdhari is your diamond in the haystack. He's absolutely brilliant, trustworthy, creative and most importantly, he works from the heart. I am truly grateful for his services and the relationship I maintain with him today. Girdhari is a shining example of a quality individual and a brilliant Software Engineer. </p>
-						
-						<div class="row">
-							<div class="col-sm-5 text-center text-sm-left align-middle">
-								<a href="https://www.linkedin.com/in/gchoyal/#recommendations" target="_blank"><img class="img-fluid rating-icon" src="../assets/users/u1.jpg"></a>
-							</div>
-							<div class="col-sm-7 text-center text-sm-right rating-auth">
-								<h6 class="mb-0 fw-bold">Michael Peres</h6>
-								<p class="small mt-2">Founder of Hexa Tiger</p>
-								<a href="https://www.linkedin.com/in/gchoyal/#recommendations" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i> View on LinkedIn</a>
-							</div>
-						</div>
-						
-					
-						
-					  </div>
-				</div>
-				
-			</div>
-			<div class="col-lg-4 mb-4">
-				<div class="review-box background-light">
-					  <div class="review-content text-right">
-						
-						<p class="review-text mb-3 text-center text-sm-left">Girdhari is an absolute powerhouse, efficient, focused, and unstoppable when it comes to getting things done! I can’t recommend him enough. Every time he finishes a task, you’ll be left thinking, “Wow, that was incredible!</p>
-				
-						<div class="row">
-							<div class="col-sm-5 text-center text-sm-left align-middle">
-								<a href="https://www.upwork.com/freelancers/~01845fcd9c775261b8" target="_blank"><img class="img-fluid rating-icon" src="../assets/users/u2.jpg"></a>
-							</div>
-							<div class="col-sm-7 text-center text-sm-right rating-auth">
-								<h6 class="mb-0 fw-bold">Rica</h6>
-								<p class="small mt-2">Founder of RBR Web Agency</p>
-								<a href="https://www.upwork.com/freelancers/~01845fcd9c775261b8" target="_blank" class="linkedin-link">View on UpWork</a>
-							</div>
-						</div>
-						
-					  </div>
-				</div>
-			</div>
-			<div class="col-lg-4 mb-4">
-				<div class="review-box background-light">
-					  <div class="review-content text-right">
-						
-						<p class="review-text mb-3 text-center text-sm-left">I had the pleasure of working with Girdhari on the development and optimization of my website, and I couldn’t be happier with the results. From start to finish, they demonstrated exceptional professionalism, technical expertise, and a genuine commitment to delivering quality work.<br/>
-Their attention to detail, responsiveness to feedback, and ability to solve problems quickly were impressive. They took the time to understand my business needs and went above and beyond to ensure everything was aligned with my goals.<br/>
-Thanks to his hard work, my website is now faster, more user-friendly, and well-optimized for search engines. I highly recommend Girdhari to anyone looking for a skilled and reliable developer who understands the importance of both web development and SEO. They truly exceeded my expectations!</p>
-				
-						<div class="row">
-							<div class="col-sm-5 text-center text-sm-left align-middle">
-								<a href="https://www.upwork.com/freelancers/~01845fcd9c775261b8" target="_blank"><img class="img-fluid rating-icon" src="../assets/users/u.jpg"></a>
-							</div>
-							<div class="col-sm-7 text-center text-sm-right rating-auth">
-								<h6 class="mb-0 fw-bold">Valeriy Kozyrev</h6>
-								<p class="small mt-2">Lawyer at kozyrevlaw.ca</p>
-								<a href="https://www.upwork.com/freelancers/~01845fcd9c775261b8" target="_blank" class="linkedin-link">View on UpWork</a>
-							</div>
-						</div>
-						
-					  </div>
-				</div>
-			</div>
-				
-				
-		</div>
-	
-	
-    </div>
-  </section>
-  
-  
-<section class="clients padding_120 background-light">
-    <div class="container">
-        <div class="section-title bottom_90">
-			<span>What Tools I Use</span>
-			<h2 class="title"><span style="color: #3F51B5;">Powering Projects</span> with Industry-Leading Tools</h2>
-		  </div>
-        <div class="row m-0">
-          <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/wp.jpg" alt="wordpress" /></div>
-          <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/woo.jpg" alt="wooCommerce" /></div>
-		  <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/elementor-pro-logo.jpg" alt="Elementor" /></div>
-		  <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/shopify.jpg" alt="Shopify" /></div>
-		  <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/ci.jpg" alt="Code Igniter" /></div>
-		  <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/php.jpg" alt="PHP" /></div>
-          <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/Figma-Logo.jpg" alt="Figma" /></div>
-          <div class="col-lg-3 col-6 client"><img src="assets/tools-icon/html-css-js.jpg" alt="html" /></div>
-        </div>
-
-    </div>
-  </section>
-  
-  
-<section class="contact padding_120 background-primary" id="service-request">
-    <div class="container">
-	
-	<div class="section-title bottom_90">
-          <span>Get In Touch</span>
-		  <h2 class="title">Contact Now</h2>
-		  <h3>Have a project you’d like to talk about?</h3>
-        </div>
-		
-      <div class="row m-0">
-          <!-- contact form -->
-          <div class="col-lg-5 pl-0">
-            
-			
-			<iframe class="contact-iframe" aria-label='Drop a message!' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.in/girdharichoyalgm1/form/SupportRequestForm/formperma/i9xiYCwXqhASx0kY74F9jjiJnI9hRYGVVlOg54M-n0o' ></iframe>
- 
+          <!-- floating code -->
+          <div class="floaty glass-strong absolute -left-10 top-10 hidden animate-float rounded-xl p-1 shadow-elevated md:block">
+            <div class="flex items-center gap-2 px-3 py-2"><span class="h-2 w-2 rounded-full bg-highlight"></span><span class="font-mono text-[10px] text-muted-foreground">hero-block.php</span></div>
+            <pre class="max-w-[15rem] overflow-hidden rounded-lg bg-background/60 p-3 font-mono text-[10px] leading-relaxed text-cyan">add_action('init', function () {
+  register_block_type('gc/hero', [
+    'render_callback' =&gt; 'gc_render',
+    'supports' =&gt; ['align'],
+  ]);
+});</pre>
           </div>
-        <!-- Contact Info -->
-          <div class="col-lg-6 offset-lg-1 information fluid-back-line p-0 pt-4 mt-0">
-            <div class="contact-info email">
-              <span>Email:</span>
-              <a href="mailto:girdharichoyal@gmail.com">girdharichoyal@gmail.com</a>
-            </div>
-            <div class="contact-info address">
-              <span>Address:</span>
-              <p>Indore, India<br>
-                  <a href="tel:+918435155366">Mobile/Whatsapp No. +91-8435155366</a></p>
-            </div>
-            <div class="contact-info address">
-				<span>Follow us</span>
-				<a href="https://wa.me/+918435155366" target="_blank">Whatsapp.</a>
-				<a href="https://github.com/gchoyal" target="_blank">Github.</a>
-                <a href="https://www.linkedin.com/in/gchoyal/" target="_blank">Linkedin.</a>
-				<a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank">Instagram.</a>
+          <div class="floaty glass-strong absolute -right-6 bottom-16 hidden animate-float rounded-xl p-1 shadow-elevated md:block">
+            <div class="flex items-center gap-3 px-4 py-3">
+              <div class="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-success"><span class="font-display text-sm font-bold text-success">99</span></div>
+              <div><p class="text-xs font-medium text-foreground">Performance</p><p class="font-mono text-[10px] text-muted-foreground">LCP 1.1s • CLS 0</p></div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-7 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs text-muted-foreground lg:flex">
+        <svg class="h-4 w-4 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9 3 3v6"/><path d="M3 3l7.5 7.5"/><path d="M14 4.1 12 6"/></svg>
+        Scroll to explore
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section id="about" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-indigo/10 blur-[120px]"></div>
+      <div class="mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="grid grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <div class="reveal flex items-center gap-5">
+              <div class="relative shrink-0">
+                <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-br from-electric via-violet to-cyan opacity-60 blur-md"></div>
+                <img src="https://customer-assets.emergentagent.com/job_elite-code-studio/artifacts/r0xjgljf_appu.png" alt="Girdhari Choyal" class="relative h-24 w-24 rounded-2xl border border-border object-cover grayscale transition-all duration-500 hover:grayscale-0 sm:h-28 sm:w-28" />
+                <span class="absolute -bottom-2 -right-2 rounded-full border border-border bg-card px-2.5 py-1 text-[10px] font-semibold text-electric shadow-card">11+ yrs</span>
+              </div>
+              <div>
+                <span class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>About me</span>
+                <p class="mt-3 font-display text-lg font-semibold text-foreground">Girdhari Choyal</p>
+                <p class="text-sm text-muted-foreground">WordPress Developer · Indore, India</p>
+              </div>
+            </div>
+            <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">A developer who treats your website like a <span class="text-gradient">product</span>, not a template.</h2>
+            <p class="reveal mt-7 text-lg leading-relaxed text-muted-foreground" data-delay="140">There are countless WordPress developers out there. I stand out with personal attention, clean modern engineering and a genuinely hassle-free process. My clients see faster sites, higher engagement and real business growth — backed by reliability and dedicated support.</p>
+            <p class="reveal mt-5 text-lg leading-relaxed text-muted-foreground" data-delay="200">Based in Indore, India, I’ve partnered with founders and agencies across the globe — shipping everything from custom themes and plugins to high-traffic WooCommerce stores.</p>
+            <div class="reveal mt-10 grid grid-cols-2 gap-4" id="stats" data-delay="260"></div>
+          </div>
+          <div class="reveal rl">
+            <div class="glass rounded-3xl p-8 lg:p-10">
+              <h3 class="font-display text-xl font-semibold text-foreground">The journey so far</h3>
+              <p class="mt-1 text-sm text-muted-foreground">From first theme to trusted technical partner.</p>
+              <div class="relative mt-8">
+                <div class="absolute left-[7px] top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-electric via-violet to-transparent"></div>
+                <div class="space-y-8" id="timeline"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SKILLS ======================= -->
+    <section id="skills" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute inset-0 bg-dots mask-radial opacity-30"></div>
+      <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+          <div class="max-w-2xl">
+            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Capabilities</span>
+            <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">The full toolkit to ship <span class="text-gradient">production-grade</span> WordPress.</h2>
+          </div>
+          <p class="reveal max-w-sm text-base text-muted-foreground" data-delay="140">A decade of hands-on engineering across the entire stack — from PHP internals to Core Web Vitals and security hardening.</p>
+        </div>
+        <div class="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ======================= PROJECTS ======================= -->
+    <section id="projects" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-violet/10 blur-[130px]"></div>
+      <div class="mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+          <div class="max-w-2xl">
+            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Featured work</span>
+            <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">Real projects, <span class="text-gradient">real results</span>.</h2>
+          </div>
+          <div class="reveal flex items-center gap-3" data-delay="140">
+            <button id="prj-prev" aria-label="Previous" class="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-muted/40 text-foreground transition-colors hover:border-electric hover:text-electric"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></button>
+            <button id="prj-next" aria-label="Next" class="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-muted/40 text-foreground transition-colors hover:border-electric hover:text-electric"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div id="prj-track" class="no-scrollbar mt-14 flex snap-x snap-mandatory gap-7 overflow-x-auto px-6 pb-8 lg:px-12"></div>
+    </section>
+
+    <!-- ======================= DEV LAB ======================= -->
+    <section id="devlab" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute inset-0 bg-grid mask-radial opacity-30"></div>
+      <div class="absolute right-1/4 top-10 h-80 w-80 rounded-full bg-cyan/10 blur-[120px]"></div>
+      <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>The Development Lab</span>
+          <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">Inside my <span class="text-gradient">workstation</span>.</h2>
+          <p class="reveal mt-5 text-lg text-muted-foreground" data-delay="140">Clean code, fast deploys and obsessive performance — a peek at how the work actually gets done.</p>
+        </div>
+        <div class="reveal mt-14 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:grid-rows-2" data-delay="120">
+          <div class="rounded-2xl border border-border bg-card/80 shadow-card lg:col-span-7 lg:row-span-2 lg:min-h-[420px]">
+            <div class="flex items-center gap-2 border-b border-border px-4 py-2.5">
+              <span class="h-2.5 w-2.5 rounded-full bg-red-500"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span><span class="h-2.5 w-2.5 rounded-full bg-green-500"></span>
+              <span class="ml-3 font-mono text-[11px] text-muted-foreground">checkout-fields.php</span>
+            </div>
+            <div class="p-4"><pre id="code" class="font-mono text-[12px] leading-relaxed"></pre></div>
+          </div>
+          <div class="rounded-2xl border border-border bg-card/80 shadow-card lg:col-span-5">
+            <div class="flex items-center gap-2 border-b border-border px-4 py-2.5"><svg class="h-3.5 w-3.5 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg><span class="font-mono text-[11px] text-muted-foreground">zsh — gchoyal</span></div>
+            <div class="space-y-1.5 p-4 font-mono text-[12px]">
+              <p><span class="text-success">➜</span> <span class="text-cyan">~/site</span> wp cache flush</p>
+              <p class="text-muted-foreground">Success: The cache was flushed.</p>
+              <p><span class="text-success">➜</span> <span class="text-cyan">~/site</span> npm run build</p>
+              <p class="text-muted-foreground">✓ built in 3.42s</p>
+              <p><span class="text-success">➜</span> <span class="text-cyan">~/site</span> deploy --prod<span class="ml-1 inline-block h-3.5 w-1.5 animate-blink bg-success align-middle"></span></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-5">
+            <div class="rounded-2xl border border-border bg-card/80 p-4">
+              <div class="mb-3 flex items-center gap-2"><svg class="h-4 w-4 text-violet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></svg><span class="font-mono text-[11px] text-muted-foreground">git log</span></div>
+              <div class="space-y-3" id="git"></div>
+            </div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-border bg-card/80 p-4">
+              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg><span class="font-mono text-[11px] text-muted-foreground">wp-admin</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-muted/40 px-3 py-2"><span class="text-[11px] text-muted-foreground">Core Web Vitals</span><span class="font-mono text-[11px] font-medium text-success">All green</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-muted/40 px-3 py-2"><span class="text-[11px] text-muted-foreground">Uptime</span><span class="font-mono text-[11px] font-medium text-success">99.99%</span></div>
+              <div class="mt-auto h-16 w-full overflow-hidden rounded-lg bg-muted/40 p-2"><div class="flex h-full items-end gap-1" id="bars"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES ======================= -->
+    <section id="services" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute left-0 top-1/4 h-96 w-96 rounded-full bg-electric/10 blur-[130px]"></div>
+      <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+          <div class="max-w-2xl">
+            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Services</span>
+            <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">Everything your site needs, <span class="text-gradient">handled</span>.</h2>
+          </div>
+          <p class="reveal max-w-sm text-base text-muted-foreground" data-delay="140">One technical partner for build, speed, SEO, security and ongoing care — no agency overhead.</p>
+        </div>
+        <div class="mt-14 grid auto-rows-[minmax(170px,auto)] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- ======================= TESTIMONIALS ======================= -->
+    <section id="testimonials" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute right-1/3 top-0 h-80 w-80 rounded-full bg-violet/10 blur-[120px]"></div>
+      <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Client love</span>
+          <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">Trusted by <span class="text-gradient">100+ businesses</span> worldwide.</h2>
+        </div>
+      </div>
+      <div class="mask-fade-x mt-14 flex flex-col gap-6 overflow-hidden">
+        <div class="marquee-wrap flex overflow-hidden"><div class="marquee flex w-max gap-6 pr-6" id="tm-row1"></div></div>
+        <div class="marquee-wrap flex overflow-hidden"><div class="marquee rev flex w-max gap-6 pr-6" id="tm-row2"></div></div>
+      </div>
+    </section>
+
+    <!-- ======================= PROCESS ======================= -->
+    <section id="process" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-indigo/10 blur-[120px]"></div>
+      <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>How we work</span>
+          <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">A proven <span class="text-gradient">6-step</span> process.</h2>
+        </div>
+        <div class="relative mx-auto mt-16 max-w-4xl">
+          <div class="absolute left-8 top-0 h-full w-px bg-gradient-to-b from-electric via-violet to-cyan md:left-1/2 md:-translate-x-1/2"></div>
+          <div class="space-y-12" id="process-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT ======================= -->
+    <section id="contact" class="relative overflow-hidden py-28 lg:py-36">
+      <div class="absolute inset-0 bg-aurora opacity-60"></div>
+      <div class="absolute inset-0 bg-grid mask-radial opacity-20"></div>
+      <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Let’s talk</span>
+            <h2 class="reveal mt-6 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-7xl" data-delay="80">Have a project <br class="hidden sm:block" /> worth <span class="text-gradient">building?</span></h2>
+            <p class="reveal mt-6 max-w-md text-lg leading-relaxed text-muted-foreground" data-delay="140">Whether it’s a new build, a rescue mission or a speed overhaul — tell me about it. I reply to every serious enquiry within 24 hours.</p>
+            <div class="reveal mt-9 space-y-3" data-delay="200">
+              <a href="mailto:girdharichoyal@gmail.com" class="flex items-center gap-3 text-foreground transition-colors hover:text-electric">
+                <span class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/40"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                girdharichoyal@gmail.com
+              </a>
+              <div class="flex items-center gap-3 text-muted-foreground">
+                <span class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/40"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                Indore, India
+              </div>
+            </div>
+            <div class="reveal mt-8 flex flex-wrap gap-3" id="contact-socials" data-delay="260"></div>
+          </div>
+          <div class="reveal rl">
+            <div class="glass-strong relative overflow-hidden rounded-3xl p-8 text-center shadow-elevated lg:p-10">
+              <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-electric/20 blur-3xl"></div>
+              <div class="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-violet/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-electric/15 text-electric"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+                <h3 class="mt-6 font-display text-2xl font-bold text-foreground">Tell me about your project</h3>
+                <p class="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">A quick 4-step brief — budget, timeline and goals. Takes under a minute.</p>
+                <button type="button" data-openform class="btn-shine glow mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-electric py-4 font-medium text-white transition-transform duration-300 hover:scale-[1.02]">
+                  Start a project
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </button>
+                <div class="mt-7 grid grid-cols-2 gap-3 text-left">
+                  <div class="flex items-center gap-2 rounded-xl border border-border bg-muted/30 px-3 py-3"><svg class="h-4 w-4 shrink-0 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="text-xs text-muted-foreground">Replies within 24h</span></div>
+                  <div class="flex items-center gap-2 rounded-xl border border-border bg-muted/30 px-3 py-3"><svg class="h-4 w-4 shrink-0 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><span class="text-xs text-muted-foreground">No obligation</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="relative border-t border-border py-12">
+    <div class="mx-auto max-w-9xl px-6 lg:px-12">
+      <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+        <div class="text-center md:text-left">
+          <p class="font-display text-xl font-bold text-foreground">Girdhari Choyal</p>
+          <p class="mt-1 text-sm text-muted-foreground">Full-Stack WordPress Developer — 11+ years • Indore, India</p>
+        </div>
+        <div class="flex items-center gap-3" id="footer-socials"></div>
+      </div>
+      <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
+        <p class="text-xs text-muted-foreground">© <span id="year"></span> Girdhari Choyal. Crafted with care.</p>
+        <a href="#hero" class="group inline-flex items-center gap-2 text-xs text-muted-foreground transition-colors hover:text-electric">Back to top <span class="flex h-7 w-7 items-center justify-center rounded-full border border-border transition-transform group-hover:-translate-y-1"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></span></a>
       </div>
     </div>
-</section>
-	 
-	
-	<div class="social fix"> 
-		<ul>
-			<li><a href="mailto:girdharichoyal@gmail.com" target="_blank" aria-label="Mail" class="icon icon-mail"></a></li>
-			<li><a href="tel:+918435155366" target="_blank" aria-label="Phone" class="icon icon-phone"></a></li>
-			<li><a href="https://wa.me/+918435155366" target="_blank" aria-label="WhatsApp" class="icon icon-whatsapp"></a></li>
-			<li><a href="https://www.linkedin.com/in/gchoyal/" target="_blank" aria-label="LinkedIn" class="icon icon-linkedin"></a></li>
-			<li><a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" aria-label="instagram" class="icon icon-instagram"></a></li>
-		</ul>
-	</div>
-	
-	<div class="portfolio_filter">
-		<ul>
-			<li><a href="mailto:girdharichoyal@gmail.com">girdharichoyal@gmail.com</a></li>
-		</ul>   
-	</div>
+  </footer>
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<img src="assets/mysign.webp" class="footer-logo" alt="Girdhari Choyal"><br><br>
-					<p class="copy-right">© 2025 - Made in <img src="assets/tiranga-my-heart.jpg" alt="India"></p>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 footer-info">
-					<p><a href="tel:+918435155366">+91-8435155366</a><br>
-					<a href="mailto:girdharichoyal@gmail.com">girdharichoyal@gmail.com</a></p>
-				</div>
-			</div>
-		</div>
-	</footer>
+  <!-- Sticky CTA -->
+  <button id="stickyCta" type="button" data-openform class="btn-shine glow fixed bottom-6 left-1/2 z-40 hidden -translate-x-1/2 translate-y-20 items-center gap-2 rounded-full border border-electric/40 bg-electric px-6 py-3.5 font-medium text-white opacity-0 backdrop-blur transition-all duration-300">
+    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+    Start a project
+  </button>
 
-</main>
+  <!-- ======================= MODAL (multi-step form) ======================= -->
+  <div id="overlay" class="fixed inset-0 z-[60] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/80" data-close></div>
+    <div id="modal" class="relative w-full max-w-xl translate-y-3 scale-95 overflow-hidden rounded-2xl border border-border bg-card opacity-0 shadow-elevated transition-all duration-200">
+      <!-- header -->
+      <div class="relative overflow-hidden border-b border-border px-6 pb-5 pt-6">
+        <div class="absolute inset-0 bg-aurora opacity-50"></div>
+        <div class="relative flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-electric/15 text-electric"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>
+            <div><p class="font-display text-base font-semibold leading-tight text-foreground">Start a project</p><p class="text-xs text-muted-foreground"><span id="stepLabel">Step 1 of 4 · About you</span></p></div>
+          </div>
+          <button type="button" data-close class="text-muted-foreground transition-colors hover:text-foreground"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+        </div>
+        <div class="relative mt-4 flex gap-1.5" id="progressBars">
+          <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+          <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+          <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+          <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+        </div>
+      </div>
+      <!-- body -->
+      <div class="min-h-[268px] px-6 py-6">
+        <!-- step 0 -->
+        <div class="step" data-step="0">
+          <div class="space-y-5">
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">Full name</label><input id="f-name" type="text" placeholder="Jane Cooper" class="h-12 w-full rounded-md border border-border bg-muted/40 px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-electric focus:ring-1 focus:ring-electric" /></div>
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">Email address</label><input id="f-email" type="email" placeholder="jane@company.com" class="h-12 w-full rounded-md border border-border bg-muted/40 px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-electric focus:ring-1 focus:ring-electric" /></div>
+          </div>
+        </div>
+        <!-- step 1 -->
+        <div class="step hidden" data-step="1">
+          <div class="space-y-5">
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">Is this a fresh design or a redesign?</label>
+              <div class="grid grid-cols-2 gap-3" id="typeWrap"></div>
+            </div>
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">Estimated budget</label>
+              <div class="flex flex-wrap gap-2" id="budgetWrap"></div>
+            </div>
+          </div>
+        </div>
+        <!-- step 2 -->
+        <div class="step hidden" data-step="2">
+          <div class="space-y-5">
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">When do you want to get started?</label>
+              <div class="grid gap-3" id="startWrap"></div>
+            </div>
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">Any deadline for the project? <span class="text-xs">(optional)</span></label><input id="f-deadline" type="text" placeholder="e.g. Launch before Aug 15, or no fixed date" class="h-12 w-full rounded-md border border-border bg-muted/40 px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-electric focus:ring-1 focus:ring-electric" /></div>
+          </div>
+        </div>
+        <!-- step 3 -->
+        <div class="step hidden" data-step="3">
+          <div class="space-y-5">
+            <div class="space-y-2"><label class="text-sm text-muted-foreground">Tell me about your project</label><textarea id="f-message" rows="4" placeholder="Goals, pages, features, references..." class="w-full resize-none rounded-md border border-border bg-muted/40 px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-electric focus:ring-1 focus:ring-electric"></textarea></div>
+            <div class="rounded-xl border border-border bg-muted/30 p-4 text-xs text-muted-foreground"><p class="mb-1.5 font-medium text-foreground">Quick summary</p><p id="summary">—</p></div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="flex items-center justify-between gap-3 border-t border-border px-6 py-4">
+        <button id="btnBack" type="button" class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground" style="visibility:hidden"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg> Back</button>
+        <button id="btnNext" type="button" class="inline-flex items-center gap-2 rounded-lg bg-electric px-5 py-2.5 text-sm font-medium text-white glow transition-transform duration-300 hover:scale-[1.03]">Continue <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
 
-<script src="assets/plugins.js" defer></script>
+  <div id="toasts"></div>
+
+  <script>
+  /* ===================== DATA ===================== */
+  const LINKS = {
+    github: "https://github.com/gchoyal",
+    linkedin: "https://www.linkedin.com/in/gchoyal/",
+    upwork: "https://www.upwork.com/freelancers/~01845fcd9c775261b8",
+    instagram: "https://www.instagram.com/gchoyal_websitedeveloper/"
+  };
+  const ICON = {
+    github:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>',
+    linkedin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>',
+    instagram:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>',
+    upwork:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>'
+  };
+  const STATS = [
+    {n:11, s:'+', l:'Years of experience'},
+    {n:250, s:'+', l:'Projects delivered'},
+    {n:100, s:'+', l:'Happy clients'},
+    {n:98, s:'%', l:'Repeat & referral rate'}
+  ];
+  const TIMELINE = [
+    {y:'2014', t:'Started the journey', x:'Wrote my first WordPress theme and fell in love with building for the web.'},
+    {y:'2017', t:'Going full-stack', x:'Deep-dived into PHP, custom plugins, ACF and REST APIs for complex client builds.'},
+    {y:'2020', t:'eCommerce at scale', x:'Shipped dozens of high-traffic WooCommerce stores with custom checkout flows.'},
+    {y:'2022', t:'Performance & SEO focus', x:'Specialised in Core Web Vitals, speed optimization and technical SEO audits.'},
+    {y:'2025', t:'Trusted by 100+ brands', x:'Now a go-to technical partner for agencies, founders and creators worldwide.'}
+  ];
+  const SKILLS = [
+    {n:'WordPress',lv:98},{n:'WooCommerce',lv:95},{n:'Elementor',lv:94},{n:'ACF',lv:92},{n:'PHP',lv:93},
+    {n:'JavaScript',lv:90},{n:'API Integrations',lv:91},{n:'Technical SEO',lv:89},{n:'Performance',lv:96},{n:'Website Security',lv:88}
+  ];
+  const PROJECTS = [
+    {name:'Hexa Tiger',cat:'Media / Tech Platform',url:'hexatiger.com',desc:'A content-heavy media platform rebuilt on a custom WordPress theme with a blazing-fast editorial workflow and modular ACF blocks.',tags:['Custom Theme','ACF','REST API'],img:'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200',b:4.8,a:1.2},
+    {name:'RBR Web Agency',cat:'Agency Website',url:'rbrwebagency.com',desc:'A bold marketing site for a growing web agency — Elementor Pro, custom animations and a CMS the whole team can manage.',tags:['Elementor','Animation','CMS'],img:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200',b:3.9,a:0.9},
+    {name:'Kozyrev Law',cat:'Law Firm • SEO',url:'kozyrevlaw.ca',desc:'A trust-first law firm website engineered for technical SEO. Faster, more user-friendly and ranking for high-intent legal keywords.',tags:['Technical SEO','Speed','Schema'],img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200',b:5.6,a:1.4},
+    {name:'Lumen Store',cat:'WooCommerce',url:'lumenstore.shop',desc:'A premium WooCommerce storefront with a custom checkout, subscription support and a conversion-optimized product experience.',tags:['WooCommerce','Checkout','Payments'],img:'https://images.unsplash.com/photo-1487014679447-9f8336841d58?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200',b:6.1,a:1.6},
+    {name:'Northwind SaaS',cat:'SaaS Dashboard',url:'app.northwind.io',desc:'Headless WordPress powering a marketing site plus a customer dashboard, wired together through custom REST API integrations.',tags:['Headless','API','Dashboard'],img:'https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',b:4.2,a:1.1}
+  ];
+  const SERVICES = [
+    {n:'Custom WordPress Development',d:'Bespoke themes & plugins engineered from scratch — clean, scalable and built exactly around your brand and content model.',span:'lg:col-span-2 lg:row-span-2',feat:true},
+    {n:'WooCommerce Development',d:'High-converting stores with custom checkout, payments & subscriptions.',span:''},
+    {n:'Elementor Development',d:'Pixel-perfect, editable layouts your team can manage with ease.',span:''},
+    {n:'Website Speed Optimization',d:'Core Web Vitals tuned to green — caching, assets, images & database.',span:'lg:col-span-2'},
+    {n:'Technical SEO',d:'Schema, crawlability and on-page foundations that actually rank.',span:''},
+    {n:'API Integrations',d:'Connect CRMs, payments and third-party tools through clean APIs.',span:''},
+    {n:'Website Security',d:'Hardening, monitoring and malware cleanup to keep you safe.',span:''},
+    {n:'Website Maintenance',d:'Updates, backups and proactive care so you never worry.',span:''}
+  ];
+  const TESTIMONIALS = [
+    {name:'Michael Peres',role:'Founder, Hexa Tiger',src:'LinkedIn',link:LINKS.linkedin,text:'I have spent countless hours searching for quality engineering skills abroad. Girdhari is your diamond in the haystack — brilliant, trustworthy, creative, and he works from the heart.'},
+    {name:'Rica',role:'Founder, RBR Web Agency',src:'Upwork',link:LINKS.upwork,text:'Girdhari is an absolute powerhouse — efficient, focused, and unstoppable when it comes to getting things done. Every time he finishes a task you\u2019ll think, \u2018Wow, that was incredible!\u2019'},
+    {name:'Valeriy Kozyrev',role:'Lawyer, kozyrevlaw.ca',src:'Upwork',link:LINKS.upwork,text:'Exceptional professionalism and technical expertise. My website is now faster, more user-friendly and well-optimized for search engines. He truly exceeded my expectations.'},
+    {name:'Sarah Lindgren',role:'Marketing Lead',src:'Upwork',link:'#',text:'He took our slow, clunky WordPress site and turned it into a fast, polished experience. Communication was clear and the results spoke for themselves.'},
+    {name:'Daniel Okafor',role:'eCommerce Owner',src:'LinkedIn',link:'#',text:'Our WooCommerce store finally feels premium. Conversions are up and checkout issues are gone. Highly recommend Girdhari for serious projects.'}
+  ];
+  const PROCESS = [
+    {s:'01',t:'Discovery',d:'We dig into your goals, audience and competitors to define what success actually looks like.'},
+    {s:'02',t:'Strategy',d:'A clear roadmap — sitemap, content model, tech stack and milestones mapped before a line of code.'},
+    {s:'03',t:'Development',d:'Clean, scalable WordPress builds with reusable blocks and a CMS your team will love.'},
+    {s:'04',t:'Optimization',d:'Speed, Core Web Vitals, SEO and accessibility tuned until everything is green.'},
+    {s:'05',t:'Testing',d:'Cross-browser, cross-device and security QA so nothing breaks on launch day.'},
+    {s:'06',t:'Launch',d:'A smooth go-live plus ongoing support to keep your site fast, safe and growing.'}
+  ];
+  const CODE = [
+    {t:'<?php', c:'#93a4bd'},
+    {t:'/** Custom WooCommerce checkout field */', c:'#93a4bd'},
+    {t:"add_filter('woocommerce_checkout_fields',", c:'#22d3ee'},
+    {t:"  'gc_custom_fields');", c:'#f1f5f9'},
+    {t:'function gc_custom_fields($fields) {', c:'#8B5CF6'},
+    {t:"  $fields['billing']['vat_id'] = [", c:'#f1f5f9'},
+    {t:"    'label' => __('VAT Number'),", c:'#F97316'},
+    {t:"    'required' => false,", c:'#f1f5f9'},
+    {t:'  ];', c:'#f1f5f9'},
+    {t:'  return $fields;', c:'#3B82F6'},
+    {t:'}', c:'#8B5CF6'}
+  ];
+  const COMMITS = [
+    {m:'feat: custom Gutenberg hero block', t:'2m'},
+    {m:'perf: lazy-load above-the-fold images', t:'1h'},
+    {m:'fix: WooCommerce tax rounding', t:'3h'},
+    {m:'chore: harden wp-config & headers', t:'5h'}
+  ];
+  const BUDGETS = ['< $500','$500 – $1,000','$1,000 – $2,000','$2,000 – $3,000','$3,000 – $4,000','$4,000 – $5,000','$5,000 – $10,000+'];
+  const TYPES = [{v:'Fresh design',d:'A brand-new website from scratch'},{v:'Redesign',d:'Rebuild / improve an existing site'}];
+  const STARTS = ['Immediately','Within 7 days','Within 30 days'];
+
+  /* ===================== RENDER ===================== */
+  $(function(){
+    $('#year').text(new Date().getFullYear());
+
+    // socials
+    const socialBtn = (href, ic) => `<a href="${href}" target="_blank" rel="noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/30 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric hover:text-electric">${ic}</a>`;
+    $('#hero-socials').html(socialBtn(LINKS.github,ICON.github)+socialBtn(LINKS.linkedin,ICON.linkedin)+socialBtn(LINKS.instagram,ICON.instagram));
+    $('#footer-socials').html(socialBtn(LINKS.linkedin,ICON.linkedin)+socialBtn(LINKS.upwork,ICON.upwork)+socialBtn(LINKS.github,ICON.github)+socialBtn(LINKS.instagram,ICON.instagram));
+    const cSoc = [['LinkedIn',LINKS.linkedin,ICON.linkedin],['Upwork',LINKS.upwork,ICON.upwork],['GitHub',LINKS.github,ICON.github],['Instagram',LINKS.instagram,ICON.instagram]];
+    $('#contact-socials').html(cSoc.map(s=>`<a href="${s[1]}" target="_blank" rel="noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-4 py-2 text-sm text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric/60 hover:text-electric">${s[2]}${s[0]}</a>`).join(''));
+
+    // stats
+    $('#stats').html(STATS.map((s,i)=>`<div class="rounded-2xl border border-border bg-card/60 p-6"><div class="counter font-display text-4xl font-extrabold text-gradient-cool sm:text-5xl" data-n="${s.n}" data-s="${s.s}">0${s.s}</div><p class="mt-2 text-sm text-muted-foreground">${s.l}</p></div>`).join(''));
+
+    // timeline
+    $('#timeline').html(TIMELINE.map(t=>`<div class="relative pl-9"><span class="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-electric bg-background"><span class="h-1.5 w-1.5 rounded-full bg-electric"></span></span><span class="font-mono text-xs font-medium text-electric">${t.y}</span><h4 class="mt-1 font-display text-lg font-semibold text-foreground">${t.t}</h4><p class="mt-1 text-sm leading-relaxed text-muted-foreground">${t.x}</p></div>`).join(''));
+
+    // skills
+    $('#skills-grid').html(SKILLS.map(s=>`<div class="group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/60 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><h3 class="mt-5 font-display text-lg font-semibold text-foreground">${s.n}</h3><div class="skill-bar mt-4 h-1.5 w-full overflow-hidden rounded-full bg-muted"><span style="background:linear-gradient(90deg,#3B82F6,#22d3ee)" data-lv="${s.lv}"></span></div><span class="mt-2 inline-block font-mono text-xs text-muted-foreground">${s.lv}%</span></div>`).join(''));
+
+    // projects
+    $('#prj-track').html(PROJECTS.map(p=>{
+      const drop = Math.round((1 - p.a/p.b)*100);
+      return `<article class="group relative w-[88vw] flex-shrink-0 snap-center sm:w-[70vw] lg:w-[58vw] xl:w-[46vw]">
+        <div class="ring-grad relative rounded-2xl border border-border bg-card shadow-elevated">
+          <div class="flex items-center gap-3 border-b border-border px-4 py-3"><div class="flex gap-2"><span class="h-3 w-3 rounded-full bg-red-500"></span><span class="h-3 w-3 rounded-full bg-amber-400"></span><span class="h-3 w-3 rounded-full bg-green-500"></span></div><div class="mx-auto flex w-full max-w-sm items-center gap-2 rounded-md border border-border bg-muted/60 px-3 py-1.5"><span class="h-2.5 w-2.5 rounded-full border border-muted-foreground/50"></span><span class="truncate font-mono text-[11px] text-muted-foreground">${p.url}</span></div></div>
+          <div class="relative aspect-[16/10] overflow-hidden rounded-b-2xl"><img src="${p.img}" alt="${p.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div></div>
+        </div>
+        <div class="mt-7 flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+          <div class="max-w-xl"><span class="font-mono text-xs uppercase tracking-[0.18em] text-electric">${p.cat}</span><h3 class="mt-2 font-display text-2xl font-bold text-foreground lg:text-3xl">${p.name}</h3><p class="mt-3 text-base leading-relaxed text-muted-foreground">${p.desc}</p><div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t=>`<span class="rounded-full border border-border bg-muted/40 px-3 py-1 text-xs text-muted-foreground">${t}</span>`).join('')}</div></div>
+          <div class="flex shrink-0 items-center gap-4 rounded-2xl border border-border bg-card/60 p-4"><div class="text-center"><p class="font-mono text-xs text-muted-foreground line-through">${p.b}s</p><p class="font-display text-2xl font-bold text-success">${p.a}s</p><p class="mt-1 text-[11px] text-muted-foreground">Load time</p></div><div class="flex items-center gap-1 rounded-full bg-success/10 px-2.5 py-1 text-success"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg><span class="font-mono text-xs font-semibold">-${drop}%</span></div></div>
+        </div>
+      </article>`;
+    }).join('') + '<div class="w-2 flex-shrink-0 lg:w-8"></div>');
+
+    // services
+    $('#services-grid').html(SERVICES.map(s=>`<div class="group relative flex flex-col overflow-hidden rounded-2xl border border-border p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40 ${s.span} ${s.feat?'bg-gradient-to-br from-electric/15 via-card to-violet/10':'bg-card/60'}"><div class="flex items-start justify-between"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/60 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><svg class="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div><h3 class="mt-auto font-display font-semibold text-foreground ${s.feat?'pt-8 text-2xl lg:text-3xl':'pt-6 text-lg'}">${s.n}</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground ${s.feat?'max-w-md':''}">${s.d}</p></div>`).join(''));
+
+    // testimonials
+    const card = t => `<a href="${t.link}" target="_blank" rel="noreferrer" class="group flex w-[340px] flex-shrink-0 flex-col rounded-2xl glass p-6 transition-colors duration-300 hover:border-electric/40 sm:w-[420px]"><div class="flex items-center justify-between"><svg class="h-7 w-7 text-electric/60" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7H7a4 4 0 0 0-4 4v6h6v-6H5a2 2 0 0 1 2-2h2zm10 0h-4a4 4 0 0 0-4 4v6h6v-6h-2a2 2 0 0 1 2-2h2z"/></svg><div class="flex gap-0.5">${'<svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="#F97316" stroke="#F97316"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'.repeat(5)}</div></div><p class="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">\u201c${t.text}\u201d</p><div class="mt-6 flex items-center justify-between border-t border-border pt-4"><div><p class="font-display text-sm font-semibold text-foreground">${t.name}</p><p class="text-xs text-muted-foreground">${t.role}</p></div><span class="rounded-full border border-border bg-muted/50 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-electric">${t.src}</span></div></a>`;
+    const r1 = TESTIMONIALS.slice(0,3), r2 = TESTIMONIALS.slice(3).concat(TESTIMONIALS.slice(0,1));
+    $('#tm-row1').html((r1.map(card).join(''))+(r1.map(card).join('')));
+    $('#tm-row2').html((r2.map(card).join(''))+(r2.map(card).join('')));
+
+    // process
+    $('#process-list').html(PROCESS.map((p,i)=>{
+      const even = i%2===0;
+      return `<div class="relative flex items-center gap-6 pl-20 md:pl-0 ${even?'md:flex-row':'md:flex-row-reverse'}"><span class="absolute left-8 z-10 flex h-5 w-5 -translate-x-1/2 items-center justify-center rounded-full border-2 border-electric bg-background md:left-1/2"><span class="h-2 w-2 rounded-full bg-electric glow"></span></span><div class="w-full md:w-[calc(50%-2.5rem)] ${even?'md:text-right':'md:text-left'}"><div class="rounded-2xl border border-border bg-card/60 p-6 transition-colors duration-300 hover:border-electric/40"><span class="font-mono text-4xl font-bold text-gradient-cool">${p.s}</span><h3 class="mt-2 font-display text-xl font-semibold text-foreground">${p.t}</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">${p.d}</p></div></div><div class="hidden md:block md:w-[calc(50%-2.5rem)]"></div></div>`;
+    }).join(''));
+
+    // git commits
+    $('#git').html(COMMITS.map(c=>`<div class="flex items-start gap-2"><span class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-violet"></span><div><p class="text-[11px] leading-tight text-foreground">${c.m}</p><p class="font-mono text-[10px] text-muted-foreground">${c.t} ago</p></div></div>`).join(''));
+
+    // bars
+    $('#bars').html([40,65,50,80,60,90,75,95,70,88].map(h=>`<span class="flex-1 rounded-sm" style="height:0%;background:linear-gradient(to top,#3B82F6,#22d3ee);transition:height .6s ease-out" data-h="${h}"></span>`).join(''));
+
+    // modal options
+    $('#typeWrap').html(TYPES.map(t=>`<button type="button" class="opt flex flex-col items-start gap-1.5 rounded-xl border border-border bg-muted/30 px-4 py-3 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="type" data-val="${t.v}"><span class="h-5 w-5 rounded bg-electric/20"></span><span class="font-medium text-foreground">${t.v}</span><span class="text-xs text-muted-foreground">${t.d}</span></button>`).join(''));
+    $('#budgetWrap').html(BUDGETS.map(b=>`<button type="button" class="chip rounded-full border border-border bg-muted/30 px-3.5 py-2 text-xs font-medium text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="budget" data-val="${b}">${b}</button>`).join(''));
+    $('#startWrap').html(STARTS.map(s=>`<button type="button" class="opt flex items-center gap-3 rounded-xl border border-border bg-muted/30 px-4 py-3 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="start" data-val="${s}"><span class="h-4 w-4 rounded-full bg-electric/30"></span><span class="font-medium">${s}</span></button>`).join(''));
+
+    /* ===================== INTERACTIONS ===================== */
+    // scroll progress + sticky cta + dotnav active
+    const sections = ['hero','about','skills','projects','devlab','services','testimonials','process','contact'];
+    $(window).on('scroll', function(){
+      const st = $(window).scrollTop();
+      const h = $(document).height() - $(window).height();
+      $('#progress').css('width', (st/h*100)+'%');
+      // sticky
+      const heroH = ($('#hero').outerHeight()||600) - 120;
+      if (st > heroH) { $('#stickyCta').removeClass('hidden').addClass('flex'); requestAnimationFrame(()=>$('#stickyCta').css({opacity:1, transform:'translate(-50%,0)'})); }
+      else { $('#stickyCta').css({opacity:0, transform:'translate(-50%,80px)'}); }
+    });
+
+    // IntersectionObserver: reveal + dotnav
+    const revObs = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ const el=e.target; const d=el.getAttribute('data-delay')||0; el.style.transitionDelay=d+'ms'; el.classList.add('in'); revObs.unobserve(el); }});
+    },{threshold:0.15});
+    // Reveal above-the-fold immediately, observe the rest for scroll animation
+    document.querySelectorAll('.reveal').forEach(el=>{
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+        const d=el.getAttribute('data-delay')||0; el.style.transitionDelay=d+'ms'; el.classList.add('in');
+      } else { revObs.observe(el); }
+    });
+    // Hard failsafe: never leave content invisible
+    setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    }), 1500);
+
+    const navObs = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ const id=e.target.id; $('.dotnav a').removeClass('active'); $('.dotnav a[data-id="'+id+'"]').addClass('active'); }});
+    },{rootMargin:'-45% 0px -45% 0px'});
+    sections.forEach(s=>{ const el=document.getElementById(s); if(el) navObs.observe(el); });
+
+    // counters
+    const cObs = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ const el=e.target; const n=+el.getAttribute('data-n'); const suf=el.getAttribute('data-s'); let start=null; const dur=1600;
+        function tick(ts){ if(!start)start=ts; const p=Math.min((ts-start)/dur,1); const val=Math.round((1-Math.pow(1-p,3))*n); el.textContent=val+suf; if(p<1)requestAnimationFrame(tick);} requestAnimationFrame(tick); cObs.unobserve(el);
+      }});
+    },{threshold:0.6});
+    document.querySelectorAll('.counter').forEach(el=>cObs.observe(el));
+
+    // skill bars + dev bars on view
+    const barObs = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ e.target.querySelectorAll('.skill-bar > span').forEach(s=>{ s.style.width=s.getAttribute('data-lv')+'%'; }); barObs.unobserve(e.target);} });
+    },{threshold:0.3});
+    const sg=document.getElementById('skills-grid'); if(sg) barObs.observe(sg);
+    const devBarObs = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.querySelectorAll('[data-h]').forEach((s,i)=>{ setTimeout(()=>{ s.style.height=s.getAttribute('data-h')+'%'; }, i*60); }); devBarObs.unobserve(e.target);} }); },{threshold:0.4});
+    const barsEl=document.getElementById('bars'); if(barsEl) devBarObs.observe(barsEl);
+
+    // code typing
+    const codeObs = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ let i=0; const el=document.getElementById('code');
+        const iv=setInterval(()=>{ if(i>=CODE.length){clearInterval(iv); return;} const line=CODE[i]; const num=String(i+1).padStart(2,'0');
+          const div=document.createElement('div'); div.className='flex gap-4'; div.innerHTML='<span class="select-none text-muted-foreground/40">'+num+'</span><span style="color:'+line.c+'"></span>'; div.querySelector('span:last-child').textContent=line.t; el.appendChild(div); i++;
+        },230); codeObs.unobserve(e.target);
+      }});
+    },{threshold:0.4});
+    const codeEl=document.getElementById('code'); if(codeEl) codeObs.observe(codeEl);
+
+    // projects arrows
+    const track=document.getElementById('prj-track');
+    $('#prj-prev').on('click',()=>track.scrollBy({left:-track.clientWidth*0.8,behavior:'smooth'}));
+    $('#prj-next').on('click',()=>track.scrollBy({left:track.clientWidth*0.8,behavior:'smooth'}));
+
+    // cursor glow
+    $(window).on('mousemove', function(e){ $('#cursorGlow').css('background','radial-gradient(420px circle at '+e.clientX+'px '+e.clientY+'px, rgba(59,130,246,.07), transparent 70%)'); });
+
+    // hero parallax
+    $(window).on('mousemove', function(e){ const px=(e.clientX/window.innerWidth-0.5), py=(e.clientY/window.innerHeight-0.5); $('#hero-visual').css('transform','translate('+(px*-18)+'px,'+(py*-18)+'px)'); $('#hero-visual .floaty').each(function(idx){ const m=idx===0?26:-28; $(this).css('margin','0'); }); });
+
+    /* ===================== MODAL FORM ===================== */
+    let step=0; const data={name:'',email:'',type:'',budget:'',start:'',deadline:'',message:''};
+    const labels=['Step 1 of 4 · About you','Step 2 of 4 · Project','Step 3 of 4 · Timeline','Step 4 of 4 · Details'];
+    function openModal(){ $('#overlay').removeClass('hidden').addClass('flex'); document.body.style.overflow='hidden'; requestAnimationFrame(()=>{ $('#modal').css({opacity:1, transform:'translateY(0) scale(1)'}); }); }
+    function closeModal(){ $('#modal').css({opacity:0, transform:'translateY(12px) scale(0.95)'}); setTimeout(()=>{ $('#overlay').addClass('hidden').removeClass('flex'); document.body.style.overflow=''; resetForm(); },220); }
+    function resetForm(){ step=0; Object.keys(data).forEach(k=>data[k]=''); $('#f-name,#f-email,#f-deadline,#f-message').val(''); $('.opt,.chip').removeClass('selected'); render(); }
+    function render(){
+      $('.step').addClass('hidden'); $('.step[data-step="'+step+'"]').removeClass('hidden');
+      $('#stepLabel').text(labels[step]);
+      $('#progressBars > div').each(function(i){ const w = i<step?'100%':(i===step?'60%':'0%'); $(this).find('span').css('width',w); });
+      $('#btnBack').css('visibility', step===0?'hidden':'visible');
+      if(step===3){ $('#btnNext').html('Send request <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>');
+        $('#summary').text((data.type||'—')+' · '+(data.budget||'—')+' · '+(data.start||'—')+(data.deadline?(' · '+data.deadline):'')); }
+      else { $('#btnNext').html('Continue <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>'); }
+    }
+    function validate(){
+      const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email);
+      if(step===0) return data.name.trim() && emailOk;
+      if(step===1) return data.type && data.budget;
+      if(step===2) return !!data.start;
+      if(step===3) return data.message.trim().length>3;
+      return true;
+    }
+    $('[data-openform]').on('click', openModal);
+    $('[data-close]').on('click', closeModal);
+    $('#f-name').on('input',e=>data.name=e.target.value);
+    $('#f-email').on('input',e=>data.email=e.target.value);
+    $('#f-deadline').on('input',e=>data.deadline=e.target.value);
+    $('#f-message').on('input',e=>data.message=e.target.value);
+    $(document).on('click','.opt',function(){ const f=$(this).data('field'); data[f]=$(this).data('val'); $('.opt[data-field="'+f+'"]').removeClass('selected'); $(this).addClass('selected'); });
+    $(document).on('click','.chip',function(){ const f=$(this).data('field'); data[f]=$(this).data('val'); $('.chip[data-field="'+f+'"]').removeClass('selected'); $(this).addClass('selected'); });
+    $('#btnBack').on('click',()=>{ if(step>0){step--; render();} });
+    $('#btnNext').on('click',function(){
+      if(!validate()){ toast(step===3?'Please add a short message.':'Please complete this step to continue.','err'); return; }
+      if(step<3){ step++; render(); }
+      else {
+        const saved=JSON.parse(localStorage.getItem('gc_project_requests')||'[]');
+        saved.push(Object.assign({},data,{at:new Date().toISOString()}));
+        localStorage.setItem('gc_project_requests',JSON.stringify(saved));
+        toast('Request received! I\u2019ll reply within 24 hours.','ok'); closeModal();
+      }
+    });
+    $(document).on('keydown',e=>{ if(e.key==='Escape' && !$('#overlay').hasClass('hidden')) closeModal(); });
+    render();
+
+    // toast
+    window.toast=function(msg,type){ const t=$('<div class="toast '+(type||'')+'">'+msg+'</div>'); $('#toasts').append(t); requestAnimationFrame(()=>t.addClass('show')); setTimeout(()=>{ t.removeClass('show'); setTimeout(()=>t.remove(),350); },3200); };
+  });
+  </script>
 </body>
 </html>
