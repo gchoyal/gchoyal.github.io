@@ -805,11 +805,40 @@
       if(!validate()){ toast(step===3?'Please add a short message.':'Please complete this step to continue.','err'); return; }
       if(step<3){ step++; render(); }
       else {
-        const saved=JSON.parse(localStorage.getItem('gc_project_requests')||'[]');
-        saved.push(Object.assign({},data,{at:new Date().toISOString()}));
-        localStorage.setItem('gc_project_requests',JSON.stringify(saved));
-        toast('Request received! I\u2019ll reply within 24 hours.','ok'); closeModal();
-      }
+
+			data.at = new Date().toISOString();
+
+			$('#btnNext').prop('disabled', true);
+
+			fetch('https://script.google.com/macros/s/AKfycbxU4dqB4bbcBzbgKnstDtbiWL-aYNrg1_H2JFTHwRoKa7inFkQOxY74-FaKTzZSvSx4/exec', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			})
+			.then(response => response.text())
+			.then(result => {
+
+				console.log('Google Script Response:', result);
+
+				toast('Request received! I’ll reply within 24 hours.','ok');
+				closeModal();
+
+			})
+			.catch(error => {
+
+				console.error(error);
+				toast('Failed to send request. Please try again.','err');
+
+			})
+			.finally(() => {
+
+				$('#btnNext').prop('disabled', false);
+
+			});
+
+		}
     });
     $(document).on('keydown',e=>{ if(e.key==='Escape' && !$('#overlay').hasClass('hidden')) closeModal(); });
     render();
