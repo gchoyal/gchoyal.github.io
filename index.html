@@ -812,10 +812,11 @@
 
 			fetch('https://script.google.com/macros/s/AKfycbxU4dqB4bbcBzbgKnstDtbiWL-aYNrg1_H2JFTHwRoKa7inFkQOxY74-FaKTzZSvSx4/exec', {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(data)
+				body: new URLSearchParams(data)
+			})
+			.then(res => res.text())
+			.then(res => {
+				console.log(res);
 			})
 			.then(response => response.text())
 			.then(result => {
