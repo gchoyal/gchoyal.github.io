@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="https://customer-assets.emergentagent.com/job_elite-code-studio/artifacts/r0xjgljf_appu.png" />
   <link rel="apple-touch-icon" href="https://customer-assets.emergentagent.com/job_elite-code-studio/artifacts/r0xjgljf_appu.png" />
 
-  <meta name="description" content="Girdhari Choyal — Elite WordPress Developer with 11+ years of experience building fast, secure custom websites and WooCommerce stores. Partner directly for agency-level engineering." />
+  <meta name="description" content="Elite WordPress developer with 11+ years of experience. I build fast, secure custom websites & WooCommerce stores directly for founders and agencies." />
   <meta name="keywords" content="WordPress developer, WooCommerce developer, custom WordPress theme, Elementor developer, WordPress speed optimization, Gutenberg developer, freelance developer Indore, local SEO Indore, web developer Madhya Pradesh" />
   <meta name="author" content="Girdhari Choyal" />
   <meta name="theme-color" content="#2563eb" />
@@ -200,7 +200,7 @@
             cyan: '#0891b2',
             indigo: '#4f46e5',
             highlight: '#ea580c',
-            success: '#16a34a',
+            success: '#166534',
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -391,7 +391,7 @@
           
           <!-- Copywriting -->
           <p class="reveal mt-4 lg:mt-6 max-w-xl text-base leading-relaxed text-muted-foreground" data-delay="160">
-            Need a reliable expert to build fast, secure custom websites and WooCommerce stores? With over <span class="font-semibold text-foreground">11 years</span> of experience, I deliver agency-level engineering directly to founders, agencies, and brands.
+            Need an elite WordPress freelancer to build fast, secure custom websites and WooCommerce stores? With over <span class="font-semibold text-foreground">11 years</span> of experience, you can hire me to deliver agency-level engineering directly to founders, agencies, and brands.
           </p>
 
           <!-- Bullets of Freelance Value -->
@@ -1037,7 +1037,7 @@
             <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-electric/15 text-electric"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>
             <div><p class="font-display text-base font-semibold leading-tight text-foreground">Start a project</p><p class="text-xs text-muted-foreground"><span id="stepLabel">Step 1 of 4 · About you</span></p></div>
           </div>
-          <button type="button" data-close class="text-muted-foreground transition-colors hover:text-foreground"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+          <button type="button" data-close aria-label="Close modal" class="text-muted-foreground transition-colors hover:text-foreground"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
         </div>
         <div class="relative mt-4 flex gap-1.5" id="progressBars">
           <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
@@ -1186,9 +1186,9 @@
     $('#year').text(new Date().getFullYear());
 
     // socials
-    const socialBtn = (href, ic) => `<a href="${href}" target="_blank" rel="noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/50 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric hover:text-electric shadow-sm">${ic}</a>`;
-    $('#hero-socials').html(socialBtn(LINKS.github,ICON.github)+socialBtn(LINKS.linkedin,ICON.linkedin)+socialBtn(LINKS.instagram,ICON.instagram));
-    $('#footer-socials').html(socialBtn(LINKS.linkedin,ICON.linkedin)+socialBtn(LINKS.upwork,ICON.upwork)+socialBtn(LINKS.github,ICON.github)+socialBtn(LINKS.instagram,ICON.instagram));
+    const socialBtn = (href, ic, label) => `<a href="${href}" target="_blank" rel="noreferrer" aria-label="${label}" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/50 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric hover:text-electric shadow-sm">${ic}</a>`;
+    $('#hero-socials').html(socialBtn(LINKS.github,ICON.github,"GitHub Profile")+socialBtn(LINKS.linkedin,ICON.linkedin,"LinkedIn Profile")+socialBtn(LINKS.instagram,ICON.instagram,"Instagram Profile"));
+    $('#footer-socials').html(socialBtn(LINKS.linkedin,ICON.linkedin,"LinkedIn Profile")+socialBtn(LINKS.upwork,ICON.upwork,"Upwork Profile")+socialBtn(LINKS.github,ICON.github,"GitHub Profile")+socialBtn(LINKS.instagram,ICON.instagram,"Instagram Profile"));
     const cSoc = [['LinkedIn',LINKS.linkedin,ICON.linkedin],['Upwork',LINKS.upwork,ICON.upwork],['GitHub',LINKS.github,ICON.github],['Instagram',LINKS.instagram,ICON.instagram]];
     $('#contact-socials').html(cSoc.map(s=>`<a href="${s[1]}" target="_blank" rel="noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric/60 hover:text-electric shadow-sm">${s[2]}${s[0]}</a>`).join(''));
 
@@ -1199,7 +1199,7 @@
     $('#timeline').html(TIMELINE.map(t=>`<div class="relative pl-9"><span class="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-electric bg-background"><span class="h-1.5 w-1.5 rounded-full bg-electric"></span></span><span class="font-mono text-xs font-medium text-electric">${t.y}</span><h4 class="mt-1 font-display text-lg font-semibold text-foreground">${t.t}</h4><p class="mt-1 text-sm leading-relaxed text-muted-foreground">${t.x}</p></div>`).join(''));
 
     // skills
-    $('#skills-grid').html(SKILLS.map(s=>`<div class="group relative overflow-hidden rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40 shadow-sm"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/40 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><h3 class="mt-5 font-display text-lg font-semibold text-foreground">${s.n}</h3><div class="skill-bar mt-4 h-1.5 w-full overflow-hidden rounded-full bg-muted"><span style="background:linear-gradient(90deg,#2563eb,#0891b2)" data-lv="${s.lv}"></span></div><span class="mt-2 inline-block font-mono text-xs text-muted-foreground">${s.lv}%</span></div>`).join(''));
+    $('#skills-grid').html(SKILLS.map(s=>`<div class="group relative overflow-hidden rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40 shadow-sm"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/40 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><span class="block mt-5 font-display text-lg font-semibold text-foreground">${s.n}</span><div class="skill-bar mt-4 h-1.5 w-full overflow-hidden rounded-full bg-muted"><span style="background:linear-gradient(90deg,#2563eb,#0891b2)" data-lv="${s.lv}"></span></div><span class="mt-2 inline-block font-mono text-xs text-muted-foreground">${s.lv}%</span></div>`).join(''));
 
     // projects
     $('#prj-track').html(PROJECTS.map(p=>{
