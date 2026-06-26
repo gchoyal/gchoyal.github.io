@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,18 +19,18 @@
       theme: {
         extend: {
           colors: {
-            background: '#070b16',
-            foreground: '#f1f5f9',
-            card: '#0d1424',
-            muted: '#0f1a2e',
-            'muted-foreground': '#93a4bd',
-            border: '#1d2942',
-            electric: '#3B82F6',
-            violet: '#8B5CF6',
-            cyan: '#22d3ee',
-            indigo: '#6366F1',
-            highlight: '#F97316',
-            success: '#22c55e',
+            background: '#ffffff',
+            foreground: '#0f172a',
+            card: '#ffffff',
+            muted: '#f8fafc',
+            'muted-foreground': '#64748b',
+            border: '#e2e8f0',
+            electric: '#2563eb',
+            violet: '#7c3aed',
+            cyan: '#0891b2',
+            indigo: '#4f46e5',
+            highlight: '#ea580c',
+            success: '#16a34a',
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -49,8 +49,8 @@
   <style>
     html { scroll-behavior: smooth; }
     body {
-      background: #070b16;
-      color: #f1f5f9;
+      background: #ffffff;
+      color: #334155;
       font-family: 'Inter', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -59,45 +59,45 @@
     .font-display { font-family: 'Plus Jakarta Sans','Inter',sans-serif; }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-    ::selection { background: rgba(59,130,246,.32); color: #f1f5f9; }
+    ::selection { background: rgba(37,99,235,.12); color: #0f172a; }
     ::-webkit-scrollbar { width: 10px; height: 10px; }
-    ::-webkit-scrollbar-track { background: #070b16; }
-    ::-webkit-scrollbar-thumb { background: #243352; border-radius: 999px; border: 2px solid #070b16; }
-    ::-webkit-scrollbar-thumb:hover { background: #3B82F6; }
+    ::-webkit-scrollbar-track { background: #f8fafc; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; border: 2px solid #f8fafc; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     .text-gradient {
-      background: linear-gradient(120deg, #f1f5f9 0%, #93c5fd 45%, #c4b5fd 100%);
+      background: linear-gradient(120deg, #0f172a 0%, #2563eb 50%, #7c3aed 100%);
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
     }
     .text-gradient-cool {
-      background: linear-gradient(135deg, #22d3ee, #3B82F6 55%, #8B5CF6);
+      background: linear-gradient(135deg, #0891b2, #2563eb 55%, #7c3aed);
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
     }
     .bg-aurora {
       background-image:
-        radial-gradient(60% 60% at 20% 20%, rgba(59,130,246,.35), transparent 70%),
-        radial-gradient(50% 50% at 80% 10%, rgba(139,92,246,.30), transparent 70%),
-        radial-gradient(55% 55% at 70% 80%, rgba(34,211,238,.22), transparent 70%);
+        radial-gradient(60% 60% at 20% 20%, rgba(37,99,235,.07), transparent 70%),
+        radial-gradient(50% 50% at 80% 10%, rgba(124,58,237,.06), transparent 70%),
+        radial-gradient(55% 55% at 70% 80%, rgba(8,145,178,.05), transparent 70%);
     }
     .bg-grid {
       background-image:
-        linear-gradient(rgba(36,51,82,.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(36,51,82,.5) 1px, transparent 1px);
+        linear-gradient(rgba(15,23,42,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,.03) 1px, transparent 1px);
       background-size: 64px 64px;
     }
-    .bg-dots { background-image: radial-gradient(rgba(60,80,120,.6) 1px, transparent 1px); background-size: 26px 26px; }
+    .bg-dots { background-image: radial-gradient(rgba(15,23,42,.04) 1px, transparent 1px); background-size: 26px 26px; }
     .mask-radial { -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
-    .glass { background: rgba(13,20,36,.55); backdrop-filter: blur(16px); border: 1px solid rgba(241,245,249,.08); }
-    .glass-strong { background: rgba(13,20,36,.85); backdrop-filter: blur(22px); border: 1px solid rgba(241,245,249,.1); }
-    .glow { box-shadow: 0 0 50px -8px rgba(59,130,246,.45); }
-    .shadow-elevated { box-shadow: 0 30px 80px -20px rgba(2,4,10,.9); }
-    .shadow-card { box-shadow: 0 10px 40px -16px rgba(2,4,10,.8); }
+    .glass { background: rgba(255,255,255,.7); backdrop-filter: blur(16px); border: 1px solid rgba(15,23,42,.06); }
+    .glass-strong { background: rgba(255,255,255,.85); backdrop-filter: blur(22px); border: 1px solid rgba(15,23,42,.08); }
+    .glow { box-shadow: 0 0 50px -8px rgba(37,99,235,.15); }
+    .shadow-elevated { box-shadow: 0 20px 50px -12px rgba(15,23,42,0.08); }
+    .shadow-card { box-shadow: 0 8px 30px -10px rgba(15,23,42,0.05); }
     .ring-grad { position: relative; }
     .ring-grad::before {
       content:''; position:absolute; inset:0; border-radius:inherit; padding:1px;
-      background: linear-gradient(135deg, rgba(59,130,246,.6), rgba(139,92,246,.2), rgba(34,211,238,.5));
+      background: linear-gradient(135deg, rgba(37,99,235,.4), rgba(124,58,237,.2), rgba(8,145,178,.3));
       -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
     }
@@ -131,26 +131,30 @@
     .btn-shine { position: relative; overflow: hidden; }
     .btn-shine::after {
       content:''; position:absolute; inset:0; transform: translateX(-100%);
-      background: linear-gradient(90deg, transparent, rgba(241,245,249,.22), transparent); transition: transform .7s;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent); transition: transform .7s;
     }
     .btn-shine:hover::after { transform: translateX(100%); }
 
     .skill-bar > span { display:block; height:100%; width:0; border-radius:999px; transition: width 1s ease-out; }
 
     /* dot nav */
-    .dotnav a .lbl { opacity:0; transition: opacity .3s, color .3s; }
-    .dotnav a:hover .lbl { opacity:1; }
-    .dotnav a .dot { transition: all .3s; }
-    .dotnav a.active .dot { transform: scale(1.25); background:#3B82F6; border-color:#3B82F6; box-shadow:0 0 50px -8px rgba(59,130,246,.45); }
-    .dotnav a.active .lbl { opacity:1; color:#3B82F6; }
+    .dotnav a .lbl { opacity: 0.5; color: #64748b; font-weight: 500; transition: opacity .3s, color .3s; }
+    .dotnav a:hover .lbl { opacity: 1; color: #2563eb !important; }
+    .dotnav a .dot { transition: all .3s; border-color: #94a3b8 !important; background: #f1f5f9; }
+    .dotnav a:hover .dot { border-color: #2563eb !important; background: rgba(37,99,235,.15); }
+    .dotnav a.active .dot { transform: scale(1.25); background:#2563eb !important; border-color:#2563eb !important; box-shadow:0 0 20px -4px rgba(37,99,235,.5); }
+    .dotnav a.active .lbl { opacity: 1; color: #2563eb !important; font-weight: 600; }
 
-    .opt.selected { border-color:#3B82F6; background: rgba(59,130,246,.10); color:#f1f5f9; box-shadow: 0 0 50px -8px rgba(59,130,246,.45); }
-    .chip.selected { border-color:#3B82F6; background: rgba(59,130,246,.10); color:#f1f5f9; }
+    .opt.selected, .b-opt.selected { border-color:#2563eb; background: rgba(37,99,235,.06); color:#0f172a; box-shadow: 0 4px 20px -6px rgba(37,99,235,.15); }
+    .chip.selected, .b-chip.selected { border-color:#2563eb; background: rgba(37,99,235,.06); color:#0f172a; }
+
+    /* FAQ accordion styling */
+    .faq-item.border-electric { border-color: #2563eb; box-shadow: 0 4px 20px -6px rgba(37,99,235,.08); }
 
     /* toast */
     #toasts { position: fixed; bottom: 20px; right: 20px; z-index: 80; display:flex; flex-direction:column; gap:10px; }
     .toast { min-width: 240px; max-width: 340px; padding: 12px 16px; border-radius: 12px; font-size: 14px;
-      border:1px solid #1d2942; background:#0d1424; color:#f1f5f9; box-shadow: 0 10px 40px -16px rgba(2,4,10,.8);
+      border:1px solid #e2e8f0; background:#ffffff; color:#0f172a; box-shadow: 0 8px 30px -10px rgba(15,23,42,.08);
       opacity:0; transform: translateY(10px); transition: all .35s; }
     .toast.show { opacity:1; transform: none; }
     .toast.err { border-color: rgba(239,68,68,.5); }
@@ -160,7 +164,7 @@
 
 <body>
   <!-- scroll progress -->
-  <div id="progress" class="fixed left-0 top-0 z-50 h-[3px] w-0" style="background:linear-gradient(90deg,#22d3ee,#3B82F6,#8B5CF6)"></div>
+  <div id="progress" class="fixed left-0 top-0 z-50 h-[3px] w-0" style="background:linear-gradient(90deg,#0891b2,#2563eb,#7c3aed)"></div>
   <!-- cursor glow -->
   <div id="cursorGlow" class="pointer-events-none fixed inset-0 z-[5] hidden lg:block"></div>
 
@@ -177,74 +181,171 @@
     <a href="#services" data-id="services" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Services</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
     <a href="#testimonials" data-id="testimonials" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Reviews</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
     <a href="#process" data-id="process" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Process</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
+    <a href="#faq" data-id="faq" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">FAQ</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
     <a href="#contact" data-id="contact" class="group flex items-center justify-end gap-3"><span class="lbl font-mono text-[11px] uppercase tracking-wider text-muted-foreground">Contact</span><span class="dot h-2.5 w-2.5 rounded-full border border-border"></span></a>
   </nav>
 
   <main>
     <!-- ======================= HERO ======================= -->
-    <section id="hero" class="relative flex min-h-screen items-center overflow-hidden pb-16 pt-28">
+    <section id="hero" class="relative flex min-h-screen items-center overflow-hidden pb-16 pt-16 lg:pt-28">
       <div class="absolute inset-0 bg-aurora"></div>
       <div class="absolute inset-0 bg-grid mask-radial opacity-40"></div>
-      <div class="absolute -left-32 top-24 h-[28rem] w-[28rem] animate-glowpulse rounded-full bg-violet/20 blur-[120px]"></div>
-      <div class="absolute -right-24 bottom-0 h-[30rem] w-[30rem] animate-glowpulse rounded-full bg-electric/20 blur-[130px]"></div>
+      <div class="absolute -left-32 top-24 h-[28rem] w-[28rem] animate-glowpulse rounded-full bg-violet/10 blur-[120px]"></div>
+      <div class="absolute -right-24 bottom-0 h-[30rem] w-[30rem] animate-glowpulse rounded-full bg-electric/10 blur-[130px]"></div>
 
-      <div class="relative z-10 mx-auto grid w-full max-w-9xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
-        <div>
-          <div class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 backdrop-blur">
-            <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-pingdot rounded-full bg-success opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-success"></span></span>
-            <span class="text-sm text-muted-foreground">Available for Website Audits & Consulting</span>
+      <div class="relative z-10 mx-auto grid w-full max-w-9xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-12 lg:px-12">
+        <!-- Text Column (Left/Top on Mobile, Right on Desktop) -->
+        <div class="text-left lg:col-span-5 xl:col-span-6">
+          <!-- Profile Photo with Badge -->
+          <div class="reveal flex items-center gap-4 mb-6">
+            <div class="relative shrink-0">
+              <div class="absolute -inset-1 rounded-full bg-gradient-to-br from-electric via-violet to-cyan opacity-40 blur-sm"></div>
+              <img src="https://customer-assets.emergentagent.com/job_elite-code-studio/artifacts/r0xjgljf_appu.png" alt="Girdhari Choyal" class="relative h-20 w-20 rounded-full border border-border object-cover bg-white" />
+              <span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full border-2 border-white bg-success"></span>
+              <span class="absolute -bottom-1 -left-1 rounded-full border border-border bg-card px-2 py-0.5 text-[9px] font-semibold text-electric shadow-card">11+ yrs</span>
+            </div>
+            <div>
+              <div class="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted px-3 py-1 text-xs text-muted-foreground">
+                <span class="relative flex h-1.5 w-1.5"><span class="absolute inline-flex h-full w-full animate-pingdot rounded-full bg-success opacity-75"></span><span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-success"></span></span>
+                <span>Available for Freelance Contracts</span>
+              </div>
+              <h2 class="mt-1.5 font-display text-lg font-bold text-foreground leading-tight">Girdhari Choyal</h2>
+              <p class="text-xs text-muted-foreground">WordPress Developer · Indore, India</p>
+            </div>
           </div>
-          <h1 class="reveal mt-7 font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl" data-delay="80">
-            <span class="text-foreground">Full-Stack</span><br />
-            <span class="text-gradient">WordPress</span> <span class="text-foreground">Developer</span>
+
+          <!-- Main Headline -->
+          <h1 class="reveal font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-5xl xl:text-6xl" data-delay="80">
+            Hire an Elite<br />
+            <span class="text-gradient">WordPress</span> Freelancer
           </h1>
-          <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground" data-delay="160">
-            Hi, I’m <span class="font-medium text-foreground">Girdhari Choyal</span>. For
-            <span class="font-medium text-foreground">11+ years</span> I’ve been crafting fast, secure and beautiful
-            WordPress &amp; WooCommerce experiences for founders, agencies and global brands.
+          
+          <!-- Copywriting -->
+          <p class="reveal mt-6 max-w-xl text-base leading-relaxed text-muted-foreground" data-delay="160">
+            Need a reliable expert to build fast, secure custom websites and WooCommerce stores? With over <span class="font-semibold text-foreground">11 years</span> of experience, I deliver agency-level engineering directly to founders, agencies, and brands.
           </p>
-          <div class="reveal mt-9 flex flex-wrap items-center gap-4" data-delay="240">
-            <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-7 py-3.5 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
-              Start a project
-            </button>
-            <a href="#projects" class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-7 py-3.5 font-medium text-foreground backdrop-blur transition-colors duration-300 hover:border-electric/60 hover:text-electric">
+
+          <!-- Bullets of Freelance Value -->
+          <ul class="reveal mt-6 space-y-3.5 text-sm text-muted-foreground" data-delay="200">
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>No Agency Overhead:</strong> Partner directly with a single dedicated engineer for transparent communication and rapid turnaround times.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Core Web Vitals Optimized:</strong> Speed optimizations that keep bounce rates low and Google search rankings high.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Tailored to Convert:</strong> Bespoke Gutenberg blocks, WooCommerce custom funnels, and clean API integrations.</span>
+            </li>
+          </ul>
+
+          <!-- Quick Actions & Socials -->
+          <div class="reveal mt-8 flex flex-wrap items-center gap-4" data-delay="240">
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/60 px-6 py-2.5 text-sm font-medium text-foreground hover:border-electric/50 hover:text-electric transition-colors duration-300">
               View my work
               <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </a>
-          </div>
-          <div class="reveal mt-10 flex items-center gap-5" data-delay="320">
-            <span class="text-xs uppercase tracking-[0.2em] text-muted-foreground">Find me</span>
-            <div class="h-px w-10 bg-border"></div>
-            <div class="flex items-center gap-3" id="hero-socials"></div>
+            <div class="h-4 w-px bg-border hidden sm:block"></div>
+            <div class="flex items-center gap-2" id="hero-socials"></div>
           </div>
         </div>
 
-        <div id="hero-visual" class="relative mx-auto w-full max-w-2xl">
-          <div class="animate-float ring-grad rounded-2xl border border-border bg-card shadow-elevated">
-            <div class="flex items-center gap-3 border-b border-border px-4 py-3">
-              <div class="flex gap-2"><span class="h-3 w-3 rounded-full bg-red-500"></span><span class="h-3 w-3 rounded-full bg-amber-400"></span><span class="h-3 w-3 rounded-full bg-green-500"></span></div>
-              <div class="mx-auto flex w-full max-w-sm items-center gap-2 rounded-md border border-border bg-muted/60 px-3 py-1.5"><span class="h-2.5 w-2.5 rounded-full border border-muted-foreground/50"></span><span class="truncate font-mono text-[11px] text-muted-foreground">gchoyal.com/projects</span></div>
-            </div>
-            <div class="relative aspect-[16/10] overflow-hidden rounded-b-2xl">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200" alt="Dashboard" class="h-full w-full object-cover" />
-              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
-            </div>
-          </div>
-          <!-- floating code -->
-          <div class="floaty glass-strong absolute -left-10 top-10 hidden animate-float rounded-xl p-1 shadow-elevated md:block">
-            <div class="flex items-center gap-2 px-3 py-2"><span class="h-2 w-2 rounded-full bg-highlight"></span><span class="font-mono text-[10px] text-muted-foreground">hero-block.php</span></div>
-            <pre class="max-w-[15rem] overflow-hidden rounded-lg bg-background/60 p-3 font-mono text-[10px] leading-relaxed text-cyan">add_action('init', function () {
-  register_block_type('gc/hero', [
-    'render_callback' =&gt; 'gc_render',
-    'supports' =&gt; ['align'],
-  ]);
-});</pre>
-          </div>
-          <div class="floaty glass-strong absolute -right-6 bottom-16 hidden animate-float rounded-xl p-1 shadow-elevated md:block">
-            <div class="flex items-center gap-3 px-4 py-3">
-              <div class="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-success"><span class="font-display text-sm font-bold text-success">99</span></div>
-              <div><p class="text-xs font-medium text-foreground">Performance</p><p class="font-mono text-[10px] text-muted-foreground">LCP 1.1s • CLS 0</p></div>
+        <!-- Form Column (Right/Below on Mobile, Left on Desktop) -->
+        <div id="banner-form-container" class="w-full max-w-full lg:max-w-xl mx-auto reveal lg:col-span-7 xl:col-span-6">
+          <div class="glass-strong relative overflow-hidden rounded-3xl p-6 shadow-elevated border border-border sm:p-8">
+            <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-electric/5 blur-3xl"></div>
+            <div class="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-violet/5 blur-3xl"></div>
+            
+            <div class="relative">
+              <!-- Form Header -->
+              <div class="border-b border-border pb-5">
+                <div class="flex items-center gap-2">
+                  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10 text-electric">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                  </span>
+                  <div>
+                    <p class="font-display text-lg font-bold text-foreground">Start a Project</p>
+                    <p class="text-xs text-muted-foreground"><span id="b-stepLabel">Step 1 of 4 · About you</span></p>
+                  </div>
+                </div>
+                <!-- Progress Indicator -->
+                <div class="relative mt-4 flex gap-1.5" id="b-progressBars">
+                  <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+                  <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+                  <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+                  <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted"><span class="block h-full w-0 rounded-full bg-gradient-to-r from-electric to-violet transition-all duration-400"></span></div>
+                </div>
+              </div>
+
+              <!-- Form Body -->
+              <div class="min-h-[230px] py-5 text-left">
+                <!-- Step 0 -->
+                <div class="b-step" data-bstep="0">
+                  <div class="space-y-4">
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Full name</label>
+                      <input id="b-name" type="text" placeholder="Jane Cooper" class="h-11 w-full rounded-lg border border-border bg-muted/40 px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-electric focus:ring-1 focus:ring-electric transition-colors" />
+                    </div>
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Email address</label>
+                      <input id="b-email" type="email" placeholder="jane@company.com" class="h-11 w-full rounded-lg border border-border bg-muted/40 px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-electric focus:ring-1 focus:ring-electric transition-colors" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Step 1 -->
+                <div class="b-step hidden" data-bstep="1">
+                  <div class="space-y-4">
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Project Type</label>
+                      <div class="grid grid-cols-2 gap-2" id="b-typeWrap"></div>
+                    </div>
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Estimated Budget</label>
+                      <div class="flex flex-wrap gap-1.5" id="b-budgetWrap"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="b-step hidden" data-bstep="2">
+                  <div class="space-y-4">
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">When do you want to get started?</label>
+                      <div class="grid gap-2" id="b-startWrap"></div>
+                    </div>
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Any deadline? <span class="text-muted-foreground/80">(optional)</span></label>
+                      <input id="b-deadline" type="text" placeholder="e.g. Launch before Aug 15" class="h-11 w-full rounded-lg border border-border bg-muted/40 px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-electric focus:ring-1 focus:ring-electric transition-colors" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="b-step hidden" data-bstep="3">
+                  <div class="space-y-4">
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Tell me about your project</label>
+                      <textarea id="b-message" rows="3" placeholder="Goals, pages, features, references..." class="w-full resize-none rounded-lg border border-border bg-muted/40 px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-electric focus:ring-1 focus:ring-electric transition-colors"></textarea>
+                    </div>
+                    <div class="rounded-xl border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
+                      <p class="mb-0.5 font-semibold text-foreground">Quick summary</p>
+                      <p id="b-summary" class="leading-relaxed">—</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Footer -->
+              <div class="flex items-center justify-between gap-3 border-t border-border pt-4">
+                <button id="b-btnBack" type="button" class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground" style="visibility:hidden">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                  Back
+                </button>
+                <button id="b-btnNext" type="button" class="inline-flex items-center gap-2 rounded-lg bg-electric px-5 py-2.5 text-sm font-medium text-white glow transition-transform duration-300 hover:scale-[1.02]">
+                  Continue
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -256,20 +357,47 @@
       </div>
     </section>
 
+    <!-- ======================= TRUST BAR ======================= -->
+    <section class="border-y border-border bg-slate-50 py-8 relative z-10">
+      <div class="mx-auto max-w-9xl px-6 lg:px-12">
+        <p class="text-center font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6">Expertise & Technologies I Specialize In</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 grayscale transition-all">
+          <span class="font-display text-lg font-extrabold text-foreground tracking-tight flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-electric"></span>WordPress
+          </span>
+          <span class="font-display text-lg font-extrabold text-foreground tracking-tight flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-electric"></span>WooCommerce
+          </span>
+          <span class="font-display text-lg font-extrabold text-foreground tracking-tight flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-electric"></span>Elementor Pro
+          </span>
+          <span class="font-display text-lg font-extrabold text-foreground tracking-tight flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-electric"></span>ACF Pro
+          </span>
+          <span class="font-display text-lg font-extrabold text-foreground tracking-tight flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-electric"></span>PHP & APIs
+          </span>
+          <span class="font-display text-lg font-extrabold text-foreground tracking-tight flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-electric"></span>PageSpeed
+          </span>
+        </div>
+      </div>
+    </section>
+
     <!-- ======================= ABOUT ======================= -->
-    <section id="about" class="relative overflow-hidden py-28 lg:py-36">
-      <div class="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-indigo/10 blur-[120px]"></div>
+    <section id="about" class="relative overflow-hidden py-28 lg:py-36 bg-white">
+      <div class="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-indigo/5 blur-[120px]"></div>
       <div class="mx-auto max-w-9xl px-6 lg:px-12">
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <div class="reveal flex items-center gap-5">
               <div class="relative shrink-0">
-                <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-br from-electric via-violet to-cyan opacity-60 blur-md"></div>
-                <img src="https://customer-assets.emergentagent.com/job_elite-code-studio/artifacts/r0xjgljf_appu.png" alt="Girdhari Choyal" class="relative h-24 w-24 rounded-2xl border border-border object-cover grayscale transition-all duration-500 hover:grayscale-0 sm:h-28 sm:w-28" />
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-electric via-violet to-cyan opacity-40 blur-md"></div>
+                <img src="https://customer-assets.emergentagent.com/job_elite-code-studio/artifacts/r0xjgljf_appu.png" alt="Girdhari Choyal" class="relative h-24 w-24 rounded-2xl border border-border object-cover bg-white" />
                 <span class="absolute -bottom-2 -right-2 rounded-full border border-border bg-card px-2.5 py-1 text-[10px] font-semibold text-electric shadow-card">11+ yrs</span>
               </div>
               <div>
-                <span class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>About me</span>
+                <span class="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>About me</span>
                 <p class="mt-3 font-display text-lg font-semibold text-foreground">Girdhari Choyal</p>
                 <p class="text-sm text-muted-foreground">WordPress Developer · Indore, India</p>
               </div>
@@ -277,7 +405,16 @@
             <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">A developer who treats your website like a <span class="text-gradient">product</span>, not a template.</h2>
             <p class="reveal mt-7 text-lg leading-relaxed text-muted-foreground" data-delay="140">There are countless WordPress developers out there. I stand out with personal attention, clean modern engineering and a genuinely hassle-free process. My clients see faster sites, higher engagement and real business growth — backed by reliability and dedicated support.</p>
             <p class="reveal mt-5 text-lg leading-relaxed text-muted-foreground" data-delay="200">Based in Indore, India, I’ve partnered with founders and agencies across the globe — shipping everything from custom themes and plugins to high-traffic WooCommerce stores.</p>
+            
             <div class="reveal mt-10 grid grid-cols-2 gap-4" id="stats" data-delay="260"></div>
+            
+            <!-- Section CTA -->
+            <div class="reveal mt-8" data-delay="320">
+              <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+                Hire Girdhari
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            </div>
           </div>
           <div class="reveal rl">
             <div class="glass rounded-3xl p-8 lg:p-10">
@@ -294,7 +431,7 @@
     </section>
 
     <!-- ======================= SKILLS ======================= -->
-    <section id="skills" class="relative overflow-hidden py-28 lg:py-36">
+    <section id="skills" class="relative overflow-hidden py-28 lg:py-36 bg-white">
       <div class="absolute inset-0 bg-dots mask-radial opacity-30"></div>
       <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
         <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
@@ -305,31 +442,49 @@
           <p class="reveal max-w-sm text-base text-muted-foreground" data-delay="140">A decade of hands-on engineering across the entire stack — from PHP internals to Core Web Vitals and security hardening.</p>
         </div>
         <div class="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" id="skills-grid"></div>
+        
+        <!-- Section CTA -->
+        <div class="reveal mt-12 text-center" data-delay="100">
+          <p class="text-sm text-muted-foreground mb-4">Need an experienced engineer with these skills on your next project?</p>
+          <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+            Hire for these skills
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- ======================= PROJECTS ======================= -->
-    <section id="projects" class="relative overflow-hidden py-28 lg:py-36">
-      <div class="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-violet/10 blur-[130px]"></div>
+    <section id="projects" class="relative overflow-hidden py-28 lg:py-36 bg-slate-50">
+      <div class="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-violet/5 blur-[130px]"></div>
       <div class="mx-auto max-w-9xl px-6 lg:px-12">
         <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div class="max-w-2xl">
-            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Featured work</span>
+            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Featured work</span>
             <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">Real projects, <span class="text-gradient">real results</span>.</h2>
           </div>
           <div class="reveal flex items-center gap-3" data-delay="140">
-            <button id="prj-prev" aria-label="Previous" class="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-muted/40 text-foreground transition-colors hover:border-electric hover:text-electric"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></button>
-            <button id="prj-next" aria-label="Next" class="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-muted/40 text-foreground transition-colors hover:border-electric hover:text-electric"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+            <button id="prj-prev" aria-label="Previous" class="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-white text-foreground transition-colors hover:border-electric hover:text-electric shadow-sm"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></button>
+            <button id="prj-next" aria-label="Next" class="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-white text-foreground transition-colors hover:border-electric hover:text-electric shadow-sm"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
           </div>
         </div>
       </div>
       <div id="prj-track" class="no-scrollbar mt-14 flex snap-x snap-mandatory gap-7 overflow-x-auto px-6 pb-8 lg:px-12"></div>
+      
+      <!-- Section CTA -->
+      <div class="reveal mt-8 text-center" data-delay="100">
+        <p class="text-sm text-muted-foreground mb-4">Ready to build or optimize your WordPress site to reach similar heights?</p>
+        <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+          Let's achieve these results
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
     </section>
 
     <!-- ======================= DEV LAB ======================= -->
-    <section id="devlab" class="relative overflow-hidden py-28 lg:py-36">
+    <section id="devlab" class="relative overflow-hidden py-28 lg:py-36 bg-white">
       <div class="absolute inset-0 bg-grid mask-radial opacity-30"></div>
-      <div class="absolute right-1/4 top-10 h-80 w-80 rounded-full bg-cyan/10 blur-[120px]"></div>
+      <div class="absolute right-1/4 top-10 h-80 w-80 rounded-full bg-cyan/5 blur-[120px]"></div>
       <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
         <div class="mx-auto max-w-3xl text-center">
           <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>The Development Lab</span>
@@ -337,33 +492,33 @@
           <p class="reveal mt-5 text-lg text-muted-foreground" data-delay="140">Clean code, fast deploys and obsessive performance — a peek at how the work actually gets done.</p>
         </div>
         <div class="reveal mt-14 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:grid-rows-2" data-delay="120">
-          <div class="rounded-2xl border border-border bg-card/80 shadow-card lg:col-span-7 lg:row-span-2 lg:min-h-[420px]">
-            <div class="flex items-center gap-2 border-b border-border px-4 py-2.5">
+          <div class="rounded-2xl border border-slate-800 bg-[#0d1424] shadow-card lg:col-span-7 lg:row-span-2 lg:min-h-[420px]">
+            <div class="flex items-center gap-2 border-b border-slate-800 px-4 py-2.5">
               <span class="h-2.5 w-2.5 rounded-full bg-red-500"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span><span class="h-2.5 w-2.5 rounded-full bg-green-500"></span>
-              <span class="ml-3 font-mono text-[11px] text-muted-foreground">checkout-fields.php</span>
+              <span class="ml-3 font-mono text-[11px] text-slate-400">checkout-fields.php</span>
             </div>
             <div class="p-4"><pre id="code" class="font-mono text-[12px] leading-relaxed"></pre></div>
           </div>
-          <div class="rounded-2xl border border-border bg-card/80 shadow-card lg:col-span-5">
-            <div class="flex items-center gap-2 border-b border-border px-4 py-2.5"><svg class="h-3.5 w-3.5 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg><span class="font-mono text-[11px] text-muted-foreground">zsh — gchoyal</span></div>
-            <div class="space-y-1.5 p-4 font-mono text-[12px]">
+          <div class="rounded-2xl border border-slate-800 bg-[#0d1424] shadow-card lg:col-span-5">
+            <div class="flex items-center gap-2 border-b border-slate-800 px-4 py-2.5"><svg class="h-3.5 w-3.5 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg><span class="font-mono text-[11px] text-slate-400">zsh — gchoyal</span></div>
+            <div class="space-y-1.5 p-4 font-mono text-[12px] text-slate-300">
               <p><span class="text-success">➜</span> <span class="text-cyan">~/site</span> wp cache flush</p>
-              <p class="text-muted-foreground">Success: The cache was flushed.</p>
+              <p class="text-slate-400">Success: The cache was flushed.</p>
               <p><span class="text-success">➜</span> <span class="text-cyan">~/site</span> npm run build</p>
-              <p class="text-muted-foreground">✓ built in 3.42s</p>
+              <p class="text-slate-400">✓ built in 3.42s</p>
               <p><span class="text-success">➜</span> <span class="text-cyan">~/site</span> deploy --prod<span class="ml-1 inline-block h-3.5 w-1.5 animate-blink bg-success align-middle"></span></p>
             </div>
           </div>
           <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-5">
-            <div class="rounded-2xl border border-border bg-card/80 p-4">
-              <div class="mb-3 flex items-center gap-2"><svg class="h-4 w-4 text-violet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></svg><span class="font-mono text-[11px] text-muted-foreground">git log</span></div>
+            <div class="rounded-2xl border border-slate-800 bg-[#0d1424]/90 p-4">
+              <div class="mb-3 flex items-center gap-2"><svg class="h-4 w-4 text-violet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></svg><span class="font-mono text-[11px] text-slate-400">git log</span></div>
               <div class="space-y-3" id="git"></div>
             </div>
-            <div class="flex flex-col gap-4 rounded-2xl border border-border bg-card/80 p-4">
-              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg><span class="font-mono text-[11px] text-muted-foreground">wp-admin</span></div>
-              <div class="flex items-center justify-between rounded-lg bg-muted/40 px-3 py-2"><span class="text-[11px] text-muted-foreground">Core Web Vitals</span><span class="font-mono text-[11px] font-medium text-success">All green</span></div>
-              <div class="flex items-center justify-between rounded-lg bg-muted/40 px-3 py-2"><span class="text-[11px] text-muted-foreground">Uptime</span><span class="font-mono text-[11px] font-medium text-success">99.99%</span></div>
-              <div class="mt-auto h-16 w-full overflow-hidden rounded-lg bg-muted/40 p-2"><div class="flex h-full items-end gap-1" id="bars"></div></div>
+            <div class="flex flex-col gap-4 rounded-2xl border border-slate-800 bg-[#0d1424]/90 p-4 text-slate-300">
+              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg><span class="font-mono text-[11px] text-slate-400">wp-admin</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-slate-900/60 px-3 py-2"><span class="text-[11px] text-slate-400">Core Web Vitals</span><span class="font-mono text-[11px] font-medium text-success">All green</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-slate-900/60 px-3 py-2"><span class="text-[11px] text-slate-400">Uptime</span><span class="font-mono text-[11px] font-medium text-success">99.99%</span></div>
+              <div class="mt-auto h-16 w-full overflow-hidden rounded-lg bg-slate-900/40 p-2"><div class="flex h-full items-end gap-1" id="bars"></div></div>
             </div>
           </div>
         </div>
@@ -371,23 +526,32 @@
     </section>
 
     <!-- ======================= SERVICES ======================= -->
-    <section id="services" class="relative overflow-hidden py-28 lg:py-36">
-      <div class="absolute left-0 top-1/4 h-96 w-96 rounded-full bg-electric/10 blur-[130px]"></div>
+    <section id="services" class="relative overflow-hidden py-28 lg:py-36 bg-slate-50">
+      <div class="absolute left-0 top-1/4 h-96 w-96 rounded-full bg-electric/5 blur-[130px]"></div>
       <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
         <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div class="max-w-2xl">
-            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Services</span>
+            <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Services</span>
             <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">Everything your site needs, <span class="text-gradient">handled</span>.</h2>
           </div>
           <p class="reveal max-w-sm text-base text-muted-foreground" data-delay="140">One technical partner for build, speed, SEO, security and ongoing care — no agency overhead.</p>
         </div>
         <div class="mt-14 grid auto-rows-[minmax(170px,auto)] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4" id="services-grid"></div>
+        
+        <!-- Section CTA -->
+        <div class="reveal mt-12 text-center" data-delay="100">
+          <p class="text-sm text-muted-foreground mb-4">Looking for custom API integrations or ongoing support?</p>
+          <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+            Request custom service
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- ======================= TESTIMONIALS ======================= -->
-    <section id="testimonials" class="relative overflow-hidden py-28 lg:py-36">
-      <div class="absolute right-1/3 top-0 h-80 w-80 rounded-full bg-violet/10 blur-[120px]"></div>
+    <section id="testimonials" class="relative overflow-hidden py-28 lg:py-36 bg-white">
+      <div class="absolute right-1/3 top-0 h-80 w-80 rounded-full bg-violet/5 blur-[120px]"></div>
       <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
         <div class="mx-auto max-w-3xl text-center">
           <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Client love</span>
@@ -398,25 +562,117 @@
         <div class="marquee-wrap flex overflow-hidden"><div class="marquee flex w-max gap-6 pr-6" id="tm-row1"></div></div>
         <div class="marquee-wrap flex overflow-hidden"><div class="marquee rev flex w-max gap-6 pr-6" id="tm-row2"></div></div>
       </div>
+      
+      <!-- Section CTA -->
+      <div class="reveal mt-12 text-center" data-delay="100">
+        <p class="text-sm text-muted-foreground mb-4">Ready to experience professional WordPress engineering yourself?</p>
+        <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+          Work with Girdhari
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
     </section>
 
     <!-- ======================= PROCESS ======================= -->
-    <section id="process" class="relative overflow-hidden py-28 lg:py-36">
-      <div class="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-indigo/10 blur-[120px]"></div>
+    <section id="process" class="relative overflow-hidden py-28 lg:py-36 bg-slate-50">
+      <div class="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-indigo/5 blur-[120px]"></div>
       <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
         <div class="mx-auto max-w-3xl text-center">
-          <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>How we work</span>
+          <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>How we work</span>
           <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" data-delay="80">A proven <span class="text-gradient">6-step</span> process.</h2>
         </div>
         <div class="relative mx-auto mt-16 max-w-4xl">
           <div class="absolute left-8 top-0 h-full w-px bg-gradient-to-b from-electric via-violet to-cyan md:left-1/2 md:-translate-x-1/2"></div>
           <div class="space-y-12" id="process-list"></div>
         </div>
+        
+        <!-- Section CTA -->
+        <div class="reveal mt-14 text-center" data-delay="100">
+          <p class="text-sm text-muted-foreground mb-4">Let's hop on a brief consultation call and kick off Step 1 (Discovery).</p>
+          <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+            Start discovery phase
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section id="faq" class="relative overflow-hidden py-28 lg:py-36 bg-white">
+      <div class="absolute inset-0 bg-dots mask-radial opacity-30"></div>
+      <div class="relative mx-auto max-w-4xl px-6 lg:px-12">
+        <div class="mx-auto max-w-3xl text-center mb-16">
+          <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Got questions?</span>
+          <h2 class="reveal mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl" data-delay="80">Frequently Asked <span class="text-gradient">Questions</span></h2>
+          <p class="reveal mt-4 text-base text-muted-foreground" data-delay="140">Everything you need to know about hiring Girdhari as your WordPress development partner.</p>
+        </div>
+        
+        <div class="reveal space-y-4" data-delay="160">
+          <!-- Item 1 -->
+          <div class="faq-item rounded-2xl border border-border bg-white transition-colors duration-300">
+            <button class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-foreground">
+              <span>Do you work with design and marketing agencies?</span>
+              <svg class="faq-icon h-5 w-5 text-muted-foreground transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">Yes! I frequently partner with design and marketing agencies globally, acting as their dedicated white-label WordPress engineering resource. I write clean, standard code that fits seamlessly into your agency's workflow and builds trust with your clients.</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="faq-item rounded-2xl border border-border bg-white transition-colors duration-300">
+            <button class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-foreground">
+              <span>Will I be able to edit the website content myself?</span>
+              <svg class="faq-icon h-5 w-5 text-muted-foreground transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">Absolutely. I build websites using WordPress's native Block Editor (Gutenberg) or Elementor Pro, structured with reusable blocks and custom fields (ACF). You'll have full control to edit text, images, and add new pages without writing a single line of code.</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="faq-item rounded-2xl border border-border bg-white transition-colors duration-300">
+            <button class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-foreground">
+              <span>How do you charge for WordPress projects?</span>
+              <svg class="faq-icon h-5 w-5 text-muted-foreground transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">I offer transparent, fixed-price quotes for defined project scopes (like custom theme builds or speed optimizations) and hourly rates for ongoing retainer support or consulting. No hidden fees, ever.</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="faq-item rounded-2xl border border-border bg-white transition-colors duration-300">
+            <button class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-foreground">
+              <span>Can you migrate my website from Wix, Squarespace, or Shopify?</span>
+              <svg class="faq-icon h-5 w-5 text-muted-foreground transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">Yes, site migration is one of my core services. I will move all your content, posts, images, and SEO metadata over to WordPress, while upgrading the speed, security, and responsive design in the process.</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="faq-item rounded-2xl border border-border bg-white transition-colors duration-300">
+            <button class="faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-foreground">
+              <span>Do you provide maintenance and post-launch support?</span>
+              <svg class="faq-icon h-5 w-5 text-muted-foreground transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">Yes, I provide ongoing maintenance plans that cover security updates, automatic backups, speed monitoring, and regular content adjustments so you never have to worry about your site going down.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section CTA -->
+        <div class="reveal mt-12 text-center" data-delay="100">
+          <p class="text-sm text-muted-foreground mb-4">Have another question not listed here?</p>
+          <button type="button" data-openform class="btn-shine glow inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-[1.03]">
+            Ask Girdhari directly
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- ======================= CONTACT ======================= -->
-    <section id="contact" class="relative overflow-hidden py-28 lg:py-36">
+    <section id="contact" class="relative overflow-hidden py-28 lg:py-36 bg-white">
       <div class="absolute inset-0 bg-aurora opacity-60"></div>
       <div class="absolute inset-0 bg-grid mask-radial opacity-20"></div>
       <div class="relative mx-auto max-w-9xl px-6 lg:px-12">
@@ -424,7 +680,7 @@
           <div>
             <span class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground"><span class="h-1.5 w-1.5 rounded-full bg-electric glow"></span>Let’s talk</span>
             <h2 class="reveal mt-6 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-7xl" data-delay="80">Have a project <br class="hidden sm:block" /> worth <span class="text-gradient">building?</span></h2>
-            <p class="reveal mt-6 max-w-md text-lg leading-relaxed text-muted-foreground" data-delay="140">Whether it’s a new build, a rescue mission or a speed overhaul — tell me about it. I reply to every serious enquiry within 24 hours.</p>
+            <p class="reveal mt-6 max-w-md text-lg leading-relaxed text-muted-foreground" data-delay="140">Whether it’s a new build, a speed overhaul or a custom WooCommerce feature — tell me about it. I reply to every serious enquiry within 24 hours.</p>
             <div class="reveal mt-9 space-y-3" data-delay="200">
               <a href="mailto:girdharichoyal@gmail.com" class="flex items-center gap-3 text-foreground transition-colors hover:text-electric">
                 <span class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/40"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
@@ -439,10 +695,10 @@
           </div>
           <div class="reveal rl">
             <div class="glass-strong relative overflow-hidden rounded-3xl p-8 text-center shadow-elevated lg:p-10">
-              <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-electric/20 blur-3xl"></div>
-              <div class="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-violet/20 blur-3xl"></div>
+              <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-electric/5 blur-3xl"></div>
+              <div class="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-violet/5 blur-3xl"></div>
               <div class="relative">
-                <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-electric/15 text-electric"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+                <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-electric/10 text-electric"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
                 <h3 class="mt-6 font-display text-2xl font-bold text-foreground">Tell me about your project</h3>
                 <p class="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">A quick 4-step brief — budget, timeline and goals. Takes under a minute.</p>
                 <button type="button" data-openform class="btn-shine glow mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-electric py-4 font-medium text-white transition-transform duration-300 hover:scale-[1.02]">
@@ -462,7 +718,7 @@
   </main>
 
   <!-- ======================= FOOTER ======================= -->
-  <footer class="relative border-t border-border py-12">
+  <footer class="relative border-t border-border py-12 bg-white">
     <div class="mx-auto max-w-9xl px-6 lg:px-12">
       <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
         <div class="text-center md:text-left">
@@ -493,7 +749,7 @@
         <div class="absolute inset-0 bg-aurora opacity-50"></div>
         <div class="relative flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-electric/15 text-electric"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-electric/15 text-electric"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>
             <div><p class="font-display text-base font-semibold leading-tight text-foreground">Start a project</p><p class="text-xs text-muted-foreground"><span id="stepLabel">Step 1 of 4 · About you</span></p></div>
           </div>
           <button type="button" data-close class="text-muted-foreground transition-colors hover:text-foreground"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
@@ -643,41 +899,41 @@
     $('#year').text(new Date().getFullYear());
 
     // socials
-    const socialBtn = (href, ic) => `<a href="${href}" target="_blank" rel="noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/30 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric hover:text-electric">${ic}</a>`;
+    const socialBtn = (href, ic) => `<a href="${href}" target="_blank" rel="noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted/50 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric hover:text-electric shadow-sm">${ic}</a>`;
     $('#hero-socials').html(socialBtn(LINKS.github,ICON.github)+socialBtn(LINKS.linkedin,ICON.linkedin)+socialBtn(LINKS.instagram,ICON.instagram));
     $('#footer-socials').html(socialBtn(LINKS.linkedin,ICON.linkedin)+socialBtn(LINKS.upwork,ICON.upwork)+socialBtn(LINKS.github,ICON.github)+socialBtn(LINKS.instagram,ICON.instagram));
     const cSoc = [['LinkedIn',LINKS.linkedin,ICON.linkedin],['Upwork',LINKS.upwork,ICON.upwork],['GitHub',LINKS.github,ICON.github],['Instagram',LINKS.instagram,ICON.instagram]];
-    $('#contact-socials').html(cSoc.map(s=>`<a href="${s[1]}" target="_blank" rel="noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-4 py-2 text-sm text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric/60 hover:text-electric">${s[2]}${s[0]}</a>`).join(''));
+    $('#contact-socials').html(cSoc.map(s=>`<a href="${s[1]}" target="_blank" rel="noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-foreground transition-all duration-300 hover:-translate-y-1 hover:border-electric/60 hover:text-electric shadow-sm">${s[2]}${s[0]}</a>`).join(''));
 
     // stats
-    $('#stats').html(STATS.map((s,i)=>`<div class="rounded-2xl border border-border bg-card/60 p-6"><div class="counter font-display text-4xl font-extrabold text-gradient-cool sm:text-5xl" data-n="${s.n}" data-s="${s.s}">0${s.s}</div><p class="mt-2 text-sm text-muted-foreground">${s.l}</p></div>`).join(''));
+    $('#stats').html(STATS.map((s,i)=>`<div class="rounded-2xl border border-border bg-white p-6 shadow-sm"><div class="counter font-display text-4xl font-extrabold text-gradient-cool sm:text-5xl" data-n="${s.n}" data-s="${s.s}">0${s.s}</div><p class="mt-2 text-sm text-muted-foreground">${s.l}</p></div>`).join(''));
 
     // timeline
     $('#timeline').html(TIMELINE.map(t=>`<div class="relative pl-9"><span class="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-electric bg-background"><span class="h-1.5 w-1.5 rounded-full bg-electric"></span></span><span class="font-mono text-xs font-medium text-electric">${t.y}</span><h4 class="mt-1 font-display text-lg font-semibold text-foreground">${t.t}</h4><p class="mt-1 text-sm leading-relaxed text-muted-foreground">${t.x}</p></div>`).join(''));
 
     // skills
-    $('#skills-grid').html(SKILLS.map(s=>`<div class="group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/60 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><h3 class="mt-5 font-display text-lg font-semibold text-foreground">${s.n}</h3><div class="skill-bar mt-4 h-1.5 w-full overflow-hidden rounded-full bg-muted"><span style="background:linear-gradient(90deg,#3B82F6,#22d3ee)" data-lv="${s.lv}"></span></div><span class="mt-2 inline-block font-mono text-xs text-muted-foreground">${s.lv}%</span></div>`).join(''));
+    $('#skills-grid').html(SKILLS.map(s=>`<div class="group relative overflow-hidden rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40 shadow-sm"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/40 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><h3 class="mt-5 font-display text-lg font-semibold text-foreground">${s.n}</h3><div class="skill-bar mt-4 h-1.5 w-full overflow-hidden rounded-full bg-muted"><span style="background:linear-gradient(90deg,#2563eb,#0891b2)" data-lv="${s.lv}"></span></div><span class="mt-2 inline-block font-mono text-xs text-muted-foreground">${s.lv}%</span></div>`).join(''));
 
     // projects
     $('#prj-track').html(PROJECTS.map(p=>{
       const drop = Math.round((1 - p.a/p.b)*100);
       return `<article class="group relative w-[88vw] flex-shrink-0 snap-center sm:w-[70vw] lg:w-[58vw] xl:w-[46vw]">
-        <div class="ring-grad relative rounded-2xl border border-border bg-card shadow-elevated">
-          <div class="flex items-center gap-3 border-b border-border px-4 py-3"><div class="flex gap-2"><span class="h-3 w-3 rounded-full bg-red-500"></span><span class="h-3 w-3 rounded-full bg-amber-400"></span><span class="h-3 w-3 rounded-full bg-green-500"></span></div><div class="mx-auto flex w-full max-w-sm items-center gap-2 rounded-md border border-border bg-muted/60 px-3 py-1.5"><span class="h-2.5 w-2.5 rounded-full border border-muted-foreground/50"></span><span class="truncate font-mono text-[11px] text-muted-foreground">${p.url}</span></div></div>
-          <div class="relative aspect-[16/10] overflow-hidden rounded-b-2xl"><img src="${p.img}" alt="${p.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div></div>
+        <div class="ring-grad relative rounded-2xl border border-border bg-white shadow-elevated">
+          <div class="flex items-center gap-3 border-b border-border px-4 py-3"><div class="flex gap-2"><span class="h-3 w-3 rounded-full bg-red-500"></span><span class="h-3 w-3 rounded-full bg-amber-400"></span><span class="h-3 w-3 rounded-full bg-green-500"></span></div><div class="mx-auto flex w-full max-w-sm items-center gap-2 rounded-md border border-border bg-muted/40 px-3 py-1.5"><span class="h-2.5 w-2.5 rounded-full border border-muted-foreground/30"></span><span class="truncate font-mono text-[11px] text-muted-foreground">${p.url}</span></div></div>
+          <div class="relative aspect-[16/10] overflow-hidden rounded-b-2xl"><img src="${p.img}" alt="${p.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/10 to-transparent"></div></div>
         </div>
         <div class="mt-7 flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-          <div class="max-w-xl"><span class="font-mono text-xs uppercase tracking-[0.18em] text-electric">${p.cat}</span><h3 class="mt-2 font-display text-2xl font-bold text-foreground lg:text-3xl">${p.name}</h3><p class="mt-3 text-base leading-relaxed text-muted-foreground">${p.desc}</p><div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t=>`<span class="rounded-full border border-border bg-muted/40 px-3 py-1 text-xs text-muted-foreground">${t}</span>`).join('')}</div></div>
-          <div class="flex shrink-0 items-center gap-4 rounded-2xl border border-border bg-card/60 p-4"><div class="text-center"><p class="font-mono text-xs text-muted-foreground line-through">${p.b}s</p><p class="font-display text-2xl font-bold text-success">${p.a}s</p><p class="mt-1 text-[11px] text-muted-foreground">Load time</p></div><div class="flex items-center gap-1 rounded-full bg-success/10 px-2.5 py-1 text-success"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg><span class="font-mono text-xs font-semibold">-${drop}%</span></div></div>
+          <div class="max-w-xl"><span class="font-mono text-xs uppercase tracking-[0.18em] text-electric">${p.cat}</span><h3 class="mt-2 font-display text-2xl font-bold text-foreground lg:text-3xl">${p.name}</h3><p class="mt-3 text-base leading-relaxed text-muted-foreground">${p.desc}</p><div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t=>`<span class="rounded-full border border-border bg-white px-3 py-1 text-xs text-muted-foreground">${t}</span>`).join('')}</div></div>
+          <div class="flex shrink-0 items-center gap-4 rounded-2xl border border-border bg-white p-4 shadow-sm"><div class="text-center"><p class="font-mono text-xs text-muted-foreground line-through">${p.b}s</p><p class="font-display text-2xl font-bold text-success">${p.a}s</p><p class="mt-1 text-[11px] text-muted-foreground">Load time</p></div><div class="flex items-center gap-1 rounded-full bg-success/10 px-2.5 py-1 text-success"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg><span class="font-mono text-xs font-semibold">-${drop}%</span></div></div>
         </div>
       </article>`;
     }).join('') + '<div class="w-2 flex-shrink-0 lg:w-8"></div>');
 
     // services
-    $('#services-grid').html(SERVICES.map(s=>`<div class="group relative flex flex-col overflow-hidden rounded-2xl border border-border p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40 ${s.span} ${s.feat?'bg-gradient-to-br from-electric/15 via-card to-violet/10':'bg-card/60'}"><div class="flex items-start justify-between"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/60 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><svg class="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div><h3 class="mt-auto font-display font-semibold text-foreground ${s.feat?'pt-8 text-2xl lg:text-3xl':'pt-6 text-lg'}">${s.n}</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground ${s.feat?'max-w-md':''}">${s.d}</p></div>`).join(''));
+    $('#services-grid').html(SERVICES.map(s=>`<div class="group relative flex flex-col overflow-hidden rounded-2xl border border-border p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/40 shadow-sm ${s.span} ${s.feat?'bg-gradient-to-br from-electric/5 via-card to-violet/5':'bg-white'}"><div class="flex items-start justify-between"><div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-muted/40 transition-transform duration-300 group-hover:scale-110"><span class="h-2.5 w-2.5 rounded-full bg-electric"></span></div><svg class="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div><h3 class="mt-auto font-display font-semibold text-foreground ${s.feat?'pt-8 text-2xl lg:text-3xl':'pt-6 text-lg'}">${s.n}</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground ${s.feat?'max-w-md':''}">${s.d}</p></div>`).join(''));
 
     // testimonials
-    const card = t => `<a href="${t.link}" target="_blank" rel="noreferrer" class="group flex w-[340px] flex-shrink-0 flex-col rounded-2xl glass p-6 transition-colors duration-300 hover:border-electric/40 sm:w-[420px]"><div class="flex items-center justify-between"><svg class="h-7 w-7 text-electric/60" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7H7a4 4 0 0 0-4 4v6h6v-6H5a2 2 0 0 1 2-2h2zm10 0h-4a4 4 0 0 0-4 4v6h6v-6h-2a2 2 0 0 1 2-2h2z"/></svg><div class="flex gap-0.5">${'<svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="#F97316" stroke="#F97316"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'.repeat(5)}</div></div><p class="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">\u201c${t.text}\u201d</p><div class="mt-6 flex items-center justify-between border-t border-border pt-4"><div><p class="font-display text-sm font-semibold text-foreground">${t.name}</p><p class="text-xs text-muted-foreground">${t.role}</p></div><span class="rounded-full border border-border bg-muted/50 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-electric">${t.src}</span></div></a>`;
+    const card = t => `<a href="${t.link}" target="_blank" rel="noreferrer" class="group flex w-[340px] flex-shrink-0 flex-col rounded-2xl glass p-6 transition-colors duration-300 hover:border-electric/40 sm:w-[420px] shadow-sm"><div class="flex items-center justify-between"><svg class="h-7 w-7 text-electric/60" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7H7a4 4 0 0 0-4 4v6h6v-6H5a2 2 0 0 1 2-2h2zm10 0h-4a4 4 0 0 0-4 4v6h6v-6h-2a2 2 0 0 1 2-2h2z"/></svg><div class="flex gap-0.5">${'<svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="#F97316" stroke="#F97316"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'.repeat(5)}</div></div><p class="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">\u201c${t.text}\u201d</p><div class="mt-6 flex items-center justify-between border-t border-border pt-4"><div><p class="font-display text-sm font-semibold text-foreground">${t.name}</p><p class="text-xs text-muted-foreground">${t.role}</p></div><span class="rounded-full border border-border bg-white px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-electric">${t.src}</span></div></a>`;
     const r1 = TESTIMONIALS.slice(0,3), r2 = TESTIMONIALS.slice(3).concat(TESTIMONIALS.slice(0,1));
     $('#tm-row1').html((r1.map(card).join(''))+(r1.map(card).join('')));
     $('#tm-row2').html((r2.map(card).join(''))+(r2.map(card).join('')));
@@ -685,23 +941,138 @@
     // process
     $('#process-list').html(PROCESS.map((p,i)=>{
       const even = i%2===0;
-      return `<div class="relative flex items-center gap-6 pl-20 md:pl-0 ${even?'md:flex-row':'md:flex-row-reverse'}"><span class="absolute left-8 z-10 flex h-5 w-5 -translate-x-1/2 items-center justify-center rounded-full border-2 border-electric bg-background md:left-1/2"><span class="h-2 w-2 rounded-full bg-electric glow"></span></span><div class="w-full md:w-[calc(50%-2.5rem)] ${even?'md:text-right':'md:text-left'}"><div class="rounded-2xl border border-border bg-card/60 p-6 transition-colors duration-300 hover:border-electric/40"><span class="font-mono text-4xl font-bold text-gradient-cool">${p.s}</span><h3 class="mt-2 font-display text-xl font-semibold text-foreground">${p.t}</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">${p.d}</p></div></div><div class="hidden md:block md:w-[calc(50%-2.5rem)]"></div></div>`;
+      return `<div class="relative flex items-center gap-6 pl-20 md:pl-0 ${even?'md:flex-row':'md:flex-row-reverse'}"><span class="absolute left-8 z-10 flex h-5 w-5 -translate-x-1/2 items-center justify-center rounded-full border-2 border-electric bg-white md:left-1/2"><span class="h-2 w-2 rounded-full bg-electric glow"></span></span><div class="w-full md:w-[calc(50%-2.5rem)] ${even?'md:text-right':'md:text-left'}"><div class="rounded-2xl border border-border bg-white p-6 shadow-sm transition-colors duration-300 hover:border-electric/40"><span class="font-mono text-4xl font-bold text-gradient-cool">${p.s}</span><h3 class="mt-2 font-display text-xl font-semibold text-foreground">${p.t}</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">${p.d}</p></div></div><div class="hidden md:block md:w-[calc(50%-2.5rem)]"></div></div>`;
     }).join(''));
 
     // git commits
-    $('#git').html(COMMITS.map(c=>`<div class="flex items-start gap-2"><span class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-violet"></span><div><p class="text-[11px] leading-tight text-foreground">${c.m}</p><p class="font-mono text-[10px] text-muted-foreground">${c.t} ago</p></div></div>`).join(''));
+    $('#git').html(COMMITS.map(c=>`<div class="flex items-start gap-2"><span class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-violet"></span><div><p class="text-[11px] leading-tight text-slate-200">${c.m}</p><p class="font-mono text-[10px] text-slate-400">${c.t} ago</p></div></div>`).join(''));
 
     // bars
-    $('#bars').html([40,65,50,80,60,90,75,95,70,88].map(h=>`<span class="flex-1 rounded-sm" style="height:0%;background:linear-gradient(to top,#3B82F6,#22d3ee);transition:height .6s ease-out" data-h="${h}"></span>`).join(''));
+    $('#bars').html([40,65,50,80,60,90,75,95,70,88].map(h=>`<span class="flex-1 rounded-sm" style="height:0%;background:linear-gradient(to top,#2563eb,#0891b2);transition:height .6s ease-out" data-h="${h}"></span>`).join(''));
 
     // modal options
-    $('#typeWrap').html(TYPES.map(t=>`<button type="button" class="opt flex flex-col items-start gap-1.5 rounded-xl border border-border bg-muted/30 px-4 py-3 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="type" data-val="${t.v}"><span class="h-5 w-5 rounded bg-electric/20"></span><span class="font-medium text-foreground">${t.v}</span><span class="text-xs text-muted-foreground">${t.d}</span></button>`).join(''));
-    $('#budgetWrap').html(BUDGETS.map(b=>`<button type="button" class="chip rounded-full border border-border bg-muted/30 px-3.5 py-2 text-xs font-medium text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="budget" data-val="${b}">${b}</button>`).join(''));
-    $('#startWrap').html(STARTS.map(s=>`<button type="button" class="opt flex items-center gap-3 rounded-xl border border-border bg-muted/30 px-4 py-3 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="start" data-val="${s}"><span class="h-4 w-4 rounded-full bg-electric/30"></span><span class="font-medium">${s}</span></button>`).join(''));
+    $('#typeWrap').html(TYPES.map(t=>`<button type="button" class="opt flex flex-col items-start gap-1.5 rounded-xl border border-border bg-muted/40 px-4 py-3 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="type" data-val="${t.v}"><span class="h-5 w-5 rounded bg-electric/20"></span><span class="font-medium text-foreground">${t.v}</span><span class="text-xs text-muted-foreground">${t.d}</span></button>`).join(''));
+    $('#budgetWrap').html(BUDGETS.map(b=>`<button type="button" class="chip rounded-full border border-border bg-muted/40 px-3.5 py-2 text-xs font-medium text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="budget" data-val="${b}">${b}</button>`).join(''));
+    $('#startWrap').html(STARTS.map(s=>`<button type="button" class="opt flex items-center gap-3 rounded-xl border border-border bg-muted/40 px-4 py-3 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="start" data-val="${s}"><span class="h-4 w-4 rounded-full bg-electric/30"></span><span class="font-medium">${s}</span></button>`).join(''));
+
+    /* ===================== BANNER FORM ===================== */
+    let bStep=0;
+    const bData={name:'',email:'',type:'',budget:'',start:'',deadline:'',message:''};
+    const bLabels=['Step 1 of 4 · About you','Step 2 of 4 · Project','Step 3 of 4 · Timeline','Step 4 of 4 · Details'];
+
+    // Render option buttons for banner
+    $('#b-typeWrap').html(TYPES.map(t=>`<button type="button" class="b-opt flex flex-col items-start gap-1 rounded-xl border border-border bg-muted/40 px-3 py-2 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="type" data-val="${t.v}"><span class="h-4 w-4 rounded bg-electric/25"></span><span class="font-bold text-foreground text-xs">${t.v}</span><span class="text-[9px] text-muted-foreground leading-normal mt-0.5">${t.d}</span></button>`).join(''));
+    $('#b-budgetWrap').html(BUDGETS.map(b=>`<button type="button" class="b-chip rounded-full border border-border bg-muted/40 px-3 py-1 text-[11px] font-semibold text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="budget" data-val="${b}">${b}</button>`).join(''));
+    $('#b-startWrap').html(STARTS.map(s=>`<button type="button" class="b-opt flex items-center gap-2.5 rounded-xl border border-border bg-muted/40 px-3 py-1.5 text-left text-sm text-muted-foreground transition-all duration-200 hover:border-electric/50 hover:text-foreground" data-field="start" data-val="${s}"><span class="h-3 w-3 rounded-full bg-electric/25"></span><span class="font-bold text-xs">${s}</span></button>`).join(''));
+
+    function bRender(){
+      $('.b-step').addClass('hidden');
+      $('.b-step[data-bstep="'+bStep+'"]').removeClass('hidden');
+      $('#b-stepLabel').text(bLabels[bStep]);
+      $('#b-progressBars > div').each(function(i){
+        const w = i<bStep?'100%':(i===bStep?'60%':'0%');
+        $(this).find('span').css('width',w);
+      });
+      $('#b-btnBack').css('visibility', bStep===0?'hidden':'visible');
+      if(bStep===3){
+        $('#b-btnNext').html('Send request <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>');
+        $('#b-summary').text((bData.type||'—')+' · '+(bData.budget||'—')+' · '+(bData.start||'—')+(bData.deadline?(' · '+bData.deadline):''));
+      } else {
+        $('#b-btnNext').html('Continue <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>');
+      }
+    }
+
+    function bValidate(){
+      const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(bData.email);
+      if(bStep===0) return bData.name.trim() && emailOk;
+      if(bStep===1) return bData.type && bData.budget;
+      if(bStep===2) return !!bData.start;
+      if(bStep===3) return bData.message.trim().length>3;
+      return true;
+    }
+
+    $('#b-name').on('input',e=>bData.name=e.target.value);
+    $('#b-email').on('input',e=>bData.email=e.target.value);
+    $('#b-deadline').on('input',e=>bData.deadline=e.target.value);
+    $('#b-message').on('input',e=>bData.message=e.target.value);
+
+    $(document).on('click','.b-opt',function(){
+      const f=$(this).data('field');
+      bData[f]=$(this).data('val');
+      $('.b-opt[data-field="'+f+'"]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    $(document).on('click','.b-chip',function(){
+      const f=$(this).data('field');
+      bData[f]=$(this).data('val');
+      $('.b-chip[data-field="'+f+'"]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    $('#b-btnBack').on('click',()=>{ if(bStep>0){bStep--; bRender();} });
+    $('#b-btnNext').on('click',function(){
+      if(!bValidate()){
+        toast(bStep===3?'Please add a short message.':'Please complete this step to continue.','err');
+        return;
+      }
+      if(bStep<3){ bStep++; bRender(); }
+      else {
+        bData.at = new Date().toISOString();
+        $('#b-btnNext').prop('disabled', true);
+        fetch('https://script.google.com/macros/s/AKfycbxU4dqB4bbcBzbgKnstDtbiWL-aYNrg1_H2JFTHwRoKa7inFkQOxY74-FaKTzZSvSx4/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new URLSearchParams(bData)
+        })
+        .then(() => {
+          toast('Request received! I’ll reply within 24 hours.', 'ok');
+          bStep=0;
+          Object.keys(bData).forEach(k=>bData[k]='');
+          $('#b-name,#b-email,#b-deadline,#b-message').val('');
+          $('.b-opt,.b-chip').removeClass('selected');
+          bRender();
+        })
+        .catch(error => {
+          console.error(error);
+          toast('Failed to send request. Please try again.', 'err');
+        })
+        .finally(() => {
+          $('#b-btnNext').prop('disabled', false);
+        });
+      }
+    });
+
+    bRender();
+
+    // FAQ Accordion
+    $(document).on('click', '.faq-trigger', function() {
+      const item = $(this).closest('.faq-item');
+      const content = item.find('.faq-content');
+      const icon = item.find('.faq-icon');
+      
+      // Close other FAQs
+      $('.faq-item').not(item).each(function() {
+        $(this).removeClass('border-electric bg-slate-50/50');
+        $(this).find('.faq-content').css('max-height', '0px');
+        $(this).find('.faq-icon').css('transform', 'rotate(0deg)');
+      });
+      
+      if (item.hasClass('border-electric')) {
+        item.removeClass('border-electric bg-slate-50/50');
+        content.css('max-height', '0px');
+        icon.css('transform', 'rotate(0deg)');
+      } else {
+        item.addClass('border-electric bg-slate-50/50');
+        content.css('max-height', content[0].scrollHeight + 'px');
+        icon.css('transform', 'rotate(180deg)');
+      }
+    });
+
 
     /* ===================== INTERACTIONS ===================== */
     // scroll progress + sticky cta + dotnav active
-    const sections = ['hero','about','skills','projects','devlab','services','testimonials','process','contact'];
+    const sections = ['hero','about','skills','projects','devlab','services','testimonials','process','faq','contact'];
     $(window).on('scroll', function(){
       const st = $(window).scrollTop();
       const h = $(document).height() - $(window).height();
@@ -764,10 +1135,10 @@
     $('#prj-next').on('click',()=>track.scrollBy({left:track.clientWidth*0.8,behavior:'smooth'}));
 
     // cursor glow
-    $(window).on('mousemove', function(e){ $('#cursorGlow').css('background','radial-gradient(420px circle at '+e.clientX+'px '+e.clientY+'px, rgba(59,130,246,.07), transparent 70%)'); });
+    $(window).on('mousemove', function(e){ $('#cursorGlow').css('background','radial-gradient(420px circle at '+e.clientX+'px '+e.clientY+'px, rgba(37,99,235,.07), transparent 70%)'); });
 
-    // hero parallax
-    $(window).on('mousemove', function(e){ const px=(e.clientX/window.innerWidth-0.5), py=(e.clientY/window.innerHeight-0.5); $('#hero-visual').css('transform','translate('+(px*-18)+'px,'+(py*-18)+'px)'); $('#hero-visual .floaty').each(function(idx){ const m=idx===0?26:-28; $(this).css('margin','0'); }); });
+    // hero parallax (visual movement disabled since layout swapped to form/text, but kept for subtle background float)
+    $(window).on('mousemove', function(e){ const px=(e.clientX/window.innerWidth-0.5), py=(e.clientY/window.innerHeight-0.5); $('#banner-form-container').css('transform','translate('+(px*-8)+'px,'+(py*-8)+'px)'); });
 
     /* ===================== MODAL FORM ===================== */
     let step=0; const data={name:'',email:'',type:'',budget:'',start:'',deadline:'',message:''};
@@ -805,34 +1176,25 @@
       if(!validate()){ toast(step===3?'Please add a short message.':'Please complete this step to continue.','err'); return; }
       if(step<3){ step++; render(); }
       else {
-			data.at = new Date().toISOString();
-
-			$('#btnNext').prop('disabled', true);
-
-			fetch('https://script.google.com/macros/s/AKfycbxU4dqB4bbcBzbgKnstDtbiWL-aYNrg1_H2JFTHwRoKa7inFkQOxY74-FaKTzZSvSx4/exec', {
-				method: 'POST',
-				mode: 'no-cors',
-				body: new URLSearchParams(data)
-			})
-			.then(() => {
-
-				toast('Request received! I’ll reply within 24 hours.', 'ok');
-				closeModal();
-
-			})
-			.catch(error => {
-
-				console.error(error);
-				toast('Failed to send request. Please try again.', 'err');
-
-			})
-			.finally(() => {
-
-				$('#btnNext').prop('disabled', false);
-
-			});
-		}
-
+        data.at = new Date().toISOString();
+        $('#btnNext').prop('disabled', true);
+        fetch('https://script.google.com/macros/s/AKfycbxU4dqB4bbcBzbgKnstDtbiWL-aYNrg1_H2JFTHwRoKa7inFkQOxY74-FaKTzZSvSx4/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new URLSearchParams(data)
+        })
+        .then(() => {
+          toast('Request received! I’ll reply within 24 hours.', 'ok');
+          closeModal();
+        })
+        .catch(error => {
+          console.error(error);
+          toast('Failed to send request. Please try again.', 'err');
+        })
+        .finally(() => {
+          $('#btnNext').prop('disabled', false);
+        });
+      }
     });
     $(document).on('keydown',e=>{ if(e.key==='Escape' && !$('#overlay').hasClass('hidden')) closeModal(); });
     render();
